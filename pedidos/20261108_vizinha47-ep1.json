@@ -1,0 +1,30 @@
+{
+ "id": "vizinha47-ep1",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {"quem": "nina", "texto": "Caio... quem deixou esse bilhete debaixo da porta?", "estilo": "Brazilian Portuguese accent, young woman, uneasy, whispering at night"},
+    {"quem": "caio", "texto": "Ninguém sabe que a gente mudou pra cá.", "estilo": "Brazilian Portuguese accent, young man, confused and suspicious"},
+    {"quem": "nina", "texto": "Tá escrito: bem-vinda de volta, Nina.", "estilo": "Brazilian Portuguese accent, scared, voice trembling"},
+    {"quem": "caio", "texto": "De volta? Você nunca morou aqui.", "estilo": "Brazilian Portuguese accent, alarmed, low voice"}
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {"quem": "lurdes", "texto": "Morou, sim, minha filha. Na casa quarenta e sete.", "estilo": "Brazilian Portuguese accent, old woman, calm, sweet but eerie"},
+    {"quem": "nina", "texto": "A senhora deve estar me confundindo.", "estilo": "Brazilian Portuguese accent, nervous, polite"},
+    {"quem": "lurdes", "texto": "Você tinha seis anos. E prometeu voltar.", "estilo": "Brazilian Portuguese accent, slow, mysterious"},
+    {"quem": "lurdes", "texto": "Só não esperava que voltasse... depois do incêndio.", "estilo": "Brazilian Portuguese accent, almost a whisper, ominous"}
+   ]
+  }
+ ]
+}
