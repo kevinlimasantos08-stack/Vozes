@@ -10,7 +10,7 @@ Motores:
 
 Formato do pedido: ver README.md.
 """
-import base64, glob, json, os, sys, time, traceback, urllib.request
+import base64, glob, json, os, sys, time, traceback, urllib.error, urllib.request
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -208,7 +208,51 @@ def rodar_refs(p, pasta):
     return feitos
 
 
-MOTORES = {"gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
+def _http(metodo, url, corpo=None, headers=None):
+    dados = json.dumps(corpo).encode() if corpo is not None else None
+    h = {"Content-Type": "application/json"}
+    h.update(headers or {})
+    req = urllib.request.Request(url, data=dados, headers=h, method=metodo)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.status, r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode("utf-8", "replace")
+    except Exception as e:
+        return -1, f"{type(e).__name__}: {e}"
+
+
+def rodar_diagnostico(p, pasta):
+    """Testa a chave em cada endereço possível e grava as respostas (sem a chave)."""
+    k = os.environ.get("GEMINI_API_KEY", "")
+    out = {"prefixo_chave": k[:3], "tamanho_chave": len(k)}
+    corpo = {"contents": [{"parts": [{"text": "Diga em português do Brasil: Olá, tudo bem?"}]}],
+             "generationConfig": {"responseModalities": ["AUDIO"],
+                                  "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Kore"}}}}}
+    c, t = _http("GET", "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers={"x-goog-api-key": k})
+    tts = []
+    try:
+        tts = [m["name"] for m in json.loads(t).get("models", []) if "tts" in m["name"]]
+    except Exception:
+        pass
+    out["gl_listar"] = {"http": c, "modelos_tts": tts, "trecho": t[:300] if not tts else ""}
+    for m in (tts[:3] or ["models/gemini-2.5-flash-preview-tts"]):
+        c, t = _http("POST", f"https://generativelanguage.googleapis.com/v1beta/{m}:generateContent", corpo, {"x-goog-api-key": k})
+        out[f"gl_{m}"] = {"http": c, "trecho": t[:300]}
+    for m in ["gemini-2.5-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.5-pro-tts"]:
+        c, t = _http("POST", f"https://aiplatform.googleapis.com/v1beta1/publishers/google/models/{m}:generateContent?key={k}", corpo)
+        out[f"vertex_{m}"] = {"http": c, "trecho": t[:300]}
+    tts_corpo = {"input": {"prompt": "Fale de forma natural", "text": "Olá, tudo bem?"},
+                 "voice": {"languageCode": "pt-BR", "name": "Kore", "modelName": "gemini-2.5-flash-tts"},
+                 "audioConfig": {"audioEncoding": "LINEAR16", "sampleRateHertz": 24000}}
+    c, t = _http("POST", f"https://texttospeech.googleapis.com/v1/text:synthesize?key={k}", tts_corpo)
+    out["cloud_tts"] = {"http": c, "trecho": t[:300]}
+    with open(os.path.join(pasta, "diagnostico.json"), "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    return ["diagnostico.json"]
+
+
+MOTORES = {"diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
 
 
 def main():
