@@ -1,0 +1,15 @@
+{
+ "ok": true,
+ "motor": "chatterbox",
+ "arquivos": [
+  "01_marcos.wav",
+  "02_rosa.wav",
+  "03_marcos.wav",
+  "04_rosa.wav",
+  "05_rafael.wav",
+  "06_rafael.wav",
+  "07_rosa.wav",
+  "08_narrador.wav"
+ ],
+ "segundos": 529
+}
