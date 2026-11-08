@@ -1,0 +1,68 @@
+{
+ "id": "piloto-gemini",
+ "motor": "gemini",
+ "modelo": "gemini-3.8-flash-tts",
+ "vozes": {
+  "rafael": "Charon",
+  "rosa": "Aoede",
+  "marcos": "Orus",
+  "narrador": "Schedar"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "marcos",
+     "texto": "Rosa, a empresa vai cortar gente. Você está dispensada.",
+     "estilo": "Brazilian Portuguese accent, cold and curt"
+    },
+    {
+     "quem": "rosa",
+     "texto": "Mas eu acabei de descobrir que estou grávida!",
+     "estilo": "Brazilian Portuguese accent, shocked, voice breaking"
+    },
+    {
+     "quem": "marcos",
+     "texto": "Você nunca me contou. Então não vale.",
+     "estilo": "Brazilian Portuguese accent, dismissive"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "rosa",
+     "texto": "Doutor, ele disse que não vale porque não sabia.",
+     "estilo": "Brazilian Portuguese accent, worried, sad"
+    },
+    {
+     "quem": "rafael",
+     "texto": "Vale, sim. A gestante tem estabilidade desde a confirmação da gravidez até cinco meses após o parto.",
+     "estilo": "Brazilian Portuguese accent, calm and confident"
+    },
+    {
+     "quem": "rafael",
+     "texto": "E o tê-ésse-tê já decidiu: o desconhecimento do empregador não afasta esse direito.",
+     "estilo": "Brazilian Portuguese accent, confident, reassuring"
+    },
+    {
+     "quem": "rosa",
+     "texto": "Então eu tenho direito!",
+     "estilo": "Brazilian Portuguese accent, relieved and happy"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Artigo dez, inciso dois, alínea bê, do á-dê-cê-tê, e Súmula duzentos e quarenta e quatro, item um, do tê-ésse-tê.",
+     "estilo": "Brazilian Portuguese accent, serious and clear"
+    }
+   ]
+  }
+ ]
+}

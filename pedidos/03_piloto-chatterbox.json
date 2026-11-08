@@ -1,0 +1,39 @@
+{
+ "id": "piloto-chatterbox",
+ "motor": "chatterbox",
+ "versao": "v3",
+ "falas": [
+  {
+   "quem": "marcos",
+   "texto": "Rosa, a empresa vai cortar gente. Você está dispensada."
+  },
+  {
+   "quem": "rosa",
+   "texto": "Mas eu acabei de descobrir que estou grávida!"
+  },
+  {
+   "quem": "marcos",
+   "texto": "Você nunca me contou. Então não vale."
+  },
+  {
+   "quem": "rosa",
+   "texto": "Doutor, ele disse que não vale porque não sabia."
+  },
+  {
+   "quem": "rafael",
+   "texto": "Vale, sim. A gestante tem estabilidade desde a confirmação da gravidez até cinco meses após o parto."
+  },
+  {
+   "quem": "rafael",
+   "texto": "E o tê-ésse-tê já decidiu: o desconhecimento do empregador não afasta esse direito."
+  },
+  {
+   "quem": "rosa",
+   "texto": "Então eu tenho direito!"
+  },
+  {
+   "quem": "narrador",
+   "texto": "Artigo dez, inciso dois, alínea bê, do á-dê-cê-tê, e Súmula duzentos e quarenta e quatro, item um, do tê-ésse-tê."
+  }
+ ]
+}

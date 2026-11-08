@@ -1,0 +1,27 @@
+{
+ "id": "elenco-refs",
+ "motor": "refs",
+ "modelo": "gemini-3.8-flash-tts",
+ "elenco": {
+  "rafael": {
+   "voz": "Charon",
+   "estilo": "Brazilian Portuguese accent, calm, confident lawyer",
+   "frase": "Olá, eu sou o doutor Rafael. Hoje eu vou te explicar, com calma, um direito que pouca gente conhece, mas que pode mudar tudo na sua vida."
+  },
+  "rosa": {
+   "voz": "Aoede",
+   "estilo": "Brazilian Portuguese accent, warm, simple, a bit worried",
+   "frase": "Oi, eu sou a Rosa. Trabalho faz cinco anos na mesma empresa e nunca imaginei que ia passar por uma situação dessas."
+  },
+  "marcos": {
+   "voz": "Orus",
+   "estilo": "Brazilian Portuguese accent, firm, cold manager",
+   "frase": "Meu nome é Marcos. Sou gerente aqui, e na minha equipe as regras são claras: quem não cumpre, não fica."
+  },
+  "narrador": {
+   "voz": "Schedar",
+   "estilo": "Brazilian Portuguese accent, serious, even narrator",
+   "frase": "Esta é uma história fictícia, criada para explicar um direito de forma simples. Preste atenção até o final."
+  }
+ }
+}
