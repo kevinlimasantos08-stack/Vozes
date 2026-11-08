@@ -112,6 +112,11 @@ def gemini_bloco_um(cli, modelo, falas, vozes, estilo_geral):
     ultimo = None
     for tentativa in range(3):
         try:
+            try:  # 1º: API clássica (generate_content), mais estável entre versões
+                return gemini_classico(cli, modelo, falas, vozes, quem, estilo_geral)
+            except Exception as e0:
+                if "429" in str(e0) or "RESOURCE_EXHAUSTED" in str(e0):
+                    raise
             try:
                 r = cli.interactions.create(
                     model=modelo,
@@ -138,6 +143,7 @@ def rodar_gemini(p, pasta):
     cli = gemini_cliente()
     modelos, disponiveis = modelos_tts(cli, p.get("modelo"))
     print("Modelos de voz disponíveis:", disponiveis)
+    p["_disponiveis"] = disponiveis
     estilo = p.get("estilo", "Português do Brasil, com sotaque brasileiro, natural e com emoção")
     feitos = []
     for b in p["blocos"]:
@@ -221,10 +227,11 @@ def main():
         t0 = time.time()
         try:
             feitos = MOTORES[p["motor"]](p, pasta)
-            salvar_status(pasta, {"ok": True, "motor": p["motor"], "arquivos": feitos, "segundos": round(time.time() - t0)})
+            salvar_status(pasta, {"ok": True, "motor": p["motor"], "arquivos": feitos, "segundos": round(time.time() - t0),
+                                  "modelos": p.get("_disponiveis")})
             print(f"OK {pid}: {feitos}")
         except Exception as e:
-            salvar_status(pasta, {"ok": False, "motor": p.get("motor"), "erro": f"{type(e).__name__}: {e}",
+            salvar_status(pasta, {"ok": False, "motor": p.get("motor"), "modelos": p.get("_disponiveis"), "erro": f"{type(e).__name__}: {e}",
                                   "detalhe": traceback.format_exc()[-1500:]})
             print(f"ERRO {pid}: {e}")
 
