@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "motor": "chatterbox",
+ "erro": "TypeError: ChatterboxMultilingualTTS.from_pretrained() got an unexpected keyword argument 't3_model'",
+ "detalhe": "Traceback (most recent call last):\n  File \"/home/runner/work/Vozes/Vozes/scripts/gerar.py\", line 149, in main\n    feitos = MOTORES[p[\"motor\"]](p, pasta)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Vozes/Vozes/scripts/gerar.py\", line 86, in rodar_chatterbox\n    modelo = ChatterboxMultilingualTTS.from_pretrained(device=\"cpu\", t3_model=p.get(\"versao\", \"v3\"))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: ChatterboxMultilingualTTS.from_pretrained() got an unexpected keyword argument 't3_model'\n"
+}
