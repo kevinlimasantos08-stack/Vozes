@@ -64,13 +64,13 @@ def gemini_rest(k, modelo, falas, vozes, estilo_geral):
         raise ValueError(f"Bloco com mais de 2 vozes: {quem}")
     tons = "; ".join(f"{nome_tela(f['quem'])}: {f.get('estilo') or estilo_geral}" for f in falas)
     if len(quem) == 2:
-        texto = ("Leia este diálogo em português do Brasil, com sotaque brasileiro, como uma cena curta de novela. "
+        texto = ("Leia este diálogo em português do Brasil, com sotaque brasileiro, como uma cena curta de novela para reels, em ritmo ágil e natural. "
                  f"Tom de cada fala, na ordem: {tons}. Faça uma pausa de um segundo entre uma fala e outra.\n\n"
                  + "\n".join(f"{nome_tela(f['quem'])}: {f['texto']}" for f in falas))
         speech = {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": [
             {"speaker": nome_tela(q), "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[q]}}} for q in quem]}}
     else:
-        texto = (f"Leia em português do Brasil, com sotaque brasileiro. Tom: {tons}. "
+        texto = (f"Leia em português do Brasil, com sotaque brasileiro, em ritmo ágil e natural. Tom: {tons}. "
                  "Faça uma pausa de um segundo entre as frases.\n\n" + "\n".join(f["texto"] for f in falas))
         speech = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[quem[0]]}}}
     corpo = {"contents": [{"parts": [{"text": texto}]}],
