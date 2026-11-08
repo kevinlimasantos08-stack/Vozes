@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "motor": "diagnostico",
+ "arquivos": [
+  "diagnostico.json"
+ ],
+ "segundos": 7,
+ "modelos": null
+}
