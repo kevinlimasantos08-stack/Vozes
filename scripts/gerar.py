@@ -21,33 +21,26 @@ def salvar_status(pasta, dados):
         json.dump(dados, f, ensure_ascii=False, indent=1)
 
 
-def gemini_cliente():
-    from google import genai
-    chave = os.environ.get("GEMINI_API_KEY")
-    if not chave:
+GL = "https://generativelanguage.googleapis.com/v1beta"
+PREFERIDOS = ["gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]
+
+
+def gemini_chave():
+    k = os.environ.get("GEMINI_API_KEY")
+    if not k:
         raise RuntimeError("Segredo GEMINI_API_KEY não configurado no repositório.")
-    return genai.Client(api_key=chave)
+    return k
 
 
-PREFERIDOS = ["gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts", "gemini-2.5-pro-preview-tts"]
-
-
-def modelos_tts(cli, pedido):
-    """Lista os modelos de voz que a chave enxerga, na ordem de preferência."""
-    nomes = []
-    try:
-        for m in cli.models.list():
-            n = m.name.split("/")[-1]
-            if "tts" in n:
-                nomes.append(n)
-    except Exception:
-        pass
-    ordem = [pedido] if pedido else []
-    ordem += [m for m in PREFERIDOS if m not in ordem]
-    ordem += [n for n in sorted(nomes) if n not in ordem and "lite" not in n]
-    if nomes:
-        ordem = [m for m in ordem if m in nomes] + [m for m in ordem if m not in nomes]
-    return ordem, nomes
+def modelos_tts(k, pedido=None):
+    c, t = _http("GET", f"{GL}/models?pageSize=200", headers={"x-goog-api-key": k})
+    disp = []
+    if c == 200:
+        disp = [m["name"].split("/")[-1] for m in json.loads(t).get("models", []) if "tts" in m["name"]]
+    ordem = ([pedido] if pedido else []) + [m for m in PREFERIDOS if m != pedido]
+    if disp:
+        ordem = [m for m in ordem if m in disp]
+    return ordem, disp
 
 
 def pcm_para_wav(pcm, sr=24000):
@@ -58,96 +51,60 @@ def pcm_para_wav(pcm, sr=24000):
     return b.getvalue()
 
 
-def gemini_classico(cli, modelo, falas, vozes, quem, estilo_geral):
-    """API generate_content (modelos 2.5): o estilo vai no próprio texto."""
-    from google.genai import types
-    linhas = [f"{f['quem']}: {f['texto']}" for f in falas]
-    estilos = "; ".join(f"{f['quem']} ({f.get('estilo') or estilo_geral})" for f in falas)
-    if len(quem) == 2:
-        prompt = (f"Leia este diálogo em português do Brasil, com sotaque brasileiro. Tom de cada fala: {estilos}. "
-                  "Deixe uma pausa de um segundo entre as falas.\n\n" + "\n".join(linhas))
-        sc = types.SpeechConfig(multi_speaker_voice_config=types.MultiSpeakerVoiceConfig(speaker_voice_configs=[
-            types.SpeakerVoiceConfig(speaker=q, voice_config=types.VoiceConfig(
-                prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=vozes[q]))) for q in quem]))
-    else:
-        prompt = (f"Leia em português do Brasil, com sotaque brasileiro ({estilos}), deixando uma pausa de um segundo entre as frases:\n\n"
-                  + "\n".join(f["texto"] for f in falas))
-        sc = types.SpeechConfig(voice_config=types.VoiceConfig(
-            prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=vozes[quem[0]])))
-    r = cli.models.generate_content(model=modelo, contents=prompt,
-                                    config=types.GenerateContentConfig(response_modalities=["AUDIO"], speech_config=sc))
-    return pcm_para_wav(r.candidates[0].content.parts[0].inline_data.data)
+def nome_tela(q):
+    return q.capitalize()
 
 
-def gemini_bloco(cli, modelos, falas, vozes, estilo_geral):
-    erros = []
-    for m in modelos:
-        try:
-            return gemini_bloco_um(cli, m, falas, vozes, estilo_geral), m
-        except Exception as e:
-            erros.append(f"{m}: {type(e).__name__}: {str(e)[:160]}")
-    raise RuntimeError(" | ".join(erros))
-
-
-def gemini_bloco_um(cli, modelo, falas, vozes, estilo_geral):
+def gemini_rest(k, modelo, falas, vozes, estilo_geral):
     quem = []
     for f in falas:
         if f["quem"] not in quem:
             quem.append(f["quem"])
     if len(quem) > 2:
         raise ValueError(f"Bloco com mais de 2 vozes: {quem}")
-    conteudo = []
-    for i, f in enumerate(falas):
-        texto = f["texto"]
-        if i < len(falas) - 1:
-            texto = texto + " <long pause>"
-        meta = {"type": "speech_metadata", "style": f.get("estilo") or estilo_geral}
-        if len(quem) == 2:
-            meta["speaker"] = f["quem"]
-        conteudo.append({"type": "text", "text": texto, "annotations": [meta]})
+    tons = "; ".join(f"{nome_tela(f['quem'])}: {f.get('estilo') or estilo_geral}" for f in falas)
     if len(quem) == 2:
-        speech = {"speakers": [{"speaker": q, "voice": vozes[q]} for q in quem]}
+        texto = ("Leia este diálogo em português do Brasil, com sotaque brasileiro, como uma cena curta de novela. "
+                 f"Tom de cada fala, na ordem: {tons}. Faça uma pausa de um segundo entre uma fala e outra.\n\n"
+                 + "\n".join(f"{nome_tela(f['quem'])}: {f['texto']}" for f in falas))
+        speech = {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": [
+            {"speaker": nome_tela(q), "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[q]}}} for q in quem]}}
     else:
-        speech = [{"voice": vozes[quem[0]]}]
-    ultimo = None
-    for tentativa in range(3):
-        try:
-            try:  # 1º: API clássica (generate_content), mais estável entre versões
-                return gemini_classico(cli, modelo, falas, vozes, quem, estilo_geral)
-            except Exception as e0:
-                if "429" in str(e0) or "RESOURCE_EXHAUSTED" in str(e0):
-                    raise
+        texto = (f"Leia em português do Brasil, com sotaque brasileiro. Tom: {tons}. "
+                 "Faça uma pausa de um segundo entre as frases.\n\n" + "\n".join(f["texto"] for f in falas))
+        speech = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[quem[0]]}}}
+    corpo = {"contents": [{"parts": [{"text": texto}]}],
+             "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": speech}}
+    c, t = _http("POST", f"{GL}/models/{modelo}:generateContent", corpo, {"x-goog-api-key": k})
+    if c != 200:
+        raise RuntimeError(f"HTTP {c}: {t[:300]}")
+    parte = json.loads(t)["candidates"][0]["content"]["parts"][0]["inlineData"]
+    return pcm_para_wav(base64.b64decode(parte["data"]))
+
+
+def gemini_bloco(k, modelos, falas, vozes, estilo_geral):
+    erros = []
+    for m in modelos:
+        for tentativa in range(3):
             try:
-                r = cli.interactions.create(
-                    model=modelo,
-                    input=[{"type": "user_input", "content": conteudo}],
-                    response_format={"type": "audio"},
-                    generation_config={"speech_config": speech},
-                )
-                return base64.b64decode(r.output_audio.data)
-            except AttributeError:
-                return gemini_classico(cli, modelo, falas, vozes, quem, estilo_geral)
-        except Exception as e:
-            ultimo = e
-            msg = str(e)
-            if "404" in msg or "not found" in msg.lower() or "not supported" in msg.lower():
-                try:
-                    return gemini_classico(cli, modelo, falas, vozes, quem, estilo_geral)
-                except Exception as e2:
-                    raise e2
-            time.sleep(20 * (tentativa + 1))  # limite de uso ou falha temporária
-    raise ultimo
+                return gemini_rest(k, m, falas, vozes, estilo_geral), m
+            except Exception as e:
+                msg = str(e)
+                if "HTTP 429" in msg and tentativa < 2:
+                    time.sleep(30 * (tentativa + 1)); continue
+                erros.append(f"{m}: {msg[:200]}")
+                break
+    raise RuntimeError(" | ".join(erros))
 
 
 def rodar_gemini(p, pasta):
-    cli = gemini_cliente()
-    modelos, disponiveis = modelos_tts(cli, p.get("modelo"))
-    print("Modelos de voz disponíveis:", disponiveis)
-    p["_disponiveis"] = disponiveis
-    estilo = p.get("estilo", "Português do Brasil, com sotaque brasileiro, natural e com emoção")
+    k = gemini_chave()
+    modelos, disp = modelos_tts(k, p.get("modelo"))
+    p["_disponiveis"] = disp
+    estilo = p.get("estilo", "natural e com emoção")
     feitos = []
     for b in p["blocos"]:
-        audio, usado = gemini_bloco(cli, modelos, b["falas"], p["vozes"], estilo)
+        audio, usado = gemini_bloco(k, modelos, b["falas"], p["vozes"], estilo)
         modelos = [usado] + [m for m in modelos if m != usado]
         nome = f"cena{b['n']}.wav"
         with open(os.path.join(pasta, nome), "wb") as f:
@@ -194,16 +151,16 @@ def rodar_urls(p, pasta):
 
 
 def rodar_refs(p, pasta):
-    cli = gemini_cliente()
-    modelos, _ = modelos_tts(cli, p.get("modelo"))
+    k = gemini_chave()
+    modelos, _ = modelos_tts(k, p.get("modelo"))
     os.makedirs(os.path.join(RAIZ, "refs"), exist_ok=True)
     feitos = []
     for quem, d in p["elenco"].items():
-        audio, _ = gemini_bloco(cli, modelos, [{"quem": quem, "texto": d["frase"], "estilo": d.get("estilo")}],
-                                {quem: d["voz"]}, "Português do Brasil, natural")
+        audio, usado = gemini_bloco(k, modelos, [{"quem": quem, "texto": d["frase"], "estilo": d.get("estilo")}],
+                                    {quem: d["voz"]}, "natural")
         with open(os.path.join(RAIZ, "refs", f"{quem}.wav"), "wb") as f:
             f.write(audio)
-        feitos.append(f"refs/{quem}.wav")
+        feitos.append(f"refs/{quem}.wav ({usado})")
         time.sleep(3)
     return feitos
 
