@@ -1,0 +1,12 @@
+{
+ "ok": true,
+ "motor": "refs",
+ "arquivos": [
+  "refs/rafael.wav (gemini-3.8-flash-tts)",
+  "refs/rosa.wav (gemini-3.8-flash-tts)",
+  "refs/marcos.wav (gemini-3.8-flash-tts)",
+  "refs/narrador.wav (gemini-3.8-flash-tts)"
+ ],
+ "segundos": 37,
+ "modelos": null
+}
