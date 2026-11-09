@@ -1,0 +1,59 @@
+name: Render 3D
+
+on:
+  push:
+    paths:
+      - "blender/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render3d
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq xvfb libegl1 libgl1 libgl1-mesa-dri libxi6 libxxf86vm1 libxfixes3 libxrender1 libxkbcommon0 libsm6 >/dev/null
+          curl -sSL -o b.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
+          tar -xf b.tar.xz && mv blender-4.2.3-linux-x64 blender-app
+          ./blender-app/blender --version | head -1
+
+      - name: Teste EEVEE
+        continue-on-error: true
+        run: |
+          mkdir -p saidas3d/teste
+          xvfb-run -a -s "-screen 0 1920x1080x24" ./blender-app/blender -b -P blender/teste_personagem.py -- saidas3d/teste eevee 2>&1 | tail -30 | tee saidas3d/teste/log_eevee.txt
+
+      - name: Teste Cycles
+        continue-on-error: true
+        run: |
+          ./blender-app/blender -b -P blender/teste_personagem.py -- saidas3d/teste cycles 2>&1 | tail -30 | tee saidas3d/teste/log_cycles.txt
+
+      - name: Juntar quadros em vídeo curto
+        continue-on-error: true
+        run: |
+          cd saidas3d/teste
+          for m in eevee cycles; do
+            if ls anim_${m}_*.png >/dev/null 2>&1; then
+              ffmpeg -v error -y -framerate 24 -pattern_type glob -i "anim_${m}_*.png" -vf scale=540:-2 -pix_fmt yuv420p anim_${m}.mp4 && rm anim_${m}_*.png
+            fi
+          done
+
+      - name: Devolver para o repositório
+        run: |
+          git config user.name "estudio-vozes"
+          git config user.email "actions@users.noreply.github.com"
+          git add saidas3d
+          git diff --cached --quiet || git commit -m "Render 3D de teste"
+          git pull --rebase
+          git push
