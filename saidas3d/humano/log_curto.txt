@@ -26,19 +26,7 @@
 [fase1] sem asset para Clothes
 [fase1] pose aplicada
 [fase1] altura topo 1.835
+[fase1] nariz (0.0, -0.177, 1.679) olhos (0.0, -0.147, 1.714)
 Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
-OBJ import of 'base.obj' took 15.56 ms
-OBJ import of 'scruffy_beard.obj' took 1.80 ms
-Saved: '/home/runner/work/Vozes/Vozes/saidas3d/humano/plano_medio.jpg'
-Time: 09:58.91 (Saving: 00:00.55)
-
-[fase1] render plano_medio 598.9 s
-Saved: '/home/runner/work/Vozes/Vozes/saidas3d/humano/close.jpg'
-Time: 10:04.45 (Saving: 00:00.45)
-
-[fase1] render close 604.5 s
-Info: Total files 1 | Changed 1 | Failed 0
-Info: Saved "rafael_fase1.blend"
-[fase1] fim
-
-Blender quit
+OBJ import of 'base.obj' took 11.14 ms
+OBJ import of 'scruffy_beard.obj' took 1.24 ms

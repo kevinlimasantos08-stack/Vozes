@@ -22,5 +22,4 @@ sem asset para Clothes
 sem asset para Clothes
 pose aplicada
 altura topo 1.835
-render plano_medio 598.9 s
-render close 604.5 s
+nariz (0.0, -0.177, 1.679) olhos (0.0, -0.147, 1.714)
