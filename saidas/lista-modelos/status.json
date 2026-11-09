@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "motor": "modelos",
+ "arquivos": [
+  "modelos.json"
+ ],
+ "segundos": 0,
+ "modelos": null
+}
