@@ -1,0 +1,14 @@
+{
+ "id": "teste-3d",
+ "motor": "imagens",
+ "imagens": [
+  {
+   "nome": "rafael_escritorio.png",
+   "prompt": "A Brazilian lawyer in his early 30s, light brown skin, short dark hair, full well-trimmed black beard, black suit, white shirt, champagne-colored tie, friendly confident expression, standing in a warm wood-paneled law office with bookshelves and a window at dusk. 3D animated feature film still, original stylized cartoon characters with soft rounded shapes, expressive eyes, subsurface skin shading, cinematic soft lighting, shallow depth of field, rich textures, vertical 9:16 frame, full body visible with headroom, no text, no logos, no watermark"
+  },
+  {
+   "nome": "rosa_empresa.png",
+   "prompt": "A Brazilian woman in her early 30s, warm brown skin, voluminous curly dark hair, teal blouse and dark jeans, worried expression holding a few paper bills, standing in a bright modern corporate office with glass walls and plants. 3D animated feature film still, original stylized cartoon characters with soft rounded shapes, expressive eyes, subsurface skin shading, cinematic soft lighting, shallow depth of field, rich textures, vertical 9:16 frame, full body visible with headroom, no text, no logos, no watermark"
+  }
+ ]
+}

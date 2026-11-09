@@ -224,7 +224,44 @@ def rodar_modelos(p, pasta):
     return ["modelos.json"]
 
 
-MOTORES = {"modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
+def gemini_imagem(k, modelos, prompt, proporcao="9:16", refs=()):
+    partes = [{"text": prompt}]
+    for r in refs:
+        with open(os.path.join(RAIZ, r), "rb") as f:
+            partes.append({"inlineData": {"mimeType": "image/png", "data": base64.b64encode(f.read()).decode()}})
+    erros = []
+    for m in modelos:
+        for cfg in ({"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": proporcao}}, {"responseModalities": ["IMAGE", "TEXT"]}):
+            c, t = _http("POST", f"{GL}/models/{m}:generateContent", {"contents": [{"parts": partes}], "generationConfig": cfg},
+                         {"x-goog-api-key": k})
+            if c == 200:
+                for pt in json.loads(t)["candidates"][0]["content"]["parts"]:
+                    if "inlineData" in pt:
+                        return base64.b64decode(pt["inlineData"]["data"]), m
+                erros.append(f"{m}: sem imagem na resposta")
+            else:
+                erros.append(f"{m} HTTP {c}: {t[:220]}")
+                if c in (404, 429, 403):
+                    break
+    raise RuntimeError(" | ".join(erros))
+
+
+def rodar_imagens(p, pasta):
+    k = gemini_chave()
+    modelos = p.get("modelos", ["gemini-2.5-flash-image", "gemini-3.1-flash-image-preview", "gemini-3.1-flash-image"])
+    feitos = []
+    for im in p["imagens"]:
+        dados, usado = gemini_imagem(k, modelos, im["prompt"], im.get("proporcao", "9:16"), im.get("refs", []))
+        destino = os.path.join(RAIZ, im["salvar_em"]) if im.get("salvar_em") else os.path.join(pasta, im["nome"])
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        with open(destino, "wb") as f:
+            f.write(dados)
+        feitos.append(f"{im['nome']} ({usado})")
+        time.sleep(4)
+    return feitos
+
+
+MOTORES = {"imagens": rodar_imagens, "modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
 
 
 def main():
