@@ -1,0 +1,82 @@
+Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
+Fra:12 Mem:74.04M (Peak 74.83M) | Time:00:23.16 | Rendering 1 / 32 samples
+Fra:12 Mem:74.04M (Peak 74.83M) | Time:00:52.09 | Rendering 25 / 32 samples
+Fra:12 Mem:74.04M (Peak 74.83M) | Time:01:00.37 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/still_eevee.png'
+Time: 01:00.52 (Saving: 00:00.14)
+
+Fra:1 Mem:74.04M (Peak 81.95M) | Time:00:02.79 | Rendering 1 / 32 samples
+Fra:1 Mem:74.04M (Peak 81.95M) | Time:00:31.25 | Rendering 25 / 32 samples
+Fra:1 Mem:74.04M (Peak 81.95M) | Time:00:39.63 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0001.png'
+Time: 00:39.72 (Saving: 00:00.08)
+
+Fra:2 Mem:74.04M (Peak 81.95M) | Time:00:02.78 | Rendering 1 / 32 samples
+Fra:2 Mem:74.04M (Peak 81.95M) | Time:00:31.53 | Rendering 25 / 32 samples
+Fra:2 Mem:74.04M (Peak 81.95M) | Time:00:39.98 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0002.png'
+Time: 00:40.08 (Saving: 00:00.08)
+
+Fra:3 Mem:74.04M (Peak 81.95M) | Time:00:02.80 | Rendering 1 / 32 samples
+Fra:3 Mem:74.04M (Peak 81.95M) | Time:00:31.95 | Rendering 25 / 32 samples
+Fra:3 Mem:74.04M (Peak 81.95M) | Time:00:40.41 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0003.png'
+Time: 00:40.50 (Saving: 00:00.08)
+
+Fra:4 Mem:74.04M (Peak 81.95M) | Time:00:02.80 | Rendering 1 / 32 samples
+Fra:4 Mem:74.04M (Peak 81.95M) | Time:00:31.97 | Rendering 25 / 32 samples
+Fra:4 Mem:74.04M (Peak 81.95M) | Time:00:40.50 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0004.png'
+Time: 00:40.59 (Saving: 00:00.08)
+
+Fra:5 Mem:74.04M (Peak 81.95M) | Time:00:02.83 | Rendering 1 / 32 samples
+Fra:5 Mem:74.04M (Peak 81.95M) | Time:00:32.11 | Rendering 25 / 32 samples
+Fra:5 Mem:74.04M (Peak 81.95M) | Time:00:40.56 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0005.png'
+Time: 00:40.65 (Saving: 00:00.08)
+
+Fra:6 Mem:74.04M (Peak 81.95M) | Time:00:02.80 | Rendering 1 / 32 samples
+Fra:6 Mem:74.04M (Peak 81.95M) | Time:00:31.77 | Rendering 25 / 32 samples
+Fra:6 Mem:74.04M (Peak 81.95M) | Time:00:40.20 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0006.png'
+Time: 00:40.29 (Saving: 00:00.08)
+
+Fra:7 Mem:74.04M (Peak 81.95M) | Time:00:02.82 | Rendering 1 / 32 samples
+Fra:7 Mem:74.04M (Peak 81.95M) | Time:00:31.71 | Rendering 25 / 32 samples
+Fra:7 Mem:74.04M (Peak 81.95M) | Time:00:39.99 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0007.png'
+Time: 00:40.09 (Saving: 00:00.08)
+
+Fra:8 Mem:74.04M (Peak 81.95M) | Time:00:02.76 | Rendering 1 / 32 samples
+Fra:8 Mem:74.04M (Peak 81.95M) | Time:00:32.07 | Rendering 25 / 32 samples
+Fra:8 Mem:74.04M (Peak 81.95M) | Time:00:40.37 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0008.png'
+Time: 00:40.46 (Saving: 00:00.08)
+
+Fra:9 Mem:74.04M (Peak 81.95M) | Time:00:02.76 | Rendering 1 / 32 samples
+Fra:9 Mem:74.04M (Peak 81.95M) | Time:00:31.37 | Rendering 25 / 32 samples
+Fra:9 Mem:74.04M (Peak 81.95M) | Time:00:39.70 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0009.png'
+Time: 00:39.79 (Saving: 00:00.08)
+
+Fra:10 Mem:74.04M (Peak 81.95M) | Time:00:02.78 | Rendering 1 / 32 samples
+Fra:10 Mem:74.04M (Peak 81.95M) | Time:00:31.55 | Rendering 25 / 32 samples
+Fra:10 Mem:74.04M (Peak 81.95M) | Time:00:39.91 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0010.png'
+Time: 00:40.00 (Saving: 00:00.08)
+
+Fra:11 Mem:74.04M (Peak 81.95M) | Time:00:02.77 | Rendering 1 / 32 samples
+Fra:11 Mem:74.04M (Peak 81.95M) | Time:00:31.53 | Rendering 25 / 32 samples
+Fra:11 Mem:74.04M (Peak 81.95M) | Time:00:39.94 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0011.png'
+Time: 00:40.03 (Saving: 00:00.08)
+
+Fra:12 Mem:74.04M (Peak 81.95M) | Time:00:02.79 | Rendering 1 / 32 samples
+Fra:12 Mem:74.04M (Peak 81.95M) | Time:00:31.67 | Rendering 25 / 32 samples
+Fra:12 Mem:74.04M (Peak 81.95M) | Time:00:40.04 | Rendering 32 / 32 samples
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/teste/anim_eevee_0012.png'
+Time: 00:40.13 (Saving: 00:00.08)
+
+TEMPOS {'motor': 'BLENDER_EEVEE_NEXT', 'still_s': 60.5, 'anim_24q_s': 482.4, 'por_quadro_s': 40.2}
+
+Blender quit
