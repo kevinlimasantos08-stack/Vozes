@@ -1,4 +1,4 @@
-inicio 21:51:10 nucleos=2
+inicio 21:52:56 nucleos=2
 [INFO ] mpfb.init ..............................: Build info FROM_SOURCE
 [INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
 [INFO ] mpfb.init ..............................: MPFB initialization has finished.
@@ -6,8 +6,24 @@ Info: Preferences saved
 Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
 PPA focal: 
 PPA jammy: pool/main/m/makehuman-community/makehuman-community_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-3dobjs-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-bodyparts_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-bodyparts-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-clothes_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-clothes-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-hair_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-hair-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-proxymeshes-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-skins_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-targets_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-targets-dev_1.3.0+20240427162744-1ppa1_all.deb 
-PPA bionic: 
-PPA 2s base=
-clone LFS falhou
-LFS 0s base=
-fim 21:52:21
+  makehuman-community_1.3.0+20240427162744-1ppa1_all.deb 7.1M
+  makehuman-community-bodyparts_1.3.0+20240427162744-1ppa1_all.deb 10M
+  makehuman-community-bodyparts-dev_1.3.0+20240427162744-1ppa1_all.deb 288K
+  makehuman-community-clothes_1.3.0+20240427162744-1ppa1_all.deb 127M
+  makehuman-community-clothes-dev_1.3.0+20240427162744-1ppa1_all.deb 1.7M
+  makehuman-community-hair_1.3.0+20240427162744-1ppa1_all.deb 34M
+  makehuman-community-hair-dev_1.3.0+20240427162744-1ppa1_all.deb 936K
+  makehuman-community-proxymeshes-dev_1.3.0+20240427162744-1ppa1_all.deb 1.4M
+  makehuman-community-skins_1.3.0+20240427162744-1ppa1_all.deb 84M
+PPA 18s base=/tmp/mh/ppa/usr/share/makehuman-community/data
+pastas: 3dobjs VERSION animations clear.thumb clothes expressions eyebrows eyelashes eyes hair icons images.list languages litspheres logging.ini materials modifiers notfound.thumb poses poseunits povray proxymeshes rigs scenes shaders skins teeth textures themes tongue uvs 
+pngs: 191, exemplo /tmp/mh/ppa/usr/share/makehuman-community/data/eyes/materials/deepblue_eye.png
+mhclo: 55 mhpxy: 64 obj: 62
+eyes: low-poly.mhclo high-poly.mhclo 
+eyebrows: eyebrow009.mhclo eyebrow008.mhclo eyebrow007.mhclo eyebrow012.mhclo eyebrow011.mhclo eyebrow003.mhclo eyebrow001.mhclo eyebrow002.mhclo eyebrow010.mhclo eyebrow004.mhclo eyebrow005.mhclo eyebrow006.mhclo 
+eyelashes: eyelashes02.mhclo eyelashes03.mhclo eyelashes04.mhclo eyelashes01.mhclo 
+hair: short02.mhclo ponytail01.mhclo long01.mhclo bob01.mhclo bob02.mhclo short04.mhclo braid01.mhclo short03.mhclo afro01.mhclo short01.mhclo 
+teeth: teeth_shape01.mhclo teeth_shape03.mhclo teeth_shape02.mhclo teeth_shape05.mhclo teeth_shape04.mhclo teeth_base.mhclo 
+tongue: tongue01.mhclo 
+roupas: shoes03.mhclo female_sportsuit01.mhclo male_casualsuit04.mhclo male_casualsuit01.mhclo female_casualsuit02.mhclo male_casualsuit06.mhclo male_worksuit01.mhclo female_casualsuit01.mhclo shoes05.mhclo male_casualsuit03.mhclo male_casualsuit02.mhclo shoes06.mhclo male_casualsuit05.mhclo shoes02.mhclo shoes04.mhclo female_elegantsuit01.mhclo shoes01.mhclo fedora_cocked.mhclo fedora.mhclo male_elegantsuit01.mhclo 
+peles: middleage_caucasian_female.mhmat old_african_male.mhmat young_african_male.mhmat default.mhmat middleage_african_male.mhmat middleage_caucasian_male.mhmat middleage_asian_female.mhmat young_caucasian_female.mhmat young_caucasian_female_special_suit.mhmat young_caucasian_female2.mhmat middleage_asian_male.mhmat young_african_female.mhmat young_asian_male.mhmat old_asian_female.mhmat old_asian_male.mhmat young_caucasian_male.mhmat young_caucasian_male_special_suit.mhmat young_caucasian_male2.mhmat old_caucasian_male.mhmat toon01.mhmat young_asian_female.mhmat old_caucasian_female.mhmat middleage_african_female.mhmat old_african_female.mhmat 
