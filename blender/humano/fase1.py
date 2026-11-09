@@ -1,4 +1,5 @@
 # Fase 1 — Dr. Rafael realista (MPFB2) em escritório Maison Noir, still em Cycles.
+# v2: downloads com limite de tempo e cache
 # Uso: blender -b --addons bl_ext.user_default.mpfb -P fase1.py -- <saida> <pasta_zips>
 import importlib, sys, os, json, math, time, traceback
 
