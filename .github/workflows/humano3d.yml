@@ -34,9 +34,26 @@ jobs:
           (cd /tmp/mpfb2/src/mpfb && zip -qr /tmp/mpfb.zip .)
           ./blender-app/blender -b --command extension install-file -r user_default --enable /tmp/mpfb.zip 2>&1 | tail -5 | tee -a $OUT/andamento.txt
 
+      - name: Preparar envio de andamento
+        run: |
+          git config --global user.name "estudio-vozes"
+          git config --global user.email "actions@users.noreply.github.com"
+          cat > /tmp/enviar.sh <<'SH'
+          enviar () {
+            for t in 1 2 3; do
+              git fetch -q origin main && git reset -q origin/main
+              git add $OUT
+              git diff --cached --quiet && return 0
+              git commit -qm "$1" && git push -q origin HEAD:main && return 0
+              sleep 5
+            done
+            return 0
+          }
+          SH
+
       - name: Recuperar pacotes já baixados
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: /tmp/packs
           key: mhpacks-v2
@@ -45,6 +62,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         timeout-minutes: 60
         run: |
+          source /tmp/enviar.sh
           mkdir -p /tmp/packs
           git config user.name "estudio-vozes"
           git config user.email "actions@users.noreply.github.com"
@@ -60,15 +78,23 @@ jobs:
                 rm -f /tmp/packs/$1.zip
               fi
             done
-            git add $OUT && git commit -qm "Humano 3D: pacote $1" && git pull -q --rebase && git push -q || true
+            enviar "Humano 3D: pacote $1"
           }
           # o servidor do MakeHuman é muito lento a partir do GitHub (~10 KB/s): só o pacote pequeno de barbas
           baixar bodyparts05 bodyparts05/bodyparts05_cc0.zip
+
+      - name: Guardar pacotes para as próximas vezes
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/packs
+          key: mhpacks-v2
 
       - name: Assets base do MakeHuman (GitHub, CC0)
         continue-on-error: true
         timeout-minutes: 20
         run: |
+          source /tmp/enviar.sh
           git lfs install >/dev/null
           ini=$(date +%s)
           git clone -q --depth 1 https://github.com/makehumancommunity/makehuman-assets.git /tmp/mha
@@ -76,7 +102,7 @@ jobs:
           ls /tmp/mha >> $OUT/andamento.txt
           ls /tmp/mha/base 2>/dev/null | tr '\n' ' ' >> $OUT/andamento.txt; echo >> $OUT/andamento.txt
           f=$(find /tmp/mha -name "*.png" | head -1); echo "png exemplo: $f $(stat -c %s "$f" 2>/dev/null) bytes" >> $OUT/andamento.txt
-          git add $OUT && git commit -qm "Humano 3D: assets base" && git pull -q --rebase && git push -q || true
+          enviar "Humano 3D: assets base"
 
       - name: Montar e renderizar o Dr. Rafael
         continue-on-error: true
@@ -88,11 +114,9 @@ jobs:
       - name: Devolver para o repositório
         if: always()
         run: |
+          source /tmp/enviar.sh
           [ -f $OUT/log.txt ] && grep -v "^Fra:\|Sample \|Rendering\|Updating" $OUT/log.txt | tail -c 15000 > $OUT/log_curto.txt && rm $OUT/log.txt
           git config user.name "estudio-vozes"
           git config user.email "actions@users.noreply.github.com"
           echo "fim $(date -u +%H:%M:%S)" >> $OUT/andamento.txt
-          git add $OUT
-          git diff --cached --quiet || git commit -qm "Humano 3D: resultado"
-          git pull -q --rebase
-          git push -q
+          enviar "Humano 3D: resultado"
