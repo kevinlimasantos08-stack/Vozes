@@ -11,49 +11,66 @@ permissions:
 
 concurrency:
   group: render3d
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
       - name: Instalar Blender
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq xvfb libegl1 libgl1 libgl1-mesa-dri libxi6 libxxf86vm1 libxfixes3 libxrender1 libxkbcommon0 libsm6 >/dev/null
-          curl -sSL -o b.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
+          mkdir -p saidas3d/teste
+          echo "inicio $(date -u +%H:%M:%S)" > saidas3d/teste/andamento.txt
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq xvfb libegl1 libgl1 libgl1-mesa-dri libxi6 libxxf86vm1 libxfixes3 libxrender1 libxkbcommon0 libsm6 ffmpeg >/dev/null
+          curl -sSfL -o b.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
           tar -xf b.tar.xz && mv blender-4.2.3-linux-x64 blender-app
-          ./blender-app/blender --version | head -1
+          ./blender-app/blender --version | head -1 >> saidas3d/teste/andamento.txt
+          nproc >> saidas3d/teste/andamento.txt
+
+      - name: Avisar que instalou
+        run: |
+          echo "blender instalado $(date -u +%H:%M:%S)" >> saidas3d/teste/andamento.txt
+          git config user.name "estudio-vozes"
+          git config user.email "actions@users.noreply.github.com"
+          git add saidas3d && git commit -qm "Render 3D: Blender instalado" && git pull -q --rebase && git push -q
 
       - name: Teste EEVEE
         continue-on-error: true
+        timeout-minutes: 25
         run: |
-          mkdir -p saidas3d/teste
-          xvfb-run -a -s "-screen 0 1920x1080x24" ./blender-app/blender -b -P blender/teste_personagem.py -- saidas3d/teste eevee 2>&1 | tail -30 | tee saidas3d/teste/log_eevee.txt
+          xvfb-run -a -s "-screen 0 1920x1080x24" ./blender-app/blender -b -P blender/teste_personagem.py -- saidas3d/teste eevee > saidas3d/teste/log_eevee.txt 2>&1
+          echo "eevee fim $(date -u +%H:%M:%S)" >> saidas3d/teste/andamento.txt
 
       - name: Teste Cycles
         continue-on-error: true
+        timeout-minutes: 40
         run: |
-          ./blender-app/blender -b -P blender/teste_personagem.py -- saidas3d/teste cycles 2>&1 | tail -30 | tee saidas3d/teste/log_cycles.txt
+          ./blender-app/blender -b -P blender/teste_personagem.py -- saidas3d/teste cycles > saidas3d/teste/log_cycles.txt 2>&1
+          echo "cycles fim $(date -u +%H:%M:%S)" >> saidas3d/teste/andamento.txt
 
       - name: Juntar quadros em vídeo curto
+        if: always()
         continue-on-error: true
         run: |
           cd saidas3d/teste
           for m in eevee cycles; do
             if ls anim_${m}_*.png >/dev/null 2>&1; then
-              ffmpeg -v error -y -framerate 24 -pattern_type glob -i "anim_${m}_*.png" -vf scale=540:-2 -pix_fmt yuv420p anim_${m}.mp4 && rm anim_${m}_*.png
+              ffmpeg -v error -y -framerate 12 -pattern_type glob -i "anim_${m}_*.png" -pix_fmt yuv420p anim_${m}.mp4 && rm anim_${m}_*.png
             fi
           done
+          for f in log_*.txt; do [ -f "$f" ] && tail -c 6000 "$f" > "$f.tmp" && mv "$f.tmp" "$f"; done
 
       - name: Devolver para o repositório
+        if: always()
         run: |
           git config user.name "estudio-vozes"
           git config user.email "actions@users.noreply.github.com"
+          echo "fim $(date -u +%H:%M:%S)" >> saidas3d/teste/andamento.txt
           git add saidas3d
-          git diff --cached --quiet || git commit -m "Render 3D de teste"
-          git pull --rebase
-          git push
+          git diff --cached --quiet || git commit -qm "Render 3D de teste"
+          git pull -q --rebase
+          git push -q

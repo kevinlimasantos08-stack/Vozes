@@ -152,7 +152,7 @@ cam.location = (0, -4.6, 1.5)
 cam_d.dof.use_dof = True; cam_d.dof.focus_object = cabeca; cam_d.dof.aperture_fstop = 2.8
 
 # animação de teste: aproximação + balanço da cabeça + boca
-sc.frame_start, sc.frame_end = 1, 24
+sc.frame_start, sc.frame_end = 1, 12
 cam.keyframe_insert("location", frame=1)
 cam.location = (0, -3.6, 1.55); cam.keyframe_insert("location", frame=24)
 for f in range(1, 25):
@@ -163,7 +163,7 @@ for f in range(1, 25):
 
 # ---------------- render
 r = sc.render
-r.resolution_x, r.resolution_y, r.resolution_percentage = 1080, 1920, 100
+r.resolution_x, r.resolution_y, r.resolution_percentage = 1080, 1920, 50
 r.image_settings.file_format = "PNG"
 if MOTOR == "eevee":
     for nome in ("BLENDER_EEVEE_NEXT", "BLENDER_EEVEE"):
@@ -179,7 +179,7 @@ if MOTOR == "eevee":
 else:
     r.engine = "CYCLES"
     sc.cycles.device = "CPU"
-    sc.cycles.samples = 24
+    sc.cycles.samples = 16
     sc.cycles.use_denoising = True
     sc.cycles.max_bounces = 4
 
@@ -194,6 +194,6 @@ t0 = time.time()
 r.filepath = os.path.join(OUT, f"anim_{MOTOR}_")
 bpy.ops.render.render(animation=True)
 tempos["anim_24q_s"] = round(time.time() - t0, 1)
-tempos["por_quadro_s"] = round(tempos["anim_24q_s"] / 24, 2)
+tempos["por_quadro_s"] = round(tempos["anim_24q_s"] / 12, 2)
 json.dump(tempos, open(os.path.join(OUT, f"tempos_{MOTOR}.json"), "w"), indent=1)
 print("TEMPOS", tempos)
