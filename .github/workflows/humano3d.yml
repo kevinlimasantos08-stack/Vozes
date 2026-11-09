@@ -96,7 +96,7 @@ jobs:
         run: |
           source /tmp/enviar.sh
           mkdir -p /tmp/mh && cd /tmp/mh
-          achar_base () { find /tmp/mh -type d -name skins -printf '%h\n' 2>/dev/null | while read d; do [ -d "$d/eyes" ] && echo "$d" && break; done; }
+          achar_base () { find /tmp/mh -type d -name skins -printf '%h\n' 2>/dev/null | while read d; do [ -d "$d/clothes" ] && echo "$d" && break; done; }
           # 1) pacote Ubuntu do PPA oficial (rápido, CDN do Launchpad)
           ini=$(date +%s)
           for dist in focal jammy bionic; do
@@ -104,8 +104,8 @@ jobs:
             if curl -sSfL --max-time 60 "$idx" -o Packages.gz; then
               zcat Packages.gz | grep "^Filename:" | awk '{print $2}' > lista.txt
               echo "PPA $dist: $(tr '\n' ' ' < lista.txt)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
-              for f in $(grep -E "makehuman-community(-data)?_" lista.txt); do
-                curl -sSfL --max-time 900 -o pkg.deb "https://ppa.launchpadcontent.net/makehuman-official/makehuman-community/ubuntu/$f" && dpkg-deb -x pkg.deb /tmp/mh/ppa && rm pkg.deb
+              for f in $(grep -E "makehuman-community(-bodyparts|-clothes|-hair|-skins|-proxymeshes)?(-dev)?_" lista.txt); do
+                curl -sSfL --max-time 900 -o pkg.deb "https://ppa.launchpadcontent.net/makehuman-official/makehuman-community/ubuntu/$f" && dpkg-deb -x pkg.deb /tmp/mh/ppa && echo "  $(basename $f) $(du -h pkg.deb | cut -f1)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt && rm pkg.deb
               done
               [ -n "$(achar_base)" ] && break
             fi
@@ -124,6 +124,9 @@ jobs:
             ln -sfn "$b" /tmp/mhbase
             echo "pastas: $(ls $b | tr '\n' ' ')" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
             echo "pngs: $(find $b -name '*.png' | wc -l), exemplo $(find $b -name '*.png' -size +20k | head -1)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+            echo "mhclo: $(find $b -name '*.mhclo' | wc -l) mhpxy: $(find $b -name '*.mhpxy' | wc -l) obj: $(find $b -name '*.obj' | wc -l)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+            for d in eyes eyebrows eyelashes hair teeth tongue; do echo "$d: $(find $b/$d -name '*.mhclo' -printf '%f ' 2>/dev/null | head -c 300)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt; done
+            echo "roupas: $(find $b/clothes -name '*.mhclo' -printf '%f ' | head -c 900)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
             echo "peles: $(find $b/skins -name '*.mhmat' -printf '%f ' )" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
           fi
           cd $GITHUB_WORKSPACE
