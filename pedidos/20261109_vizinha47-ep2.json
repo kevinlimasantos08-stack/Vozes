@@ -1,0 +1,122 @@
+{
+ "id": "vizinha47-ep2",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio, liguei pra minha mãe. Perguntei se eu já morei aqui.",
+     "estilo": "Brazilian Portuguese accent, young woman, uneasy, low voice at night"
+    },
+    {
+     "quem": "caio",
+     "texto": "E o que ela disse?",
+     "estilo": "Brazilian Portuguese accent, young man, curious, worried"
+    },
+    {
+     "quem": "nina",
+     "texto": "Ficou em silêncio. E desligou na minha cara.",
+     "estilo": "Brazilian Portuguese accent, hurt and scared, slow"
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina… olha o que eu achei no armário.",
+     "estilo": "Brazilian Portuguese accent, hesitant, almost whispering"
+    },
+    {
+     "quem": "nina",
+     "texto": "Uma foto? Sou eu! Com seis anos.",
+     "estilo": "Brazilian Portuguese accent, shocked, voice trembling"
+    },
+    {
+     "quem": "caio",
+     "texto": "Na frente desta porta. Olha o número.",
+     "estilo": "Brazilian Portuguese accent, low, tense"
+    },
+    {
+     "quem": "nina",
+     "texto": "Quarenta e sete.",
+     "estilo": "Brazilian Portuguese accent, whispering, terrified"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Achou a foto, né, minha filha?",
+     "estilo": "Brazilian Portuguese accent, old woman, sweet but eerie, slow"
+    },
+    {
+     "quem": "nina",
+     "texto": "A senhora colocou isso lá dentro?",
+     "estilo": "Brazilian Portuguese accent, nervous, defensive"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Eu guardei pra você. Por vinte anos.",
+     "estilo": "Brazilian Portuguese accent, calm, mysterious"
+    },
+    {
+     "quem": "nina",
+     "texto": "Minha mãe nunca falou dessa casa.",
+     "estilo": "Brazilian Portuguese accent, confused, insisting"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Claro que não. Ela foi a última a sair.",
+     "estilo": "Brazilian Portuguese accent, slow, knowing, a little cold"
+    },
+    {
+     "quem": "nina",
+     "texto": "O que aconteceu no incêndio?",
+     "estilo": "Brazilian Portuguese accent, scared, almost whispering"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Pergunta pra ela… por que trancou a porta.",
+     "estilo": "Brazilian Portuguese accent, almost a whisper, ominous, very slow"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Achei a notícia do incêndio. Teve uma vítima.",
+     "estilo": "Brazilian Portuguese accent, serious, tense, reading from phone"
+    },
+    {
+     "quem": "nina",
+     "texto": "Quem?",
+     "estilo": "Brazilian Portuguese accent, scared, short breath"
+    },
+    {
+     "quem": "caio",
+     "texto": "Uma senhora de setenta anos. O nome dela…",
+     "estilo": "Brazilian Portuguese accent, slow, hesitant"
+    },
+    {
+     "quem": "caio",
+     "texto": "…era Lurdes.",
+     "estilo": "Brazilian Portuguese accent, whisper, shocked"
+    },
+    {
+     "quem": "nina",
+     "texto": "Então… com quem eu acabei de falar?",
+     "estilo": "Brazilian Portuguese accent, terrified, trembling whisper"
+    }
+   ]
+  }
+ ]
+}
