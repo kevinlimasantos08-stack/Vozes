@@ -39,7 +39,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /tmp/packs
-          key: mhpacks-v1
+          key: mhpacks-v2
 
       - name: Baixar pacotes de assets (CC0)
         if: steps.cache.outputs.cache-hit != 'true'
@@ -62,16 +62,27 @@ jobs:
             done
             git add $OUT && git commit -qm "Humano 3D: pacote $1" && git pull -q --rebase && git push -q || true
           }
+          # o servidor do MakeHuman é muito lento a partir do GitHub (~10 KB/s): só o pacote pequeno de barbas
           baixar bodyparts05 bodyparts05/bodyparts05_cc0.zip
-          baixar skins02 skins02/skins02_cc0.zip
-          baixar suits01 suits01/suits01_cc0.zip
-          baixar system makehuman_system_assets/makehuman_system_assets_cc0.zip
+
+      - name: Assets base do MakeHuman (GitHub, CC0)
+        continue-on-error: true
+        timeout-minutes: 20
+        run: |
+          git lfs install >/dev/null
+          ini=$(date +%s)
+          git clone -q --depth 1 https://github.com/makehumancommunity/makehuman-assets.git /tmp/mha
+          echo "makehuman-assets $(du -sh /tmp/mha | cut -f1) em $(( $(date +%s) - ini ))s" >> $OUT/andamento.txt
+          ls /tmp/mha >> $OUT/andamento.txt
+          ls /tmp/mha/base 2>/dev/null | tr '\n' ' ' >> $OUT/andamento.txt; echo >> $OUT/andamento.txt
+          f=$(find /tmp/mha -name "*.png" | head -1); echo "png exemplo: $f $(stat -c %s "$f" 2>/dev/null) bytes" >> $OUT/andamento.txt
+          git add $OUT && git commit -qm "Humano 3D: assets base" && git pull -q --rebase && git push -q || true
 
       - name: Montar e renderizar o Dr. Rafael
         continue-on-error: true
         timeout-minutes: 80
         run: |
-          ./blender-app/blender -b --addons bl_ext.user_default.mpfb -P blender/humano/fase1.py -- $OUT /tmp/packs > $OUT/log.txt 2>&1
+          ./blender-app/blender -b --addons bl_ext.user_default.mpfb -P blender/humano/fase1.py -- $OUT /tmp/packs /tmp/mha/base > $OUT/log.txt 2>&1
           echo "render fim $(date -u +%H:%M:%S)" >> $OUT/andamento.txt
 
       - name: Devolver para o repositório

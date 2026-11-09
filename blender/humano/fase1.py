@@ -18,6 +18,7 @@ from mathutils import Vector
 argv = sys.argv[sys.argv.index("--") + 1:]
 SAIDA = os.path.abspath(argv[0])
 ZIPS = os.path.abspath(argv[1]) if len(argv) > 1 else ""
+BASE = os.path.abspath(argv[2]) if len(argv) > 2 else ""
 os.makedirs(SAIDA, exist_ok=True)
 INFO = []
 
@@ -47,6 +48,13 @@ if ZIPS and os.path.isdir(ZIPS):
         if z.endswith(".zip"):
             err = AssetService.fix_and_extract_asset_pack_zip(os.path.join(ZIPS, z), dados)
             log("pacote", z, "->", err or "ok")
+import shutil
+if BASE and os.path.isdir(BASE):
+    for d in sorted(os.listdir(BASE)):
+        src = os.path.join(BASE, d)
+        if os.path.isdir(src):
+            shutil.copytree(src, os.path.join(dados, d), dirs_exist_ok=True)
+    log("assets base copiados:", sorted(os.listdir(BASE)))
 for fn in ("rescan_pack_metadata", "update_all_asset_lists"):
     try:
         getattr(AssetService, fn)()
@@ -100,7 +108,8 @@ TargetService.reapply_macro_details(human)
 log("macros", macros)
 
 # pele
-pele = escolher("skins", ["toigo bronze", "middleage male", "young male", "male"], ("female", "tattoo", "genitals"))
+pele = escolher("skins", ["toigo bronze", "middleage lightskinned male", "middleage caucasian male",
+                          "young lightskinned male", "young caucasian male", "male"], ("female", "tattoo", "genitals"))
 log("pele:", pele)
 if pele:
     for tipo in ("ENHANCED_SSS", "MAKESKIN"):
@@ -143,7 +152,7 @@ add("teeth", escolher("teeth", ["teeth_base", "teeth"]), "Teeth")
 add("tongue", escolher("tongue", ["tongue01", "tongue"]), "Tongue")
 add("hair", escolher("hair", ["short02", "short04", "short03", "short01", "short"], ("female",)), "Hair")
 add("clothes", escolher("clothes", ["scruffy beard", "beard"], ("viking", "faun")), "Clothes")
-terno = escolher("clothes", ["suit male", "suit", "male casualsuit", "casualsuit", "male"], ("female", "beard", "moustache"))
+terno = escolher("clothes", ["male worksuit", "worksuit", "suit male", "male casualsuit", "casualsuit", "male"], ("female", "beard", "moustache"))
 add("clothes", terno, "Clothes")
 sapato = escolher("clothes", ["shoes0", "shoes"], ("female",))
 add("clothes", sapato, "Clothes")
