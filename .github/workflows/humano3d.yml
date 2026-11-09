@@ -1,0 +1,71 @@
+name: Humano 3D
+
+on:
+  push:
+    paths:
+      - "blender/humano/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: humano3d
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      OUT: saidas3d/humano
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Blender e MPFB
+        run: |
+          mkdir -p $OUT
+          echo "inicio $(date -u +%H:%M:%S) nucleos=$(nproc)" > $OUT/andamento.txt
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq libegl1 libgl1 libxi6 libxxf86vm1 libxfixes3 libxrender1 libxkbcommon0 libsm6 zip >/dev/null
+          curl -sSfL -o b.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
+          tar -xf b.tar.xz && mv blender-4.2.3-linux-x64 blender-app && rm b.tar.xz
+          git clone -q --depth 1 https://github.com/makehumancommunity/mpfb2.git /tmp/mpfb2
+          (cd /tmp/mpfb2/src/mpfb && zip -qr /tmp/mpfb.zip .)
+          ./blender-app/blender -b --command extension install-file -r user_default --enable /tmp/mpfb.zip 2>&1 | tail -5 | tee -a $OUT/andamento.txt
+
+      - name: Baixar pacotes de assets (CC0)
+        run: |
+          mkdir -p /tmp/packs
+          baixar () {
+            curl -sSfL -o /tmp/packs/$1.zip "https://files2.makehumancommunity.org/asset_packs/$2" \
+            || curl -sSfL -o /tmp/packs/$1.zip "https://files.makehumancommunity.org/asset_packs/$2" \
+            || { echo "falhou $1" >> $OUT/andamento.txt; rm -f /tmp/packs/$1.zip; }
+          }
+          baixar system makehuman_system_assets/makehuman_system_assets_cc0.zip
+          baixar skins02 skins02/skins02_cc0.zip
+          baixar bodyparts05 bodyparts05/bodyparts05_cc0.zip
+          baixar suits01 suits01/suits01_cc0.zip
+          ls -la /tmp/packs >> $OUT/andamento.txt
+          git config user.name "estudio-vozes"
+          git config user.email "actions@users.noreply.github.com"
+          git add $OUT && git commit -qm "Humano 3D: instalado" && git pull -q --rebase && git push -q
+
+      - name: Montar e renderizar o Dr. Rafael
+        continue-on-error: true
+        timeout-minutes: 80
+        run: |
+          ./blender-app/blender -b --addons bl_ext.user_default.mpfb -P blender/humano/fase1.py -- $OUT /tmp/packs > $OUT/log.txt 2>&1
+          echo "render fim $(date -u +%H:%M:%S)" >> $OUT/andamento.txt
+
+      - name: Devolver para o repositório
+        if: always()
+        run: |
+          [ -f $OUT/log.txt ] && grep -v "^Fra:\|Sample \|Rendering\|Updating" $OUT/log.txt | tail -c 15000 > $OUT/log_curto.txt && rm $OUT/log.txt
+          git config user.name "estudio-vozes"
+          git config user.email "actions@users.noreply.github.com"
+          echo "fim $(date -u +%H:%M:%S)" >> $OUT/andamento.txt
+          git add $OUT
+          git diff --cached --quiet || git commit -qm "Humano 3D: resultado"
+          git pull -q --rebase
+          git push -q

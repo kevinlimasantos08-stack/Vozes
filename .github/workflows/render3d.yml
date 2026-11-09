@@ -3,7 +3,7 @@ name: Render 3D
 on:
   push:
     paths:
-      - "blender/**"
+      - "blender/teste_personagem.py"
   workflow_dispatch:
 
 permissions:
