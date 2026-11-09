@@ -1,0 +1,98 @@
+{
+ "id": "cobranca-dobro",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "rafael": "Charon",
+  "rosa": "Aoede",
+  "marcos": "Orus",
+  "narrador": "Schedar"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "rosa",
+     "texto": "Eu cancelei a internet em março. Por que ainda estão me cobrando?",
+     "estilo": "Brazilian Portuguese accent, indignant, frustrated, on the edge"
+    },
+    {
+     "quem": "marcos",
+     "texto": "Consta ativo no sistema, senhora. A cobrança está correta.",
+     "estilo": "Brazilian Portuguese accent, bored call-center attendant, cold and scripted"
+    },
+    {
+     "quem": "rosa",
+     "texto": "Correta? Paguei seis meses de um serviço que nem uso!",
+     "estilo": "Brazilian Portuguese accent, shocked and outraged"
+    },
+    {
+     "quem": "marcos",
+     "texto": "Devolvo só o último mês. O resto, só provando.",
+     "estilo": "Brazilian Portuguese accent, dismissive, smug"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "rosa",
+     "texto": "Doutor, querem devolver só um mês.",
+     "estilo": "Brazilian Portuguese accent, worried, discouraged"
+    },
+    {
+     "quem": "rafael",
+     "texto": "Você guardou o protocolo do cancelamento?",
+     "estilo": "Brazilian Portuguese accent, calm, attentive lawyer"
+    },
+    {
+     "quem": "rosa",
+     "texto": "Guardei. E todos os boletos pagos.",
+     "estilo": "Brazilian Portuguese accent, hopeful, a bit unsure"
+    },
+    {
+     "quem": "rafael",
+     "texto": "Então não aceite um mês.",
+     "estilo": "Brazilian Portuguese accent, firm, confident, slow"
+    },
+    {
+     "quem": "rafael",
+     "texto": "Quem paga cobrança indevida tem direito a receber em dobro o que pagou a mais.",
+     "estilo": "Brazilian Portuguese accent, confident, clear explanation"
+    },
+    {
+     "quem": "rafael",
+     "texto": "Com correção e juros. Só escapa se provar engano justificável.",
+     "estilo": "Brazilian Portuguese accent, confident, precise"
+    },
+    {
+     "quem": "rosa",
+     "texto": "Mas eu preciso provar que eles agiram de má-fé?",
+     "estilo": "Brazilian Portuguese accent, surprised, curious"
+    },
+    {
+     "quem": "rafael",
+     "texto": "Não precisa. Desde dois mil e vinte e um, o ésse-tê-jota não exige prova de má-fé.",
+     "estilo": "Brazilian Portuguese accent, reassuring, confident"
+    },
+    {
+     "quem": "rosa",
+     "texto": "Então era eu quem tinha o que cobrar.",
+     "estilo": "Brazilian Portuguese accent, relieved, happy, a little smile"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Artigo quarenta e dois, parágrafo único, do Código de Defesa do Consumidor. Ésse-tê-jota, Corte Especial, dois mil e vinte e um.",
+     "estilo": "Brazilian Portuguese accent, serious and clear narrator"
+    }
+   ]
+  }
+ ]
+}
