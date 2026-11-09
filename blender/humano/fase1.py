@@ -152,8 +152,9 @@ add("eyelashes", escolher("eyelashes", ["eyelashes01", "eyelashes"]), "Eyelashes
 add("teeth", escolher("teeth", ["teeth_base", "teeth"]), "Teeth")
 add("tongue", escolher("tongue", ["tongue01", "tongue"]), "Tongue")
 add("hair", escolher("hair", ["short02", "short04", "short03", "short01", "short"], ("female",)), "Hair")
-add("clothes", escolher("clothes", ["scruffy beard", "beard"], ("viking", "faun")), "Clothes")
-terno = escolher("clothes", ["male worksuit", "worksuit", "suit male", "male casualsuit", "casualsuit", "male"], ("female", "beard", "moustache"))
+# barba em cartões ficou artificial no teste; volta na Fase 2 se aprovada
+# add("clothes", escolher("clothes", ["scruffy beard", "beard"], ("viking", "faun")), "Clothes")
+terno = escolher("clothes", ["male elegantsuit", "male worksuit", "worksuit", "suit male", "male casualsuit", "casualsuit", "male"], ("female", "beard", "moustache"))
 add("clothes", terno, "Clothes")
 sapato = escolher("clothes", ["shoes0", "shoes"], ("female",))
 add("clothes", sapato, "Clothes")
