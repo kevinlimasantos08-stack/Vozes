@@ -1,9 +1,12 @@
-inicio 21:23:51 nucleos=2
+inicio 21:51:10 nucleos=2
 [INFO ] mpfb.init ..............................: Build info FROM_SOURCE
 [INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
 [INFO ] mpfb.init ..............................: MPFB initialization has finished.
 Info: Preferences saved
 Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
-ok bodyparts05 files2 6.4M em 334s
-render fim 21:50:02
-fim 21:50:02
+PPA focal: 
+PPA jammy: pool/main/m/makehuman-community/makehuman-community_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-3dobjs-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-bodyparts_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-bodyparts-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-clothes_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-clothes-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-hair_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-hair-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-proxymeshes-dev_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-skins_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community/makehuman-community-targets_1.3.0+20240427162744-1ppa1_all.deb pool/main/m/makehuman-community-dev/makehuman-community-targets-dev_1.3.0+20240427162744-1ppa1_all.deb 
+PPA bionic: 
+PPA 2s base=
+clone LFS falhou
+LFS 0s base=
