@@ -52,7 +52,8 @@ import shutil
 if BASE and os.path.isdir(BASE):
     for d in sorted(os.listdir(BASE)):
         src = os.path.join(BASE, d)
-        if os.path.isdir(src):
+        if os.path.isdir(src) and d in ("skins", "eyes", "eyebrows", "eyelashes", "hair", "teeth",
+                                         "tongue", "clothes", "proxymeshes", "litspheres", "textures"):
             shutil.copytree(src, os.path.join(dados, d), dirs_exist_ok=True)
     log("assets base copiados:", sorted(os.listdir(BASE)))
 for fn in ("rescan_pack_metadata", "update_all_asset_lists"):
@@ -199,7 +200,15 @@ bpy.context.view_layer.update()
 pts = [human.matrix_world @ Vector(c) for c in human.bound_box]
 topo = max(p.z for p in pts)
 log("altura topo", round(topo, 3))
-rosto = Vector((0.0, -0.02, topo - 0.12))
+# ponto dos olhos: vértice mais à frente na altura da cabeça (ponta do nariz) e um pouco para trás
+dg = bpy.context.evaluated_depsgraph_get()
+ev = human.evaluated_get(dg)
+me = ev.to_mesh()
+cab = [ev.matrix_world @ v.co for v in me.vertices if v.co.z > 0 and (ev.matrix_world @ v.co).z > topo - 0.22]
+nariz = min(cab, key=lambda c: c.y) if cab else Vector((0, -0.1, topo - 0.15))
+ev.to_mesh_clear()
+rosto = Vector((0.0, nariz.y + 0.03, nariz.z + 0.035))
+log("nariz", tuple(round(x, 3) for x in nariz), "olhos", tuple(round(x, 3) for x in rosto))
 
 # ---------------------------------------------------------------- materiais simples
 
@@ -296,7 +305,7 @@ bpy.context.scene.world = w
 sc = bpy.context.scene
 sc.render.engine = "CYCLES"
 sc.cycles.device = "CPU"
-sc.cycles.samples = 96
+sc.cycles.samples = 64
 sc.cycles.use_adaptive_sampling = True
 sc.cycles.use_denoising = True
 try:
@@ -304,7 +313,7 @@ try:
 except Exception:
     pass
 try:
-    sc.cycles.time_limit = 1100
+    sc.cycles.time_limit = 600
 except Exception:
     pass
 sc.render.resolution_x, sc.render.resolution_y = 1080, 1920
@@ -326,8 +335,8 @@ cam_d.dof.use_dof = True
 tempos = {}
 planos = [
     # nome, deslocamento da câmera em relação ao rosto, mira (z relativa ao rosto), lente, f-stop
-    ("plano_medio", Vector((0.32, -1.55, -0.02)), -0.22, 50, 2.2),
-    ("close", Vector((0.18, -0.95, 0.0)), -0.02, 85, 2.0),
+    ("plano_medio", Vector((0.32, -1.55, -0.02)), -0.20, 50, 2.8),
+    ("close", Vector((0.18, -0.95, 0.0)), -0.03, 85, 3.5),
 ]
 salvar_info()
 for nome, desl, mira_z, lente, fs in planos:

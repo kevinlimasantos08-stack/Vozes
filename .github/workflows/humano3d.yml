@@ -90,25 +90,50 @@ jobs:
           path: /tmp/packs
           key: mhpacks-v2
 
-      - name: Assets base do MakeHuman (GitHub, CC0)
+      - name: Assets base do MakeHuman (CC0)
         continue-on-error: true
-        timeout-minutes: 20
+        timeout-minutes: 30
         run: |
           source /tmp/enviar.sh
-          git lfs install >/dev/null
+          mkdir -p /tmp/mh && cd /tmp/mh
+          achar_base () { find /tmp/mh -type d -name skins -printf '%h\n' 2>/dev/null | while read d; do [ -d "$d/eyes" ] && echo "$d" && break; done; }
+          # 1) pacote Ubuntu do PPA oficial (rápido, CDN do Launchpad)
           ini=$(date +%s)
-          git clone -q --depth 1 https://github.com/makehumancommunity/makehuman-assets.git /tmp/mha
-          echo "makehuman-assets $(du -sh /tmp/mha | cut -f1) em $(( $(date +%s) - ini ))s" >> $OUT/andamento.txt
-          ls /tmp/mha >> $OUT/andamento.txt
-          ls /tmp/mha/base 2>/dev/null | tr '\n' ' ' >> $OUT/andamento.txt; echo >> $OUT/andamento.txt
-          f=$(find /tmp/mha -name "*.png" | head -1); echo "png exemplo: $f $(stat -c %s "$f" 2>/dev/null) bytes" >> $OUT/andamento.txt
+          for dist in focal jammy bionic; do
+            idx="https://ppa.launchpadcontent.net/makehuman-official/makehuman-community/ubuntu/dists/$dist/main/binary-amd64/Packages.gz"
+            if curl -sSfL --max-time 60 "$idx" -o Packages.gz; then
+              zcat Packages.gz | grep "^Filename:" | awk '{print $2}' > lista.txt
+              echo "PPA $dist: $(tr '\n' ' ' < lista.txt)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+              for f in $(grep -E "makehuman-community(-data)?_" lista.txt); do
+                curl -sSfL --max-time 900 -o pkg.deb "https://ppa.launchpadcontent.net/makehuman-official/makehuman-community/ubuntu/$f" && dpkg-deb -x pkg.deb /tmp/mh/ppa && rm pkg.deb
+              done
+              [ -n "$(achar_base)" ] && break
+            fi
+          done
+          echo "PPA $(( $(date +%s) - ini ))s base=$(achar_base)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+          # 2) se não deu, repositório de assets com Git LFS
+          if [ -z "$(achar_base)" ]; then
+            ini=$(date +%s)
+            git lfs install >/dev/null
+            git clone -q --depth 1 https://github.com/makehumancommunity/makehuman-assets.git /tmp/mh/lfs \
+              || echo "clone LFS falhou" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+            echo "LFS $(( $(date +%s) - ini ))s base=$(achar_base)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+          fi
+          b=$(achar_base)
+          if [ -n "$b" ]; then
+            ln -sfn "$b" /tmp/mhbase
+            echo "pastas: $(ls $b | tr '\n' ' ')" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+            echo "pngs: $(find $b -name '*.png' | wc -l), exemplo $(find $b -name '*.png' -size +20k | head -1)" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+            echo "peles: $(find $b/skins -name '*.mhmat' -printf '%f ' )" >> $GITHUB_WORKSPACE/$OUT/andamento.txt
+          fi
+          cd $GITHUB_WORKSPACE
           enviar "Humano 3D: assets base"
 
       - name: Montar e renderizar o Dr. Rafael
         continue-on-error: true
         timeout-minutes: 80
         run: |
-          ./blender-app/blender -b --addons bl_ext.user_default.mpfb -P blender/humano/fase1.py -- $OUT /tmp/packs /tmp/mha/base > $OUT/log.txt 2>&1
+          ./blender-app/blender -b --addons bl_ext.user_default.mpfb -P blender/humano/fase1.py -- $OUT /tmp/packs /tmp/mhbase > $OUT/log.txt 2>&1
           echo "render fim $(date -u +%H:%M:%S)" >> $OUT/andamento.txt
 
       - name: Devolver para o repositório
