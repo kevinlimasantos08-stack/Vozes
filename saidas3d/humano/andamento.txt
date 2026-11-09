@@ -5,3 +5,5 @@ inicio 21:23:51 nucleos=2
 Info: Preferences saved
 Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
 ok bodyparts05 files2 6.4M em 334s
+render fim 21:50:02
+fim 21:50:02

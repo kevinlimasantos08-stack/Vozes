@@ -1,0 +1,26 @@
+user_data: /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data
+pacote bodyparts05.zip -> ok
+catalogo eyes 0
+catalogo eyebrows 0
+catalogo eyelashes 0
+catalogo hair 0
+catalogo teeth 0
+catalogo tongue 0
+catalogo clothes 5
+catalogo skins 0
+macros {'gender': 1.0, 'age': 0.6, 'muscle': 0.56, 'weight': 0.52, 'height': 0.58, 'proportions': 0.65, 'caucasian': 0.62, 'african': 0.25, 'asian': 0.13}
+pele: None
+rig ok Human.rig
+sem asset para Eyes
+sem asset para Eyebrows
+sem asset para Eyelashes
+sem asset para Teeth
+sem asset para Tongue
+sem asset para Hair
+asset Clothes wdg_scruffy_beard.mhclo
+sem asset para Clothes
+sem asset para Clothes
+pose aplicada
+altura topo 1.835
+render plano_medio 598.9 s
+render close 604.5 s

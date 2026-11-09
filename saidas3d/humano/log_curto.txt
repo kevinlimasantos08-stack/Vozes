@@ -1,0 +1,44 @@
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+[fase1] user_data: /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data
+[fase1] pacote bodyparts05.zip -> ok
+[fase1] catalogo eyes 0
+[fase1] catalogo eyebrows 0
+[fase1] catalogo eyelashes 0
+[fase1] catalogo hair 0
+[fase1] catalogo teeth 0
+[fase1] catalogo tongue 0
+[fase1] catalogo clothes 5
+[fase1] catalogo skins 0
+[fase1] macros {'gender': 1.0, 'age': 0.6, 'muscle': 0.56, 'weight': 0.52, 'height': 0.58, 'proportions': 0.65, 'caucasian': 0.62, 'african': 0.25, 'asian': 0.13}
+[fase1] pele: None
+[fase1] rig ok Human.rig
+[fase1] sem asset para Eyes
+[fase1] sem asset para Eyebrows
+[fase1] sem asset para Eyelashes
+[fase1] sem asset para Teeth
+[fase1] sem asset para Tongue
+[fase1] sem asset para Hair
+[fase1] asset Clothes wdg_scruffy_beard.mhclo
+[fase1] sem asset para Clothes
+[fase1] sem asset para Clothes
+[fase1] pose aplicada
+[fase1] altura topo 1.835
+Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
+OBJ import of 'base.obj' took 15.56 ms
+OBJ import of 'scruffy_beard.obj' took 1.80 ms
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/humano/plano_medio.jpg'
+Time: 09:58.91 (Saving: 00:00.55)
+
+[fase1] render plano_medio 598.9 s
+Saved: '/home/runner/work/Vozes/Vozes/saidas3d/humano/close.jpg'
+Time: 10:04.45 (Saving: 00:00.45)
+
+[fase1] render close 604.5 s
+Info: Total files 1 | Changed 1 | Failed 0
+Info: Saved "rafael_fase1.blend"
+[fase1] fim
+
+Blender quit
