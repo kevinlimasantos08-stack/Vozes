@@ -4,29 +4,40 @@
 [INFO ] mpfb.init ..............................: MPFB initialization has finished.
 [fase1] user_data: /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data
 [fase1] pacote bodyparts05.zip -> ok
-[fase1] catalogo eyes 0
-[fase1] catalogo eyebrows 0
-[fase1] catalogo eyelashes 0
-[fase1] catalogo hair 0
-[fase1] catalogo teeth 0
-[fase1] catalogo tongue 0
-[fase1] catalogo clothes 5
-[fase1] catalogo skins 0
+[fase1] assets base copiados: ['3dobjs', 'VERSION', 'animations', 'clear.thumb', 'clothes', 'expressions', 'eyebrows', 'eyelashes', 'eyes', 'hair', 'icons', 'images.list', 'languages', 'litspheres', 'logging.ini', 'materials', 'modifiers', 'notfound.thumb', 'poses', 'poseunits', 'povray', 'proxymeshes', 'rigs', 'scenes', 'shaders', 'skins', 'teeth', 'textures', 'themes', 'tongue', 'uvs']
+[fase1] catalogo eyes 2
+[fase1] catalogo eyebrows 12
+[fase1] catalogo eyelashes 4
+[fase1] catalogo hair 10
+[fase1] catalogo teeth 6
+[fase1] catalogo tongue 1
+[fase1] catalogo clothes 25
+[fase1] catalogo skins 24
 [fase1] macros {'gender': 1.0, 'age': 0.6, 'muscle': 0.56, 'weight': 0.52, 'height': 0.58, 'proportions': 0.65, 'caucasian': 0.62, 'african': 0.25, 'asian': 0.13}
-[fase1] pele: None
+[fase1] pele: /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/skins/middleage_caucasian_male/middleage_caucasian_male.mhmat
+[fase1] pele tipo ENHANCED_SSS
 [fase1] rig ok Human.rig
-[fase1] sem asset para Eyes
-[fase1] sem asset para Eyebrows
-[fase1] sem asset para Eyelashes
-[fase1] sem asset para Teeth
-[fase1] sem asset para Tongue
-[fase1] sem asset para Hair
+[fase1] asset Eyes high-poly.mhclo
+[WARN ] material.mhmaterial ....................: Patching input material line to cater for non-normalized key ('bumpTexture', 'bumpmapTexture')
+[fase1] asset Eyebrows eyebrow001.mhclo
+[fase1] asset Eyelashes eyelashes01.mhclo
+[fase1] asset Teeth teeth_base.mhclo
+[fase1] asset Tongue tongue01.mhclo
+[fase1] asset Hair short02.mhclo
 [fase1] asset Clothes wdg_scruffy_beard.mhclo
-[fase1] sem asset para Clothes
-[fase1] sem asset para Clothes
+[fase1] asset Clothes male_worksuit01.mhclo
+[fase1] asset Clothes shoes01.mhclo
 [fase1] pose aplicada
 [fase1] altura topo 1.835
 [fase1] nariz (0.0, -0.177, 1.679) olhos (0.0, -0.147, 1.714)
 Blender 4.2.3 LTS (hash 0e22e4fcea03 built 2024-10-14 23:31:34)
-OBJ import of 'base.obj' took 11.14 ms
-OBJ import of 'scruffy_beard.obj' took 1.24 ms
+OBJ import of 'base.obj' took 13.69 ms
+OBJ import of 'high-poly.obj' took 1.71 ms
+OBJ import of 'eyebrow001.obj' took 0.19 ms
+OBJ import of 'eyelashes01.obj' took 0.34 ms
+OBJ import of 'teeth_base.obj' took 2.63 ms
+OBJ import of 'tongue01.obj' took 0.37 ms
+OBJ import of 'short02.obj' took 1.37 ms
+OBJ import of 'scruffy_beard.obj' took 1.19 ms
+OBJ import of 'male_worksuit01.obj' took 2.62 ms
+OBJ import of 'shoes01.obj' took 1.27 ms

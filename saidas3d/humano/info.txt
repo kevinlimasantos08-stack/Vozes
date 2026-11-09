@@ -1,25 +1,27 @@
 user_data: /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data
 pacote bodyparts05.zip -> ok
-catalogo eyes 0
-catalogo eyebrows 0
-catalogo eyelashes 0
-catalogo hair 0
-catalogo teeth 0
-catalogo tongue 0
-catalogo clothes 5
-catalogo skins 0
+assets base copiados: ['3dobjs', 'VERSION', 'animations', 'clear.thumb', 'clothes', 'expressions', 'eyebrows', 'eyelashes', 'eyes', 'hair', 'icons', 'images.list', 'languages', 'litspheres', 'logging.ini', 'materials', 'modifiers', 'notfound.thumb', 'poses', 'poseunits', 'povray', 'proxymeshes', 'rigs', 'scenes', 'shaders', 'skins', 'teeth', 'textures', 'themes', 'tongue', 'uvs']
+catalogo eyes 2
+catalogo eyebrows 12
+catalogo eyelashes 4
+catalogo hair 10
+catalogo teeth 6
+catalogo tongue 1
+catalogo clothes 25
+catalogo skins 24
 macros {'gender': 1.0, 'age': 0.6, 'muscle': 0.56, 'weight': 0.52, 'height': 0.58, 'proportions': 0.65, 'caucasian': 0.62, 'african': 0.25, 'asian': 0.13}
-pele: None
+pele: /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/skins/middleage_caucasian_male/middleage_caucasian_male.mhmat
+pele tipo ENHANCED_SSS
 rig ok Human.rig
-sem asset para Eyes
-sem asset para Eyebrows
-sem asset para Eyelashes
-sem asset para Teeth
-sem asset para Tongue
-sem asset para Hair
+asset Eyes high-poly.mhclo
+asset Eyebrows eyebrow001.mhclo
+asset Eyelashes eyelashes01.mhclo
+asset Teeth teeth_base.mhclo
+asset Tongue tongue01.mhclo
+asset Hair short02.mhclo
 asset Clothes wdg_scruffy_beard.mhclo
-sem asset para Clothes
-sem asset para Clothes
+asset Clothes male_worksuit01.mhclo
+asset Clothes shoes01.mhclo
 pose aplicada
 altura topo 1.835
 nariz (0.0, -0.177, 1.679) olhos (0.0, -0.147, 1.714)
