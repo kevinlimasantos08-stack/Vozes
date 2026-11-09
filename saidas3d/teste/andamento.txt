@@ -1,0 +1,4 @@
+inicio 19:50:08
+Blender 4.2.3 LTS
+2
+blender instalado 19:50:50
