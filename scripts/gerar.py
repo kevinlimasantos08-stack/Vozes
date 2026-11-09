@@ -209,7 +209,22 @@ def rodar_diagnostico(p, pasta):
     return ["diagnostico.json"]
 
 
-MOTORES = {"diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
+def rodar_modelos(p, pasta):
+    """Lista os modelos que a chave enxerga (imagem, vídeo, voz), sem gerar nada."""
+    k = gemini_chave()
+    c, t = _http("GET", f"{GL}/models?pageSize=500", headers={"x-goog-api-key": k})
+    out = {"http": c}
+    if c == 200:
+        ms = json.loads(t).get("models", [])
+        out["todos"] = sorted(m["name"].split("/")[-1] + " | " + ",".join(m.get("supportedGenerationMethods", [])) for m in ms)
+    else:
+        out["trecho"] = t[:400]
+    with open(os.path.join(pasta, "modelos.json"), "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    return ["modelos.json"]
+
+
+MOTORES = {"modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
 
 
 def main():
