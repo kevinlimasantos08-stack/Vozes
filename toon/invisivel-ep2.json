@@ -1,0 +1,160 @@
+{
+ "cenario": "casa",
+ "personagens": [
+  "caio",
+  "lurdes"
+ ],
+ "planos": [
+  {
+   "de": 0,
+   "camera": "aberto",
+   "alvo": "caio",
+   "acoes": [
+    {
+     "quem": "caio",
+     "acao": "ir_para",
+     "ate": "porta"
+    },
+    {
+     "quem": "lurdes",
+     "acao": "sentar",
+     "lugar": "sofa"
+    },
+    {
+     "quem": "lurdes",
+     "acao": "olhar",
+     "para": "tv",
+     "manter": true,
+     "ate_t": "f6"
+    },
+    {
+     "quem": "lurdes",
+     "acao": "olhos",
+     "estado": "sono"
+    },
+    {
+     "quem": "caio",
+     "acao": "andar",
+     "ate": "centro",
+     "em": 0.4,
+     "chegar_olhando": "lurdes"
+    }
+   ]
+  },
+  {
+   "de": "f2",
+   "camera": "frente",
+   "alvo": "caio",
+   "acoes": [
+    {
+     "quem": "caio",
+     "acao": "acenar",
+     "em": "+0.2",
+     "dur": 1.2
+    },
+    {
+     "quem": "caio",
+     "acao": "gesticular",
+     "em": "f2+1.4",
+     "ate_t": "f3"
+    }
+   ]
+  },
+  {
+   "de": "f3",
+   "camera": "close",
+   "alvo": "lurdes",
+   "acoes": []
+  },
+  {
+   "de": "f4",
+   "camera": "lateral",
+   "alvo": "caio",
+   "lado": -1,
+   "acoes": [
+    {
+     "quem": "caio",
+     "acao": "andar",
+     "ate": "tv",
+     "chegar_olhando": "lurdes"
+    }
+   ]
+  },
+  {
+   "de": "f5",
+   "camera": "dois",
+   "alvo": "caio",
+   "com": "lurdes",
+   "acoes": [
+    {
+     "quem": "caio",
+     "acao": "comemorar",
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "de": "f6",
+   "camera": "close",
+   "alvo": "lurdes",
+   "acoes": [
+    {
+     "quem": "lurdes",
+     "acao": "olhos",
+     "estado": "normal"
+    },
+    {
+     "quem": "lurdes",
+     "acao": "olhar",
+     "para": "caio",
+     "manter": true,
+     "dur": 6
+    }
+   ]
+  },
+  {
+   "de": "f7",
+   "camera": "detalhe",
+   "alvo": "caio",
+   "acoes": [
+    {
+     "quem": "caio",
+     "acao": "surpresa"
+    }
+   ]
+  }
+ ],
+ "tempos": [
+  {
+   "t0": 0.3,
+   "dur": 1.96
+  },
+  {
+   "t0": 2.54,
+   "dur": 2.64
+  },
+  {
+   "t0": 5.46,
+   "dur": 2.44
+  },
+  {
+   "t0": 8.18,
+   "dur": 1.86
+  },
+  {
+   "t0": 10.32,
+   "dur": 0.38
+  },
+  {
+   "t0": 10.98,
+   "dur": 2.62
+  },
+  {
+   "t0": 13.88,
+   "dur": 1.527
+  }
+ ],
+ "duracao": 16.61,
+ "elenco_extra": {},
+ "semente": 7
+}
