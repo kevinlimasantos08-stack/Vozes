@@ -489,7 +489,7 @@ def acao(b, nome, t0, dur, a):
         b.raiz_em(q0); b.neutro_pernas(q0)
         return t0
     if nome == "sentar":
-        x, y, g, h = LUGARES[a["em"]]
+        x, y, g, h = LUGARES[a["lugar"]]
         b.pos = Vector((x, y)); b.giro = math.radians(g); b.sentado = True; b.alt_assento = h - 0.86 + 0.06
         b.raiz_em(q0); b.neutro_pernas(q0); b.neutro_bracos(q0)
         return t0

@@ -57,7 +57,7 @@ jobs:
           mkdir -p /tmp/quadros
           ini=$(date +%s)
           set -o pipefail
-          xvfb-run -a -s "-screen 0 1920x1080x24" /tmp/blender/blender -b -P blender/toon/motor.py -- \
+          xvfb-run -a -s "-screen 0 1920x1080x24" /tmp/blender/blender -b --python-exit-code 1 -P blender/toon/motor.py -- \
             "${{ needs.preparar.outputs.roteiro }}" /tmp/quadros ${{ matrix.parte }} 4 2>&1 | grep -v "^Fra:" | grep -iv "^Saved\|Time:" | tail -30
           echo "parte ${{ matrix.parte }} em $(( $(date +%s) - ini ))s, $(ls /tmp/quadros | wc -l) quadros" | tee /tmp/quadros/tempo_${{ matrix.parte }}.txt
       - uses: actions/upload-artifact@v4

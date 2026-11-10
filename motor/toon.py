@@ -54,7 +54,7 @@ def esperar(caminho, minutos, rotulo):
 # ---------------------------------------------------------------- 1. voz
 wav = os.path.join(PASTA, "narracao.wav")
 if SO in ("tudo", "voz") and not os.path.exists(wav):
-    vid = ID + "-voz"
+    vid = f"{ID}-voz-{int(time.time()) % 100000}"
     pedido = {"id": vid, "motor": "gemini", "modelo": EP.get("modelo_voz", "gemini-3.8-flash-tts"),
               "vozes": {"narrador": EP.get("voz", "Schedar")},
               "estilo": EP.get("estilo", "narrador de mistério, voz próxima e intrigante, ritmo ágil"),
@@ -76,6 +76,12 @@ if SO == "voz":
 
 # ---------------------------------------------------------------- 2. tempos e roteiro 3D
 voz, fim = TF.preparar(wav, EP["frases"], EP.get("atraso", 0.3))
+for i, f in enumerate(EP["frases"]):
+    esperado = len(f["texto"].split()) / 2.3
+    if f["_dur"] > 2.5 * esperado + 1.5:
+        os.rename(wav, wav + ".ruim")
+        sys.exit(f"A narração não bate com o texto (frase {i + 1} durou {f['_dur']:.1f}s, o esperado era ~{esperado:.1f}s). "
+                 "Provavelmente o Gemini leu algo a mais. Rode de novo para pedir outra narração.")
 TEMPOS = [{"t0": round(f["_t0"], 3), "dur": round(f["_dur"], 3)} for f in EP["frases"]]
 DUR = round(fim + EP.get("cauda", 1.2), 2)
 print("Tempos das frases:", " | ".join(f"{i + 1}: {t['t0']:.1f}s" for i, t in enumerate(TEMPOS)), f"| fim {fim:.1f}s", flush=True)
