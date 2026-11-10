@@ -1,0 +1,140 @@
+{
+ "id": "onibus-toon-ep1",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Enceladus"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Todo dia, à meia-noite, o ônibus da linha doze faz uma parada que não existe.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, slow, intriguing"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O ponto doze. Ninguém espera ali. Ninguém nunca esperou.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, low, mysterious"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Téo pegava esse ônibus fazia uma semana. E reparou numa coisa.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, calm, building curiosity"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Seu Bento, o motorista, sempre parava. Abria a porta. E esperava.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, slow, deliberate pauses"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Naquela noite, a porta abriu… e a catraca girou sozinha.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, tense, whisper on the last words"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Téo contou os passageiros. Eram seis quando ele subiu.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, tense, slow"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Agora eram sete.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, whisper, chilling"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Seu Bento olhou pelo espelho e disse, sem virar o rosto:",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, low, suspenseful"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Faz vinte anos que ele não desce.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, deep, old raspy voice, slow"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O passageiro era o motorista que fazia essa linha antes dele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, revealing, grave"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E ele nunca desce, porque está esperando alguém.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, slow, ominous"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Téo olhou para o banco do lado. Estava vazio…",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, almost a whisper"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "…mas estava quente.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, whisper, terrifying"
+    }
+   ]
+  }
+ ]
+}
