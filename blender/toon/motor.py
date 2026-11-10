@@ -159,6 +159,8 @@ def cen_escritorio():
     caixa((0, 0, -0.05), (10, 12, 0.1), PISO, 0)
     caixa((0, 5.55, 1.5), (10, 0.1, 3.0), PAREDE, 0)
     caixa((0, 5.48, 0.55), (10, 0.06, 1.1), FAIXA, 0)
+    caixa((0, -5.6, 1.5), (10, 0.1, 3.0), PAREDE, 0)
+    caixa((0, -5.53, 0.55), (10, 0.06, 1.1), FAIXA, 0)
     for x in (-4.55, 4.55):
         caixa((x, 0, 1.5), (0.1, 12, 3.0), PAREDE, 0)
         caixa((x * 0.987, 0, 0.55), (0.06, 12, 1.1), FAIXA, 0)
@@ -187,7 +189,7 @@ def cen_escritorio():
     pontos = {"porta": (1.8, 5.1, 180), "centro": (0.25, 0.9, 0), "frente": (0.3, -1.5, 0),
               "janela": (-3.8, 0.0, 270), "quadro": (-1.4, 4.6, 180), "bebedouro": (3.6, 3.6, 90),
               "corredor": (0.6, 2.8, 0)}
-    return pontos, (-4.2, 4.2, -5.0, 5.2, 2.8), "#EDE6DA", lugares
+    return pontos, (-4.2, 4.2, -5.2, 5.2, 2.7), "#F4EEE4", lugares
 
 
 def cen_casa():
@@ -195,6 +197,8 @@ def cen_casa():
     for x in range(-4, 4):
         caixa((x + 0.5, 0, 0.002), (0.02, 9, 0.004), "#8F6140", 0)
     caixa((0, 4.05, 1.5), (8, 0.1, 3.0), "#E9D8B8", 0)
+    caixa((0, -4.55, 1.5), (8, 0.1, 3.0), "#E9D8B8", 0)
+    caixa((-1.5, -4.48, 1.4), (1.4, 0.04, 1.1), "#A8D2EE", 0.0)     # janela da frente
     for x in (-3.95, 3.95):
         caixa((x, 0, 1.5), (0.1, 9, 3.0), "#E2CFAE", 0)
     caixa((0, 4.0, 0.08), (8, 0.04, 0.16), "#FFFFFF", 0)
@@ -239,7 +243,7 @@ def cen_casa():
     pontos = {"porta": (3.5, -1.6, 270), "centro": (0.0, 0.6, 0), "sofa_frente": (1.2, 2.0, 0),
               "janela": (-1.6, 3.2, 180), "tv": (2.8, 1.8, 90), "estante": (-3.1, 1.5, 270)}
     lugares = {"sofa": (0.7, 2.75, 0.0, 0.6), "sofa2": (1.7, 2.75, 0.0, 0.6)}
-    return pontos, (-3.6, 3.6, -4.5, 3.6, 2.8), "#EFE3CF", lugares
+    return pontos, (-3.6, 3.6, -4.2, 3.7, 2.6), "#F4ECDD", lugares
 
 
 def cen_rua():
@@ -699,6 +703,26 @@ def limita(p):
     return Vector((max(xmin, min(xmax, p.x)), max(ymin, min(ymax, p.y)), max(0.3, min(zmax, p.z))))
 
 
+def dentro(p, margem=0.25):
+    return xmin + margem <= p.x <= xmax - margem and ymin + margem <= p.y <= ymax - margem
+
+
+def encaixe(P, d, dist, z, lado=1):
+    """Acha uma posição de câmera a 'dist' de P na direção d (ou girando em volta de P) que caiba no cenário."""
+    melhor, folga = None, -1
+    for ang in (0, 25, -25, 50, -50, 75, -75, 100, -100, 135, -135, 180):
+        a = math.radians(ang * lado)
+        dd = Vector((d.x * math.cos(a) - d.y * math.sin(a), d.x * math.sin(a) + d.y * math.cos(a), 0))
+        c = P + dd * dist; c.z = z
+        if dentro(c):
+            return dd
+        cl = limita(c)
+        f = (Vector((cl.x, cl.y)) - Vector((P.x, P.y))).length
+        if f > folga:
+            melhor, folga = dd, f
+    return melhor
+
+
 def chave_cam(q, pos, mira, lente):
     cam.location = limita(pos); cam.keyframe_insert("location", frame=q)
     alvo_ob.location = mira; alvo_ob.keyframe_insert("location", frame=q)
@@ -726,35 +750,44 @@ for i, pl in enumerate(PLANOS):
         chave_cam(q0, c, m, L or 18); chave_cam(q1, c + (m - c).normalized() * 0.3, m, L or 18)
         continue
     P, F, h = onde(quem, q0)
-    lat = Vector((-F.y, F.x, 0)) * lado
+    passos = list(range(q0, q1, 4)) + [q1]
+
+    def seguir(dist0, dist1, alt, mira_alt, lente, lat_k=0.25, gira=None):
+        """Câmera na direção F (fixa no plano), acompanhando o personagem, com leve aproximação."""
+        D = encaixe(P, F if gira is None else gira, (dist0 + dist1) / 2, alt * h, lado)
+        latv = Vector((-D.y, D.x, 0)) * lado
+        for q in passos:
+            u = (q - q0) / max(1, q1 - q0)
+            Pq, _, _ = onde(quem, q)
+            dist = dist0 + (dist1 - dist0) * u
+            chave_cam(q, Pq + D * dist + latv * lat_k + Vector((0, 0, alt * h)), Pq + Vector((0, 0, mira_alt * h)), lente)
+
     if tipo == "acompanha":
         for q in list(range(q0, q1, 3)) + [q1]:
-            P, Fq, h = onde(quem, q)
-            chave_cam(q, P + F * 3.2 + lat * 0.35 + Vector((0, 0, 1.75 * h)), P + Vector((0, 0, 1.0 * h)), L or 22)
+            Pq, Fq, h = onde(quem, q)
+            D = encaixe(Pq, F, 3.2, 1.75 * h, lado)
+            chave_cam(q, Pq + D * 3.2 + Vector((-D.y, D.x, 0)) * 0.35 + Vector((0, 0, 1.75 * h)), Pq + Vector((0, 0, 1.0 * h)), L or 22)
     elif tipo == "costas":
         for q in list(range(q0, q1, 3)) + [q1]:
-            P, Fq, h = onde(quem, q)
-            chave_cam(q, P - F * 2.6 + lat * 0.4 + Vector((0, 0, 1.8 * h)), P + F * 2.0 + Vector((0, 0, 1.0 * h)), L or 22)
+            Pq, Fq, h = onde(quem, q)
+            D = encaixe(Pq, -F, 2.6, 1.8 * h, lado)
+            chave_cam(q, Pq + D * 2.6 + Vector((0, 0, 1.8 * h)), Pq - D * 2.0 + Vector((0, 0, 1.0 * h)), L or 22)
     elif tipo == "frente":
-        chave_cam(q0, P + F * 2.7 + lat * 0.3 + Vector((0, 0, 1.6 * h)), P + Vector((0, 0, 1.25 * h)), L or 26)
-        chave_cam(q1, P + F * 2.3 + lat * 0.2 + Vector((0, 0, 1.6 * h)), P + Vector((0, 0, 1.3 * h)), L or 26)
+        seguir(2.7, 2.3, 1.6, 1.27, L or 26, 0.3)
     elif tipo == "lateral":
-        n = max(2, (q1 - q0) // 6)
-        for k in range(n + 1):
-            q = q0 + (q1 - q0) * k // n
-            a = math.radians(40 - 30 * k / n) * lado
-            d = F * math.cos(a) + Vector((-F.y, F.x, 0)) * math.sin(a)
-            chave_cam(q, P + d * 2.6 + Vector((0, 0, 1.55 * h)), P + Vector((0, 0, 1.3 * h)), L or 26)
+        a0 = math.radians(40) * lado
+        Dl = Vector((F.x * math.cos(a0) - F.y * math.sin(a0), F.x * math.sin(a0) + F.y * math.cos(a0), 0))
+        seguir(2.6, 2.4, 1.55, 1.3, L or 26, 0.0, gira=Dl)
     elif tipo == "close":
-        chave_cam(q0, P + F * 2.6 + lat * 0.2 + Vector((0, 0, 1.6 * h)), P + Vector((0, 0, 1.5 * h)), L or 32)
-        chave_cam(q1, P + F * 1.8 + lat * 0.08 + Vector((0, 0, 1.64 * h)), P + Vector((0, 0, 1.55 * h)), L or 34)
+        seguir(2.6, 1.8, 1.62, 1.52, L or 33, 0.15)
     elif tipo == "detalhe":
-        chave_cam(q0, P + F * 1.5 + Vector((0, 0, 1.6 * h)), P + Vector((0, 0, 1.56 * h)), L or 40)
-        chave_cam(q1, P + F * 1.2 + Vector((0, 0, 1.6 * h)), P + Vector((0, 0, 1.57 * h)), L or 42)
+        seguir(1.5, 1.2, 1.6, 1.56, L or 41, 0.0)
     elif tipo == "aberto":
-        base = P + F * 4.6 + lat * 2.6
+        lat = Vector((-F.y, F.x, 0)) * lado
+        D = encaixe(P, (F * 4.6 + lat * 2.6).normalized(), 5.3, 2.4, lado)
+        base = P + D * 5.3
         chave_cam(q0, base + Vector((0, 0, 2.4)), P + Vector((0, 0, 0.9)), L or 20)
-        chave_cam(q1, base + F * 0.6 + lat * 0.3 + Vector((0, 0, 2.7)), P + Vector((0, 0, 0.8)), L or 20)
+        chave_cam(q1, base + D * 0.5 + Vector((0, 0, 2.6)), P + Vector((0, 0, 0.8)), L or 20)
     elif tipo == "dois":   # enquadra o alvo e outro personagem
         P2, F2, h2 = onde(pl["com"], q0)
         meio = (P + P2) / 2; sep = (P2 - P); sep.z = 0
