@@ -6,8 +6,8 @@ from mathutils import Vector
 
 argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else ["/tmp/quadros"]
 OUT = argv[0]
-F0 = int(argv[1]) if len(argv) > 1 else 1
-F1 = int(argv[2]) if len(argv) > 2 else 288
+PARTE = int(argv[1]) if len(argv) > 1 else 1
+NPARTES = int(argv[2]) if len(argv) > 2 else 1
 os.makedirs(OUT, exist_ok=True)
 FPS = 24
 
@@ -333,6 +333,32 @@ chave_cam(236, P + Vector((0.08, -1.75, 1.64)), P + Vector((0, 0, 1.55)), 34)
 chave_cam(237, P + Vector((2.6, -4.2, 2.4)), P + Vector((0, 0.3, 0.9)), 20)
 chave_cam(288, P + Vector((3.0, -4.9, 2.75)), P + Vector((0, 0.3, 0.8)), 20)
 corte(101); corte(173); corte(237)
+
+# ------------------------------------------------------------------ tempo da animação casado com a narração
+# âncoras: quadro original -> quadro novo (24 fps). Narração: "mas ninguém" 5,7s; "E foi aí" 9,4s; "percebeu" ~10,3s; "sumido" ~12,4s
+ANCORAS = [(1, 1), (100, 135), (101, 136), (173, 227), (180, 248), (237, 277), (242, 297), (256, 311), (288, 351)]
+
+
+def remap(x):
+    for (a0, b0), (a1, b1) in zip(ANCORAS, ANCORAS[1:]):
+        if x <= a1:
+            return b0 + (x - a0) * (b1 - b0) / (a1 - a0)
+    return ANCORAS[-1][1] + (x - ANCORAS[-1][0])
+
+
+acoes = {ad.action for ad in (o.animation_data for o in list(bpy.data.objects) + [cam_d]) if ad and ad.action}
+for ac in acoes:
+    for fc in ac.fcurves:
+        for kp in fc.keyframe_points:
+            x = kp.co.x
+            kp.co.x = remap(x)
+            kp.handle_left.x = remap(kp.handle_left.x)
+            kp.handle_right.x = remap(kp.handle_right.x)
+        fc.update()
+TOTAL = ANCORAS[-1][1]
+por = math.ceil(TOTAL / NPARTES)
+F0 = (PARTE - 1) * por + 1
+F1 = min(TOTAL, PARTE * por)
 
 # ------------------------------------------------------------------ render Workbench
 sc.render.engine = "BLENDER_WORKBENCH"

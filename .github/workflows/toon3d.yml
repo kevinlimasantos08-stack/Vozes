@@ -34,10 +34,9 @@ jobs:
       - name: Renderizar parte ${{ matrix.parte }}
         run: |
           P=${{ matrix.parte }}
-          INI=$(( (P - 1) * 72 + 1 )); FIM=$(( P * 72 ))
           ini=$(date +%s)
-          mkdir -p /tmp/quadros; xvfb-run -a -s "-screen 0 1920x1080x24" /tmp/blender/blender -b -P blender/toon/teste_toon.py -- /tmp/quadros $INI $FIM 2>&1 | grep -v "^Fra:" | tail -20
-          echo "parte $P: quadros $INI-$FIM em $(( $(date +%s) - ini ))s, $(ls /tmp/quadros | wc -l) arquivos" | tee /tmp/quadros/tempo_$P.txt
+          mkdir -p /tmp/quadros; xvfb-run -a -s "-screen 0 1920x1080x24" /tmp/blender/blender -b -P blender/toon/teste_toon.py -- /tmp/quadros $P 4 2>&1 | grep -v "^Fra:" | tail -20
+          echo "parte $P em $(( $(date +%s) - ini ))s, $(ls /tmp/quadros | wc -l) arquivos" | tee /tmp/quadros/tempo_$P.txt
 
       - uses: actions/upload-artifact@v4
         with:
