@@ -1,0 +1,101 @@
+{
+ "id": "onibus-ep1",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "bento": "Algenib",
+  "teo": "Achird"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "teo",
+     "texto": "Seu Bento, por que o senhor sempre para no ponto doze?",
+     "estilo": "Brazilian Portuguese accent, young man, curious, a bit sleepy, late night bus"
+    },
+    {
+     "quem": "bento",
+     "texto": "Pra ele subir.",
+     "estilo": "Brazilian Portuguese accent, old bus driver, deep raspy voice, calm and serious"
+    },
+    {
+     "quem": "teo",
+     "texto": "Ele quem? Não tem ninguém no ponto.",
+     "estilo": "Brazilian Portuguese accent, confused, half laughing"
+    },
+    {
+     "quem": "bento",
+     "texto": "Nunca tem. Mas a catraca gira.",
+     "estilo": "Brazilian Portuguese accent, slow, low, ominous"
+    },
+    {
+     "quem": "teo",
+     "texto": "O senhor tá brincando comigo.",
+     "estilo": "Brazilian Portuguese accent, nervous laugh, unsure"
+    },
+    {
+     "quem": "bento",
+     "texto": "Conta os passageiros. Agora.",
+     "estilo": "Brazilian Portuguese accent, firm, cold, no emotion"
+    },
+    {
+     "quem": "teo",
+     "texto": "Seis… sete. Eram seis quando eu subi.",
+     "estilo": "Brazilian Portuguese accent, counting slowly, then terrified whisper"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "bento",
+     "texto": "Faz vinte anos que eu dirijo essa linha.",
+     "estilo": "Brazilian Portuguese accent, tired, nostalgic, deep voice"
+    },
+    {
+     "quem": "bento",
+     "texto": "E faz vinte anos que ele não desce.",
+     "estilo": "Brazilian Portuguese accent, slow, heavy"
+    },
+    {
+     "quem": "teo",
+     "texto": "Quem é ele, Seu Bento?",
+     "estilo": "Brazilian Portuguese accent, scared, almost whispering"
+    },
+    {
+     "quem": "bento",
+     "texto": "O motorista que fazia essa linha antes de mim.",
+     "estilo": "Brazilian Portuguese accent, very slow, grave"
+    },
+    {
+     "quem": "teo",
+     "texto": "E por que ele nunca desce?",
+     "estilo": "Brazilian Portuguese accent, trembling voice"
+    },
+    {
+     "quem": "bento",
+     "texto": "Porque ele tá esperando alguém.",
+     "estilo": "Brazilian Portuguese accent, low, mysterious"
+    },
+    {
+     "quem": "teo",
+     "texto": "Quem?",
+     "estilo": "Brazilian Portuguese accent, short, terrified"
+    },
+    {
+     "quem": "bento",
+     "texto": "Você. Ele sentou do seu lado.",
+     "estilo": "Brazilian Portuguese accent, whisper, ominous, slow"
+    },
+    {
+     "quem": "teo",
+     "texto": "Seu Bento… o banco do meu lado tá quente.",
+     "estilo": "Brazilian Portuguese accent, terrified trembling whisper"
+    }
+   ]
+  }
+ ]
+}
