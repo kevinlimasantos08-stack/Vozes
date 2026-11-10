@@ -1,0 +1,203 @@
+{
+ "id": "vizinha47-ep3",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Nina, alguém tá batendo na porta.",
+     "estilo": "Brazilian Portuguese accent, young man, tense, whispering at night"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Se for a Dona Lurdes, eu não abro.",
+     "estilo": "Brazilian Portuguese accent, young woman, scared, firm"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Não é ela. É a sua mãe.",
+     "estilo": "Brazilian Portuguese accent, surprised, looking through the peephole"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Minha mãe? Ela mora a duas horas daqui.",
+     "estilo": "Brazilian Portuguese accent, confused, uneasy"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Você não devia ter voltado pra essa casa, filha.",
+     "estilo": "Brazilian Portuguese accent, middle-aged mother, worried, tired, serious"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Por que a senhora trancou a porta naquela noite?",
+     "estilo": "Brazilian Portuguese accent, demanding, voice shaking"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Porque a Lurdes entrava no seu quarto.",
+     "estilo": "Brazilian Portuguese accent, low, painful confession"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Como assim, entrava?",
+     "estilo": "Brazilian Portuguese accent, shocked, whisper"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Toda noite. Ela te pegava no colo e cantava.",
+     "estilo": "Brazilian Portuguese accent, haunted, slow"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "E dizia que você era dela.",
+     "estilo": "Brazilian Portuguese accent, whisper, chilling"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Mãe… o que a senhora fez?",
+     "estilo": "Brazilian Portuguese accent, afraid of the answer, slow"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Tranquei a porta do quarenta e sete. Por fora.",
+     "estilo": "Brazilian Portuguese accent, cold, firm, slow"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Com ela lá dentro?!",
+     "estilo": "Brazilian Portuguese accent, horrified"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Eu não sabia que ia ter fogo.",
+     "estilo": "Brazilian Portuguese accent, crying softly, guilty"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Por que nunca me contou?",
+     "estilo": "Brazilian Portuguese accent, hurt, tearful"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Porque você chamava ela de vó.",
+     "estilo": "Brazilian Portuguese accent, whisper, heavy"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Quem tá aí?",
+     "estilo": "Brazilian Portuguese accent, terrified whisper in the dark"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Shhh… dorme, minha menina.",
+     "estilo": "Brazilian Portuguese accent, old woman, sweet eerie whisper, lullaby tone"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Agora ninguém tranca mais a porta.",
+     "estilo": "Brazilian Portuguese accent, whisper, ominous, slow"
+    }
+   ]
+  }
+ ]
+}
