@@ -1,5 +1,5 @@
-parte 1: quadros 1-72 em 515s, 73 arquivos
-parte 2: quadros 73-144 em 429s, 73 arquivos
-parte 3: quadros 145-216 em 601s, 73 arquivos
-parte 4: quadros 217-288 em 440s, 73 arquivos
-288
+parte 1 em 630s, 89 arquivos
+parte 2 em 655s, 89 arquivos
+parte 3 em 647s, 89 arquivos
+parte 4 em 519s, 88 arquivos
+351
