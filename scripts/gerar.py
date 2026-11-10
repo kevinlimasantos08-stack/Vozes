@@ -55,7 +55,7 @@ def nome_tela(q):
     return q.capitalize()
 
 
-def gemini_rest(k, modelo, falas, vozes, estilo_geral):
+def gemini_rest(k, modelo, falas, vozes, estilo_geral, simples=False):
     quem = []
     for f in falas:
         if f["quem"] not in quem:
@@ -70,8 +70,13 @@ def gemini_rest(k, modelo, falas, vozes, estilo_geral):
         speech = {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": [
             {"speaker": nome_tela(q), "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[q]}}} for q in quem]}}
     else:
-        texto = (f"Leia em português do Brasil, com sotaque brasileiro, em ritmo ágil e natural. Tom: {tons}. "
-                 "Faça uma pausa de um segundo entre as frases.\n\n" + "\n".join(f["texto"] for f in falas))
+        corpo_txt = "\n".join(f["texto"] for f in falas)
+        if simples:
+            texto = corpo_txt
+        else:
+            # instruções separadas do texto, para o modelo não ler a orientação em voz alta
+            texto = ("Instruções de atuação (NÃO leia isto em voz alta): português do Brasil, sotaque brasileiro, "
+                     f"ritmo ágil e natural; tom: {tons}.\n\nTexto para ler em voz alta, e somente ele:\n" + corpo_txt)
         speech = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[quem[0]]}}}
     corpo = {"contents": [{"parts": [{"text": texto}]}],
              "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": speech}}
@@ -87,7 +92,14 @@ def gemini_bloco(k, modelos, falas, vozes, estilo_geral):
     for m in modelos:
         for tentativa in range(3):
             try:
-                return gemini_rest(k, m, falas, vozes, estilo_geral), m
+                wav = gemini_rest(k, m, falas, vozes, estilo_geral)
+                # conferência: se o áudio ficou muito mais longo que o texto, o modelo leu a instrução junto
+                palavras = sum(len(f["texto"].split()) for f in falas)
+                seg = (len(wav) - 44) / (24000 * 2)
+                if seg > palavras / 2.3 * 1.7 + 3:
+                    print(f"  áudio longo demais ({seg:.0f}s para {palavras} palavras); refazendo só com o texto", flush=True)
+                    wav = gemini_rest(k, m, falas, vozes, estilo_geral, simples=True)
+                return wav, m
             except Exception as e:
                 msg = str(e)
                 if "HTTP 429" in msg and tentativa < 2:
