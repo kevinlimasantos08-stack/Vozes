@@ -75,8 +75,9 @@ def gemini_rest(k, modelo, falas, vozes, estilo_geral, simples=False):
             texto = corpo_txt
         else:
             # instruções separadas do texto, para o modelo não ler a orientação em voz alta
-            texto = ("Instruções de atuação (NÃO leia isto em voz alta): português do Brasil, sotaque brasileiro, "
-                     f"ritmo ágil e natural; tom: {tons}.\n\nTexto para ler em voz alta, e somente ele:\n" + corpo_txt)
+            # formato curto da documentação do Gemini TTS ("Say cheerfully: ..."): a instrução não é lida
+            est = "; ".join(f.get("estilo") or estilo_geral for f in falas[:1])
+            texto = f"Say in Brazilian Portuguese, {est}:\n" + corpo_txt
         speech = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": vozes[quem[0]]}}}
     corpo = {"contents": [{"parts": [{"text": texto}]}],
              "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": speech}}
@@ -96,7 +97,7 @@ def gemini_bloco(k, modelos, falas, vozes, estilo_geral):
                 # conferência: se o áudio ficou muito mais longo que o texto, o modelo leu a instrução junto
                 palavras = sum(len(f["texto"].split()) for f in falas)
                 seg = (len(wav) - 44) / (24000 * 2)
-                if seg > palavras / 2.3 * 1.7 + 3:
+                if seg > palavras / 2.3 * 1.4 + 2:
                     print(f"  áudio longo demais ({seg:.0f}s para {palavras} palavras); refazendo só com o texto", flush=True)
                     wav = gemini_rest(k, m, falas, vozes, estilo_geral, simples=True)
                 return wav, m
