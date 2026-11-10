@@ -3,7 +3,7 @@ name: Toon 3D
 on:
   push:
     paths:
-      - "blender/toon/**"
+      - "blender/toon/teste_toon.py"
   workflow_dispatch:
 
 permissions:
