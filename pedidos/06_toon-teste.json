@@ -1,0 +1,14 @@
+{
+ "id": "toon-teste",
+ "motor": "gemini",
+ "modelo": "gemini-3.8-flash-tts",
+ "vozes": {"narrador": "Schedar"},
+ "estilo": "narrador de mistério, voz próxima e intrigante, ritmo ágil",
+ "blocos": [
+  {"n": 1, "falas": [
+   {"quem": "narrador",
+    "texto": "Segunda-feira. Oito da manhã. O Caio entrou no escritório como sempre... mas ninguém olhou pra ele. Ninguém. E foi aí que ele percebeu: ele tinha sumido.",
+    "estilo": "Brazilian Portuguese accent, mysterious storyteller, short dramatic pauses, last sentence slower and lower"}
+  ]}
+ ]
+}
