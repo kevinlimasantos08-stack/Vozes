@@ -36,7 +36,7 @@ jobs:
           P=${{ matrix.parte }}
           INI=$(( (P - 1) * 72 + 1 )); FIM=$(( P * 72 ))
           ini=$(date +%s)
-          xvfb-run -a -s "-screen 0 1920x1080x24" /tmp/blender -b -P blender/toon/teste_toon.py -- /tmp/quadros $INI $FIM 2>&1 | grep -v "^Fra:" | tail -20
+          mkdir -p /tmp/quadros; xvfb-run -a -s "-screen 0 1920x1080x24" /tmp/blender/blender -b -P blender/toon/teste_toon.py -- /tmp/quadros $INI $FIM 2>&1 | grep -v "^Fra:" | tail -20
           echo "parte $P: quadros $INI-$FIM em $(( $(date +%s) - ini ))s, $(ls /tmp/quadros | wc -l) arquivos" | tee /tmp/quadros/tempo_$P.txt
 
       - uses: actions/upload-artifact@v4
