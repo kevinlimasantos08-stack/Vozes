@@ -86,14 +86,14 @@ def vazio(nome, loc, pai=None):
 
 
 # ------------------------------------------------------------------ escritório
-PAREDE, FAIXA, PISO = "#E6E2DA", "#2F5D62", "#8C96A3"
+PAREDE, FAIXA, PISO = "#F4F1EA", "#2F6E73", "#A7B0BC"
 caixa((0, 1, -0.05), (10, 13, 0.1), PISO, 0)
 caixa((0, 5.55, 1.5), (10, 0.1, 3.0), PAREDE, 0)
 caixa((0, 5.48, 0.55), (10, 0.06, 1.1), FAIXA, 0)
 for x in (-4.55, 4.55):
     caixa((x, 1, 1.5), (0.1, 13, 3.0), PAREDE, 0)
     caixa((x * 0.987, 1, 0.55), (0.06, 13, 1.1), FAIXA, 0)
-caixa((0, 1, 3.05), (10, 13, 0.1), "#F2F0EC", 0)
+caixa((0, 1, 3.05), (10, 13, 0.1), "#FFFFFF", 0)
 for x in (-2.2, 0.0, 2.2):
     for y in (-1.0, 2.0, 4.5):
         caixa((x, y, 2.99), (1.2, 0.6, 0.02), "#FFFFFF", 0)
@@ -186,7 +186,7 @@ class Boneco:
             esfera((-0.012, -0.016, 0.022), (0.012, 0.006, 0.014), "#FFFFFF", pai=ol, seg=12)
             self.olhos.append(ol)
             pa = vazio(f"{nome}_palpebra{s}", (0.085 * s, -0.24, 0.29 + 0.09), c)
-            esfera((0, 0, 0), (0.06, 0.03, 0.05), pele, pai=pa, seg=20)
+            esfera((0, 0, 0), (0.055, 0.03, 0.045), pele, pai=pa, seg=20)
             self.palpebras.append(pa)
 
     # ---- chaves de animação
@@ -198,11 +198,13 @@ class Boneco:
         """estado: normal | sono (pálpebra meio caída) | arregalado | fechado"""
         esc = {"normal": 1.0, "sono": 1.0, "arregalado": 1.35, "fechado": 0.08}[estado]
         ex = 1.35 if estado == "arregalado" else 1.0
-        dz = {"normal": 0.09, "sono": 0.045, "arregalado": 0.13, "fechado": 0.09}[estado]
+        # pálpebra só aparece no sono; fora disso fica escondida dentro da cabeça
+        dz = {"normal": 0.10, "sono": 0.042, "arregalado": 0.13, "fechado": 0.10}[estado]
+        dy = -0.236 if estado == "sono" else -0.17
         for o in self.olhos:
             self.k(o, "scale", f, (ex, 1, esc))
         for p in self.palpebras:
-            loc = p.location.copy(); loc.z = 0.29 + dz
+            loc = p.location.copy(); loc.z = 0.29 + dz; loc.y = dy
             self.k(p, "location", f, loc)
 
     def piscar(self, f, base="normal"):
@@ -318,15 +320,15 @@ bpy.context.view_layer.update()
 for f in range(1, 101, 3):
     sc.frame_set(f)
     p = r.matrix_world.translation.copy()
-    chave_cam(f, p + Vector((-0.3, -3.4, 1.45)), p + Vector((0, 0, 1.15)), 22)
+    chave_cam(f, p + Vector((-0.3, -3.2, 1.7)), p + Vector((0, 0, 1.0)), 22)
 # plano 2 (101-172): de lado, girando devagar enquanto ele procura alguém
 P = Vector((B.x, B.y, 0))
 for i, f in enumerate(list(range(101, 173, 6)) + [172]):
     a = math.radians(35 - 30 * (f - 101) / 72)
     chave_cam(f, P + Vector((math.sin(a) * 2.6, -math.cos(a) * 2.6, 1.55)), P + Vector((0, 0, 1.3)), 26)
 # plano 3 (173-236): close frontal empurrando para o rosto
-chave_cam(173, P + Vector((0.15, -1.9, 1.62)), P + Vector((0, 0, 1.55)), 34)
-chave_cam(236, P + Vector((0.05, -1.05, 1.66)), P + Vector((0, 0, 1.62)), 38)
+chave_cam(173, P + Vector((0.2, -2.6, 1.6)), P + Vector((0, 0, 1.5)), 32)
+chave_cam(236, P + Vector((0.08, -1.75, 1.64)), P + Vector((0, 0, 1.55)), 34)
 # plano 4 (237-288): plano aberto do alto — o lugar vazio onde ele estava
 chave_cam(237, P + Vector((2.6, -4.2, 2.4)), P + Vector((0, 0.3, 0.9)), 20)
 chave_cam(288, P + Vector((3.0, -4.9, 2.75)), P + Vector((0, 0.3, 0.8)), 20)
@@ -343,7 +345,7 @@ sh = sc.display.shading
 sh.light = "STUDIO"
 sh.color_type = "MATERIAL"
 sh.show_shadows = True
-sh.shadow_intensity = 0.35
+sh.shadow_intensity = 0.3
 sh.show_cavity = True
 sh.cavity_type = "BOTH"
 sh.cavity_ridge_factor = 0.6
@@ -359,6 +361,7 @@ sc.display.shadow_shift = 0.1
 sc.display.shadow_focus = 0.6
 try:
     sc.view_settings.view_transform = "Standard"
+    sc.view_settings.exposure = 0.75
 except Exception:
     pass
 sc.render.image_settings.file_format = "PNG"
