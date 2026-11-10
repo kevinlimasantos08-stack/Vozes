@@ -106,7 +106,8 @@ def T(ref, base=0.0):
 
 
 r3d = {k: EP[k] for k in ("cenario", "personagens", "planos") if k in EP}
-r3d.update({"tempos": TEMPOS, "duracao": DUR, "elenco_extra": EP.get("elenco_extra", {}), "semente": EP.get("semente", 7)})
+r3d.update({"tempos": TEMPOS, "duracao": DUR, "elenco_extra": EP.get("elenco_extra", {}), "semente": EP.get("semente", 7),
+            "pedido_em": int(time.time())})   # muda sempre, para o push disparar o render
 video = os.path.join(PASTA, "video3d.mp4")
 if SO in ("tudo", "3d") and not os.path.exists(video):
     rel = f"toon/{ID}.json"
