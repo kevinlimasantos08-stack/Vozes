@@ -1,0 +1,21 @@
+{
+ "id": "invisivel-ep2-voz",
+ "motor": "gemini",
+ "modelo": "gemini-3.8-flash-tts",
+ "vozes": {
+  "narrador": "Schedar"
+ },
+ "estilo": "narrador de mistério, voz próxima e intrigante, ritmo ágil",
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Primeiro teste: a mãe dele. O Caio entrou em casa e gritou: mãe, cheguei! Dona Lurdes nem tirou o olho da novela. Ele passou bem na frente da TV. Nada. Até que ela virou, olhou direto pra ele e disse: quem deixou essa porta aberta?",
+     "estilo": "Brazilian Portuguese accent, mysterious storyteller, intimate, short dramatic pauses"
+    }
+   ]
+  }
+ ]
+}
