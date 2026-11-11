@@ -1,0 +1,72 @@
+{
+ "id": "vizinha47-ep3d",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Ela entrava no seu quarto toda noite. Pegava você no colo e cantava.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, haunted memory, slow, low"
+    },
+    {
+     "quem": "celia",
+     "texto": "E dizia que você era dela.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, whisper, chilling"
+    },
+    {
+     "quem": "celia",
+     "texto": "Naquela noite, eu saí com você no colo. E tranquei a porta por fora.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, guilty confession, slow, firm"
+    },
+    {
+     "quem": "nina",
+     "texto": "Com ela lá dentro?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, horrified, whisper"
+    },
+    {
+     "quem": "celia",
+     "texto": "Eu fui chamar a polícia. Quando voltei, a casa tava pegando fogo.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, crying softly, broken voice"
+    },
+    {
+     "quem": "nina",
+     "texto": "Por que a senhora nunca me contou?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, hurt, tearful"
+    },
+    {
+     "quem": "celia",
+     "texto": "Porque você chamava ela de vó.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, whisper, heavy, slow"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio? Você voltou?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, just woke up, scared whisper in the dark"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Shhh… ele foi buscar água.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, sweet eerie whisper"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Dorme, minha menina. Agora ninguém tranca mais a porta.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, lullaby whisper, slow, ominous"
+    }
+   ]
+  }
+ ]
+}
