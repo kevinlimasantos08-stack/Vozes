@@ -1,0 +1,42 @@
+{
+ "id": "onibus-ep2-chatterbox",
+ "motor": "chatterbox",
+ "versao": "v3",
+ "falas": [
+  {
+   "quem": "narrador_onibus",
+   "texto": "O motorista pisou fundo pra chegar no hospital a tempo.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "Chegou. A mãe e o bebê se salvaram. Ele, não.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "O fantasma não queria assustar ninguém. Só queria terminar a viagem.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "No ponto doze, a catraca girou de novo. Pra fora.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "O Téo olhou pela janela pra ver o fantasma ir embora.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "Mas quem sumia na neblina... era o Seu Bento.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "E o ônibus continuava andando.",
+   "intensidade": 0.5
+  }
+ ]
+}
