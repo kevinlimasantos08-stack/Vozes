@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "motor": "chatterbox",
+ "arquivos": [
+  "01_nina.wav",
+  "02_caio.wav",
+  "03_nina.wav",
+  "04_caio.wav",
+  "05_celia.wav",
+  "06_nina.wav",
+  "07_celia.wav",
+  "08_nina.wav",
+  "09_celia.wav",
+  "10_nina.wav",
+  "11_celia.wav",
+  "12_celia.wav",
+  "13_celia.wav",
+  "14_nina.wav",
+  "15_celia.wav",
+  "16_nina.wav",
+  "17_celia.wav",
+  "18_nina.wav",
+  "19_lurdes.wav",
+  "20_lurdes.wav"
+ ],
+ "segundos": 1428,
+ "modelos": null
+}
