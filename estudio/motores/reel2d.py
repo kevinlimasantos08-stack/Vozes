@@ -394,6 +394,56 @@ def cenario(nome, noite):
             d.ellipse([200, 2500, 1420, 2800], fill=(150, 70, 60), outline=ol, width=6)
         else:
             d.rectangle([140, 640, 380, 960], fill=(142, 118, 80), outline=ol, width=8); d.rectangle([166, 666, 354, 934], fill=(200, 170, 190))
+    elif nome == "fachada":  # frente da casa 47, queimada e fechada
+        grad((40, 44, 70), (70, 62, 84), 0, 900)
+        d.ellipse([1230, 180, 1390, 340], fill=(240, 236, 210))
+        d.rectangle([0, 900, W, wall_y], fill=(150, 136, 120))
+        for x in range(0, W, 120):
+            for y in range(900, wall_y, 60):
+                d.rectangle([x + (60 if (y // 60) % 2 else 0), y, x + 120 + (60 if (y // 60) % 2 else 0), y + 60], outline=(132, 118, 104), width=3)
+        d.polygon([(-40, 900), (W // 2, 420), (W + 40, 900)], fill=(70, 40, 34), outline=ol)
+        rng = random.Random(47)
+        for _ in range(22):  # fuligem
+            x = rng.randint(0, W); y = rng.randint(900, 1500); r = rng.randint(60, 200)
+            d.ellipse([x - r, y - r // 2, x + r, y + r], fill=(112, 100, 90))
+        d.rectangle([600, 1150, 1020, wall_y], fill=ol); d.rectangle([616, 1166, 1004, wall_y], fill=(86, 56, 40))
+        for yy in (1260, 1560, 1860): d.rectangle([650, yy, 970, yy + 220], outline=(64, 40, 28), width=8)
+        d.ellipse([930, 1620, 970, 1660], fill=(200, 170, 90), outline=ol, width=4)
+        d.rectangle([925, 1680, 975, 1720], fill=(150, 130, 70), outline=ol, width=4)
+        d.rounded_rectangle([700, 1010, 920, 1120], radius=14, fill=(230, 222, 200), outline=ol, width=8)
+        f47 = ImageFont.truetype(os.path.expanduser("~/.reel2d/Jost.ttf"), 90)
+        d.text((810, 1065), "47", font=f47, fill=(40, 30, 28), anchor="mm")
+        for wx in (140, 1180):
+            d.rectangle([wx, 1150, wx + 300, 1600], fill=ol); d.rectangle([wx + 16, 1166, wx + 284, 1584], fill=(20, 18, 22))
+            for k in range(4): d.rectangle([wx - 10, 1200 + k * 100, wx + 310, 1240 + k * 100], fill=(110, 84, 60), outline=ol, width=4)
+        d.rectangle([0, wall_y, W, H], fill=(70, 72, 70))
+        d.rectangle([520, wall_y, 1100, wall_y + 90], fill=(110, 100, 92), outline=ol, width=6)
+    elif nome == "queimado":  # quarto antigo da Nina, queimado, com o desenho de giz
+        grad((70, 60, 56), (46, 40, 38), 0, wall_y)
+        rng = random.Random(6)
+        for _ in range(40):
+            x = rng.randint(0, W); y = rng.randint(0, wall_y); r = rng.randint(80, 260)
+            d.ellipse([x - r, y - r, x + r, y + r], fill=(52, 44, 42))
+        d.rectangle([0, wall_y, W, H], fill=(54, 40, 32))
+        for x in range(0, W, 160): d.line([x, wall_y, x - 60, H], fill=(36, 26, 22), width=7)
+        d.rectangle([1180, 300, 1520, 900], fill=ol); d.rectangle([1196, 316, 1504, 884], fill=(36, 46, 84))
+        d.line([1196, 316, 1504, 884], fill=(120, 130, 160), width=4); d.line([1350, 316, 1260, 884], fill=(120, 130, 160), width=3)
+        # parede limpa onde o Caio tirou a fuligem
+        d.rounded_rectangle([250, 560, 1050, 1240], radius=60, fill=(150, 138, 128))
+        cg = (240, 240, 230); fo = (255, 120, 40); am = (255, 210, 60)
+        d.rectangle([450, 820, 760, 1060], outline=cg, width=10); d.polygon([(420, 830), (605, 680), (790, 830)], outline=cg, width=10)
+        d.line([420, 830, 605, 680, 790, 830], fill=cg, width=10)
+        d.rectangle([570, 940, 640, 1060], outline=cg, width=8)
+        for fx, fh in ((470, 170), (560, 230), (650, 200), (740, 150)):
+            d.polygon([(fx - 40, 830), (fx, 830 - fh), (fx + 40, 830)], outline=fo, width=9)
+            d.line([fx - 20, 830, fx, 830 - fh * 0.55, fx + 20, 830], fill=am, width=7)
+        d.ellipse([820, 900, 880, 960], outline=cg, width=8); d.line([850, 960, 850, 1060], fill=cg, width=8)
+        d.line([850, 990, 815, 1030], fill=cg, width=8); d.line([850, 990, 885, 1030], fill=cg, width=8)
+        fg = ImageFont.truetype(os.path.expanduser("~/.reel2d/Jost.ttf"), 78)
+        d.text((650, 1125), "DESCULPA VÓ", font=fg, fill=(235, 40, 60), anchor="mm")
+        d.text((650, 1205), "- NINA", font=fg, fill=(235, 40, 60), anchor="mm")
+        d.rectangle([60, 1700, 420, 2060], fill=(40, 32, 28), outline=ol, width=6)
+        d.line([60, 1700, 420, 2060], fill=(26, 20, 18), width=10)
     else:  # casa
         grad((196, 176, 150), (176, 154, 128), 0, wall_y)
         d.rectangle([0, wall_y, W, H], fill=(140, 100, 70))
@@ -410,6 +460,15 @@ def cenario(nome, noite):
         im = ImageEnhance.Brightness(im).enhance(0.45)
         arr = np.asarray(im).astype(np.float32) * np.array([0.8, 0.9, 1.2])
         im = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8))
+        luz = {"queimado": (650, 900, 620, 520, 2.1), "fachada": (810, 1300, 700, 900, 1.8)}.get(nome)
+        if luz:  # lanterna / luz da varanda
+            lx, ly, rx, ry, k = luz
+            yy, xx = np.mgrid[0:H, 0:W]
+            m = np.clip(1.25 - np.sqrt(((xx - lx) / rx) ** 2 + ((yy - ly) / ry) ** 2), 0, 1)
+            m = (m * m * (3 - 2 * m)).astype(np.float32)[..., None]
+            arr = np.asarray(im).astype(np.float32)
+            arr = arr * (1 + (k - 1) * m) + np.array([18, 14, 6]) * m
+            im = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8))
     return im
 
 # ------------------------------------------------------------------ móveis para poses

@@ -1,0 +1,203 @@
+{
+ "serie": "O Último Ônibus · Ep 3",
+ "titulo": "QUEM\nDIRIGE?",
+ "titulo_no_bloco": 0,
+ "pausa_max": 0.4,
+ "blocos": [
+  {
+   "texto": "O banco do motorista estava vazio. E o volante virava sozinho.",
+   "destaque": [
+    "vazio",
+    "sozinho"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "vazio": true,
+    "gira": true
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "O Téo correu pelo corredor gritando pelo Seu Bento.",
+   "destaque": [
+    "Seu Bento"
+   ],
+   "cena": "teo_corredor",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Ninguém respondeu. A catraca marcava um passageiro só: ele.",
+   "destaque": [
+    "um passageiro",
+    "ele"
+   ],
+   "cena": "catraca",
+   "emocao": {
+    "fixo": "01"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Em cima do painel, tinha um jornal velho, dobrado.",
+   "destaque": [
+    "jornal velho"
+   ],
+   "cena": "jornal",
+   "emocao": {
+    "foco": "chega"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Quinze de março de dois mil e seis. Acidente na porta do hospital.",
+   "destaque": [
+    "dois mil e seis",
+    "hospital"
+   ],
+   "cena": "jornal",
+   "emocao": {
+    "foco": "titulo"
+   },
+   "pausa": 0.25,
+   "impacto": false
+  },
+  {
+   "texto": "Duas fotos. O motorista antigo… e o cobrador.",
+   "destaque": [
+    "cobrador"
+   ],
+   "cena": "jornal",
+   "emocao": {
+    "foco": "fotos"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O cobrador era o Seu Bento.",
+   "destaque": [
+    "Seu Bento"
+   ],
+   "cena": "jornal",
+   "emocao": {
+    "foco": "bento"
+   },
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "Ele também morreu naquela noite. E nunca parou de trabalhar.",
+   "destaque": [
+    "morreu",
+    "nunca parou"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "serio"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Lá na frente, o letreiro mudou sozinho.",
+   "destaque": [
+    "letreiro"
+   ],
+   "cena": "painel",
+   "emocao": {
+    "de": "12  CENTRO",
+    "texto": "HOSPITAL"
+   },
+   "pausa": 0.1,
+   "impacto": false
+  },
+  {
+   "texto": "Agora dizia: hospital.",
+   "destaque": [
+    "hospital"
+   ],
+   "cena": "painel",
+   "emocao": {
+    "texto": "HOSPITAL"
+   },
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "Atrás dele, alguém gritou de dor.",
+   "destaque": [
+    "gritou de dor"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "No último banco, uma moça grávida segurava a barriga.",
+   "destaque": [
+    "grávida",
+    "barriga"
+   ],
+   "cena": "mae",
+   "emocao": {
+    "dor": true
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Era a mãe do Téo. Vinte anos mais nova.",
+   "destaque": [
+    "mãe do Téo",
+    "Vinte anos"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "pavor"
+   },
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "O relógio do painel marcava onze e cinquenta e oito. Dois minutos antes do acidente.",
+   "destaque": [
+    "onze e cinquenta e oito",
+    "Dois minutos"
+   ],
+   "cena": "painel",
+   "emocao": {
+    "texto": "HOSPITAL",
+    "relogio": true
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "E o banco do motorista… estava esperando por ele.",
+   "destaque": [
+    "esperando por ele"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "vazio": true
+   },
+   "pausa": 0.6,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "O Téo deve assumir o volante?\nComente sua teoria."
+ },
+ "vel_voz": 1.05
+}

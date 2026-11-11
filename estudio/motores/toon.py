@@ -47,6 +47,7 @@ def lw_(c, s): return c.text_extents(s).x_advance
 PERS = {
     "teo": dict(pele=hx("#C08A5E"), cabelo=hx("#1A1410"), roupa=hx("#B0402F"), oculos=True, careca=False, bone=False, barba=None),
     "bento": dict(pele=hx("#7A4E33"), cabelo=hx("#2B2B2B"), roupa=hx("#2F4A6B"), oculos=False, careca=True, bone=True, barba=hx("#BFBFBF")),
+    "mae": dict(pele=hx("#B9825A"), cabelo=hx("#2A1A12"), roupa=hx("#7A5C9E"), oculos=False, careca=False, bone=False, barba=None, longo=True),
     "antigo": dict(pele=hx("#D9B48F"), cabelo=hx("#3A2A1E"), roupa=hx("#4A4A3A"), oculos=False, careca=False, bone=True, barba=None, bigode=True),
 }
 
@@ -78,6 +79,8 @@ def toon(c, x, y, s, who, emo, t, look=0.0, sepia=False):
     # cabeça
     c.save(); c.rotate(tilt)
     R = 170 * s
+    if p.get("longo"):  # cabelo comprido atrás da cabeça
+        rrect(c, -R * 1.12, -R * 0.9, R * 2.24, R * 2.3, R * 0.9); fill_ol(c, p["cabelo"], 6 * s)
     if p.get("barba"):
         ell(c, 0, 60 * s, 150 * s, 130 * s); fill_ol(c, p["barba"], 6 * s)
     ell(c, -R * 0.98, 10 * s, 30 * s, 40 * s); fill_ol(c, p["pele"], 6 * s)
@@ -323,7 +326,7 @@ def cena_motorista(c, lt, T, t, emo):
     # painel e volante
     c.set_source_rgb(0.08, 0.08, 0.1); c.rectangle(0, 1500, W, H); c.fill()
     g = cairo.LinearGradient(0, 1500, 0, 1560); g.add_color_stop_rgba(0, 0.3, 0.6, 1, 0.5); g.add_color_stop_rgba(1, 0.3, 0.6, 1, 0); c.set_source(g); c.rectangle(0, 1500, W, 60); c.fill()
-    c.save(); c.translate(560, 1560); c.rotate(math.sin(t * 0.8) * 0.12)
+    c.save(); c.translate(560, 1560); c.rotate(math.sin(t * 0.8) * 0.12 + (math.sin(lt * 1.7) * 0.55 if emo.get("gira") else 0))
     c.set_line_width(36); c.set_source_rgb(0.05, 0.05, 0.06); c.arc(0, 0, 230, math.pi * 1.05, math.pi * 1.95); c.stroke()
     c.set_line_width(26); c.move_to(-200, -100); c.line_to(0, 0); c.line_to(200, -100); c.stroke()
     c.restore()
@@ -333,10 +336,11 @@ def cena_catraca(c, lt, T, t, emo):
     # corpo
     rrect(c, 300, 820, 480, 900, 40); fill_ol(c, (0.55, 0.57, 0.62), 8)
     c.set_source_rgb(0.42, 0.44, 0.5); rrect(c, 330, 860, 420, 120, 20); c.fill()
-    gira = eio((lt - T * 0.45) / 0.7)
-    num = ("06" if gira > 0.6 else "07") if emo.get("reverso") else ("07" if gira > 0.6 else "06")
+    gira = eio((lt - T * 0.45) / 0.7) if not emo.get("fixo") else 0.0
+    num = emo["fixo"] if emo.get("fixo") else ("06" if gira > 0.6 else "07") if emo.get("reverso") else ("07" if gira > 0.6 else "06")
     c.set_source_rgb(0.05, 0.05, 0.05); rrect(c, 420, 880, 240, 80, 10); c.fill()
     fonte(c, 64); c.set_source_rgb(1, 0.25, 0.2) if gira > 0.6 else c.set_source_rgb(0.9, 0.2, 0.15)
+    if emo.get("fixo"): c.set_source_rgb(1, 0.25 + 0.15 * math.sin(t * 6), 0.2)
     c.move_to(540 - lw_(c, num) / 2, 942); c.show_text(num)
     # braços (vista 3/4): elipse de rotação
     cx, cy = 540, 1150
@@ -499,8 +503,93 @@ def cena_descida(c, lt, T, t, emo):
     if emo.get("flash") and lt < 0.25:
         c.set_source_rgba(1, 1, 1, 0.5 * (1 - lt / 0.25)); c.paint()
 
+def cena_teo_corredor(c, lt, T, t, emo):
+    interior_fundo(c, t)
+    k = eo(lt / max(1.0, T))
+    passo = abs(math.sin(lt * 9))
+    s = 0.75 + 0.55 * k
+    toon(c, W / 2 + math.sin(lt * 9) * 25, 820 + 420 * k - passo * 30, s, "teo", emo.get("teo", "medo"), t, look=math.sin(lt * 3) * 0.8)
+    c.set_source_rgba(0.75, 0.88, 1, 0.05 + 0.04 * math.sin(t * 9)); c.paint()
+
+def jornal_foto(c, x, y, who, rot):
+    c.save(); c.translate(x, y); c.rotate(rot)
+    c.rectangle(-150, -180, 300, 360); c.set_source_rgb(0.5, 0.42, 0.32); c.fill()
+    c.save(); c.rectangle(-150, -180, 300, 360); c.clip(); toon(c, 0, -10, 0.68, who, "neutro", 0.4, sepia=True); c.restore()
+    c.set_source_rgb(0.15, 0.12, 0.1); c.set_line_width(4); c.rectangle(-150, -180, 300, 360); c.stroke()
+    c.restore()
+
+def cena_jornal(c, lt, T, t, emo):
+    c.set_source_rgb(0.05, 0.05, 0.08); c.paint()
+    g = cairo.RadialGradient(W / 2, 900, 50, W / 2, 900, 900); g.add_color_stop_rgba(0, 1, 0.85, 0.55, 0.2); g.add_color_stop_rgba(1, 0, 0, 0, 0); c.set_source(g); c.paint()
+    foco = emo.get("foco"); k = eio(lt / 1.4)
+    z = 1.0; tx = ty = 0.0
+    if foco == "bento": z = 1.0 + 0.9 * k; tx, ty = -200 * k, -60 * k
+    elif foco == "titulo": z = 1.45 + 0.1 * k; tx, ty = 0, 520 + 30 * k
+    elif foco == "fotos": z = 1.35; tx = 230 - 460 * eio(lt / max(1.0, T * 0.8)); ty = 40
+    elif foco == "chega": ty = 1300 * (1 - eo(lt / 0.9)); z = 0.85 + 0.15 * eo(lt / 0.9)
+    c.save(); c.translate(W / 2, 900); c.translate(tx, ty)
+    c.scale(z, z); c.rotate(-0.04 + math.sin(t * 0.6) * 0.01 + (0.25 * (1 - eo(lt / 0.9)) if foco == "chega" else 0))
+    rrect(c, -460, -620, 920, 1240, 8); fill_ol(c, (0.86, 0.83, 0.74), 6)
+    rnd = random.Random(8)
+    for i in range(30):
+        c.set_source_rgba(0.55, 0.45, 0.3, 0.12); c.arc(rnd.uniform(-450, 450), rnd.uniform(-610, 610), rnd.uniform(6, 40), 0, 2 * math.pi); c.fill()
+    c.select_font_face("DejaVu Serif", cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD); c.set_font_size(62); c.set_source_rgb(0.1, 0.09, 0.08)
+    for i, l in enumerate(["ACIDENTE COM", "ÔNIBUS DA LINHA 12"]):
+        c.move_to(-lw_(c, l) / 2, -480 + i * 74); c.show_text(l)
+    c.set_font_size(34)
+    l = "15 DE MARÇO DE 2006"; c.move_to(-lw_(c, l) / 2, -330); c.show_text(l)
+    c.set_line_width(4); c.move_to(-420, -300); c.line_to(420, -300); c.stroke()
+    jornal_foto(c, -200, 20, "antigo", -0.02); jornal_foto(c, 200, 20, "bento", 0.02)
+    c.set_font_size(30)
+    for x, l in ((-200, "MOTORISTA"), (200, "COBRADOR")):
+        c.move_to(x - lw_(c, l) / 2, 250); c.show_text(l)
+    c.set_source_rgba(0.2, 0.18, 0.16, 0.55)
+    for i in range(6):
+        c.rectangle(-420, 320 + i * 44, 840 - (i % 3) * 120, 14); c.fill()
+    if foco == "bento":
+        c.set_source_rgba(0.85, 0.15, 0.1, 0.9 * eio((lt - 0.6) / 0.4)); c.set_line_width(10); c.arc(200, 20, 230, 0, 2 * math.pi); c.stroke()
+    c.restore()
+
+def cena_painel(c, lt, T, t, emo):
+    c.set_source_rgb(0.03, 0.03, 0.05); c.paint()
+    interior_fundo(c, t); c.set_source_rgba(0, 0, 0, 0.55); c.paint()
+    rrect(c, 70, 640, W - 140, 420, 40); fill_ol(c, (0.06, 0.06, 0.07), 12)
+    c.set_source_rgb(0.02, 0.02, 0.02); rrect(c, 110, 680, W - 220, 340, 24); c.fill()
+    txt = emo.get("texto", "12  CENTRO"); de = emo.get("de")
+    if de and lt < T * 0.45:
+        txt = de if int(lt * 12) % 5 else ""
+    elif de and lt < T * 0.45 + 0.4:
+        txt = "".join(ch if random.Random(int(t * 30) + i).random() < 0.5 else "▒" for i, ch in enumerate(txt))
+    fonte(c, 150, "ExtraBold"); fl = 0.85 + 0.15 * math.sin(t * 40)
+    x = W / 2 - lw_(c, txt) / 2
+    g = cairo.RadialGradient(W / 2, 850, 20, W / 2, 850, 500); g.add_color_stop_rgba(0, 1, 0.55, 0.1, 0.25 * fl); g.add_color_stop_rgba(1, 1, 0.55, 0.1, 0)
+    c.set_source(g); c.paint()
+    c.set_source_rgba(1, 0.6, 0.15, fl); c.move_to(x, 905); c.show_text(txt)
+    c.set_source_rgba(0, 0, 0, 0.35)
+    for yy in range(680, 1020, 12): c.rectangle(110, yy, W - 220, 4); c.fill()
+    if emo.get("relogio"):
+        rrect(c, 300, 1250, 480, 200, 30); fill_ol(c, (0.06, 0.06, 0.07), 10)
+        fonte(c, 120, "ExtraBold"); s2 = "23:58" if int(t * 2) % 2 or lt < 1 else "23 58"
+        c.set_source_rgb(1, 0.2, 0.15); c.move_to(W / 2 - lw_(c, "23:58") / 2, 1395); c.show_text(s2)
+
+def cena_mae(c, lt, T, t, emo):
+    interior_fundo(c, t)
+    c.set_source_rgba(0, 0, 0, 0.35); c.paint()
+    ap = eo(lt / 1.2)
+    s = 0.9 + 0.25 * ap
+    dor = math.sin(t * 5) * 8 if emo.get("dor") else 0
+    toon(c, W / 2 + dor, 980, s, "mae", "medo", t, look=-0.2)
+    # barriga
+    ell(c, W / 2 + dor, 980 + 470 * s, 150 * s, 120 * s); fill_ol(c, dark(PERS["mae"]["roupa"], 1.08), 7 * s)
+    for sx in (-1, 1):
+        ell(c, W / 2 + dor + sx * 110 * s, 980 + 470 * s, 40 * s, 30 * s); fill_ol(c, PERS["mae"]["pele"], 5 * s)
+    rrect(c, 140, 1560, W - 280, 420, 60); fill_ol(c, hx("#2E5E8C"), 10)
+    c.set_source_rgb(*hx("#3E76AA")); rrect(c, 180, 1580, W - 360, 90, 30); c.fill()
+    c.set_source_rgba(0.75, 0.88, 1, 0.06 + 0.05 * math.sin(t * 7)); c.paint()
+
 CENAS = dict(bilhete=cena_bilhete, descida=cena_descida, estrada=cena_estrada, ponto=cena_ponto, interior=cena_interior, motorista=cena_motorista, catraca=cena_catraca,
-             teo_close=cena_teo_close, corredor=cena_corredor, espelho=cena_espelho, retrato=cena_retrato, banco=cena_banco)
+             teo_close=cena_teo_close, corredor=cena_corredor, espelho=cena_espelho, retrato=cena_retrato, banco=cena_banco,
+             teo_corredor=cena_teo_corredor, jornal=cena_jornal, painel=cena_painel, mae=cena_mae)
 
 # ------------------------------------------------------------------ áudio
 def ler_audio(p, vel=1.0):
@@ -597,7 +686,9 @@ def main():
             if len(g) == 3 or w[-1] in ".,!?:…": grupos.append(g); g = []
         if g: grupos.append(g)
         gr = next(x for x in grupos if idx in x)
-        fonte(c, 76); txt = " ".join(pal[i][0].upper() for i in gr); x = W / 2 - lw_(c, txt) / 2; y = 1560
+        tam = 76; fonte(c, tam); txt = " ".join(pal[i][0].upper() for i in gr)
+        while lw_(c, txt) * 1.12 > W - 110 and tam > 50: tam -= 4; fonte(c, tam)
+        x = W / 2 - lw_(c, txt) * 1.06 / 2; y = 1560
         for i in gr:
             w = pal[i][0].upper(); on = i <= idx
             cor = LAR if re.sub(r"[^\wÀ-ÿ]", "", w.lower()) in dest else TXT
@@ -630,7 +721,7 @@ def main():
         z = 1.0 + 0.08 * eio(lt / max(T, 0.5)); dx = math.sin(t * 0.4) * 12; dy = math.cos(t * 0.33) * 10
         if b.get("impacto") and lt < 0.6:
             k = (0.6 - lt) / 0.6; dx += math.sin(t * 70) * 18 * k; dy += math.cos(t * 63) * 18 * k; z += 0.05 * k
-        if b["cena"] in ("interior", "corredor", "banco", "motorista"):
+        if b["cena"] in ("interior", "corredor", "banco", "motorista", "teo_corredor", "mae", "painel"):
             c.translate(W / 2, H / 2); c.rotate(math.sin(t * 1.6) * 0.008); c.translate(-W / 2, -H / 2)
         c.translate(W / 2 + dx, H / 2 + dy); c.scale(z, z); c.translate(-W / 2, -H / 2)
         CENAS[b["cena"]](c, lt, T, t, b.get("emocao", {}))

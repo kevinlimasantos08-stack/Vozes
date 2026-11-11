@@ -18,6 +18,9 @@ cp /home/claude/vozes/estudio/motores/*.py ~/.reel2d/
 - Pedido em `pedidos/AAAAMMDD_<id>.json`, motor `gemini`, modelo `gemini-3.1-flash-tts-preview`.
 - **Economia de cota:** juntar falas em blocos de até 2 vozes (vários falantes) — a cota grátis tem limite de pedidos por dia. Narrador: até 4 frases por bloco. Cortar depois pelas pausas e conferir quem fala pela altura da voz.
 - **Cota do Gemini (~10 pedidos/dia no plano grátis):** se der HTTP 429, completar as falas que faltam pelo motor `chatterbox` do mesmo estúdio, clonando as vozes de `refs/<personagem>.wav` (já existem: nina, caio, celia, lurdes, narrador_onibus). Pedido: `{"id": "...", "motor": "chatterbox", "versao": "v3", "falas": [{"quem": "<ref>", "texto": "...", "intensidade": 0.5}]}`; leva ~1 min por fala. O Chatterbox fala mais devagar: acelerar só esses arquivos (atempo ~1.1). Avisar o Kevin na entrega quais falas saíram no Chatterbox.
+- **Pedidos que falharam ficam rodando de novo a cada push** (o gerar.py refaz todo pedido sem `status.json` ok). Depois que um pedido Gemini falhar por 429 e as falas forem refeitas no Chatterbox, mover o pedido falho para `pedidos/arquivo/` para não gastar cota nem tempo.
+- **Cortar blocos de várias frases:** o narrador faz pausas dentro da frase (". E…"). Conferir as pausas mais longas contra a estrutura do texto antes de aceitar o corte; se precisar, cortar em tempos fixos.
+- **Conferência de legenda x voz:** motor `transcrever` (faster-whisper no GitHub): pôr o mp3 em `qa/` e o pedido `{"id": "qa-<ep>", "motor": "transcrever", "arquivos": ["qa/<ep>.mp3"]}`. (O ambiente da conversa não baixa modelos do Hugging Face.)
 - Personagem novo sem ref: montar `refs/<id>.wav` (10–25 s, só a voz dele) a partir de falas Gemini já geradas.
 
 ## Regras de qualidade (não negociáveis)

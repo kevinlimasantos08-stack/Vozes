@@ -1,0 +1,296 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 4",
+ "titulo": "O DESENHO\nNA PAREDE",
+ "cenas": [
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "lurdes"
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Você desenhou isso um dia antes do fogo.",
+     "destaque": [
+      "um dia antes"
+     ],
+     "audio": "/home/claude/eps/viz4a/v13.wav",
+     "emocao": "feliz",
+     "camera": "plano",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.3
+    }
+   ]
+  },
+  {
+   "cenario": "quarto",
+   "personagens": [
+    "nina",
+    "lurdes"
+   ],
+   "pose": {
+    "nina": "deitado"
+   },
+   "camas_vazias": [
+    1100
+   ],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "O Caio não foi buscar água. Cadê ele?",
+     "destaque": [
+      "Cadê ele"
+     ],
+     "audio": "/home/claude/eps/viz4a/v1.wav",
+     "emocao": "medo",
+     "camera": "plano",
+     "reacao": {
+      "lurdes": "feliz"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Foi ver o quarto onde você dormia pequena.",
+     "destaque": [
+      "quarto"
+     ],
+     "audio": "/home/claude/eps/viz4a/v2.wav",
+     "emocao": "feliz",
+     "camera": "close",
+     "reacao": {
+      "nina": "medo"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "No 47? Aquela casa tá toda queimada!",
+     "destaque": [
+      "47",
+      "queimada"
+     ],
+     "audio": "/home/claude/eps/viz4a/v3.wav",
+     "emocao": "surpreso",
+     "camera": "medio",
+     "reacao": {
+      "lurdes": "neutro"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Eu tranquei ele lá dentro. Igualzinho sua mãe fez comigo.",
+     "destaque": [
+      "tranquei",
+      "sua mãe"
+     ],
+     "audio": "/home/claude/eps/viz4a/v4.wav",
+     "emocao": "bravo",
+     "camera": "punch",
+     "tremor": true,
+     "pausa": 0.3,
+     "reacao": {
+      "nina": "surpreso"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Ele não tem nada a ver com isso!",
+     "destaque": [
+      "nada a ver"
+     ],
+     "audio": "/home/claude/eps/viz4a/v5.wav",
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "lurdes": "neutro"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Tem sim. Ele quer te levar embora daqui.",
+     "destaque": [
+      "levar embora"
+     ],
+     "audio": "/home/claude/eps/viz4a/v6.wav",
+     "emocao": "bravo",
+     "camera": "medio",
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "medo"
+     }
+    }
+   ]
+  },
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "nina"
+   ],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio! Cê tá aí dentro?",
+     "destaque": [
+      "Caio"
+     ],
+     "audio": "/home/claude/eps/viz4a/v7.wav",
+     "emocao": "medo",
+     "camera": "plano",
+     "antes": 0.8,
+     "sfx": "batida"
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina! A porta tá trancada por fora!",
+     "destaque": [
+      "trancada",
+      "por fora"
+     ],
+     "audio": "/home/claude/eps/viz4a/v8.wav",
+     "camera": "medio",
+     "reacao": {
+      "nina": "surpreso"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "A chave tá aqui… pendurada na fechadura.",
+     "destaque": [
+      "chave"
+     ],
+     "audio": "/home/claude/eps/viz4a/v9.wav",
+     "emocao": "medo",
+     "camera": "close"
+    },
+    {
+     "quem": "caio",
+     "texto": "Abre logo! Achei uma coisa que você precisa ver.",
+     "destaque": [
+      "precisa ver"
+     ],
+     "audio": "/home/claude/eps/viz4a/v10.wav",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo"
+     }
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "nina",
+    "caio"
+   ],
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Tirei a fuligem dessa parede. Olha.",
+     "destaque": [
+      "Olha"
+     ],
+     "audio": "/home/claude/eps/viz4a/v11.wav",
+     "emocao": "medo",
+     "camera": "plano",
+     "gesto": "aponta",
+     "reacao": {
+      "nina": "surpreso"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Um desenho de criança… uma casa pegando fogo.",
+     "destaque": [
+      "pegando fogo"
+     ],
+     "audio": "/home/claude/eps/viz4a/v12.wav",
+     "emocao": "medo",
+     "camera": "plano",
+     "reacao": {
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "caio",
+     "texto": "E embaixo: desculpa, vó. Assinado, Nina.",
+     "destaque": [
+      "desculpa, vó",
+      "Nina"
+     ],
+     "audio": "/home/claude/eps/viz4a/v12b.wav",
+     "emocao": "medo",
+     "camera": "medio",
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "surpreso"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Eu não lembro de ter feito isso.",
+     "destaque": [
+      "não lembro"
+     ],
+     "audio": "/home/claude/eps/viz4a/v12c.wav",
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "caio": "triste"
+     }
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "nina",
+    "lurdes",
+    "caio"
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Você desenhou isso um dia antes do fogo.",
+     "destaque": [
+      "um dia antes"
+     ],
+     "audio": "/home/claude/eps/viz4a/v13.wav",
+     "emocao": "feliz",
+     "camera": "punch",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.4,
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó… o que eu fiz?",
+     "destaque": [
+      "o que eu fiz"
+     ],
+     "audio": "/home/claude/eps/viz4a/v14.wav",
+     "emocao": "triste",
+     "camera": "close",
+     "pausa": 0.5,
+     "reacao": {
+      "lurdes": "feliz",
+      "caio": "medo"
+     }
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "A Nina causou o incêndio?\nComente sua teoria."
+ },
+ "inicio": 0.0,
+ "gap": 0.12,
+ "pausa_max": 0.4,
+ "vel_voz": 1.0,
+ "titulo_na_fala": 1
+}
