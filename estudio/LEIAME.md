@@ -17,7 +17,8 @@ cp /home/claude/vozes/estudio/motores/*.py ~/.reel2d/
 ## Vozes (sempre pelo estúdio Vozes, Gemini)
 - Pedido em `pedidos/AAAAMMDD_<id>.json`, motor `gemini`, modelo `gemini-3.1-flash-tts-preview`.
 - **Economia de cota:** juntar falas em blocos de até 2 vozes (vários falantes) — a cota grátis tem limite de pedidos por dia. Narrador: até 4 frases por bloco. Cortar depois pelas pausas e conferir quem fala pela altura da voz.
-- Se der HTTP 429: avisar Kevin; não trocar de voz sem ele pedir.
+- **Cota do Gemini (~10 pedidos/dia no plano grátis):** se der HTTP 429, completar as falas que faltam pelo motor `chatterbox` do mesmo estúdio, clonando as vozes de `refs/<personagem>.wav` (já existem: nina, caio, celia, lurdes, narrador_onibus). Pedido: `{"id": "...", "motor": "chatterbox", "versao": "v3", "falas": [{"quem": "<ref>", "texto": "...", "intensidade": 0.5}]}`; leva ~1 min por fala. O Chatterbox fala mais devagar: acelerar só esses arquivos (atempo ~1.1). Avisar o Kevin na entrega quais falas saíram no Chatterbox.
+- Personagem novo sem ref: montar `refs/<id>.wav` (10–25 s, só a voz dele) a partir de falas Gemini já geradas.
 
 ## Regras de qualidade (não negociáveis)
 1. Gancho forte nos 2 primeiros segundos (abertura fria com a frase mais forte do episódio; título com `titulo_na_fala` / `titulo_no_bloco`).
