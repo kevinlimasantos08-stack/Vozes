@@ -1,0 +1,102 @@
+{
+ "id": "vizinha47-ep4",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "O Caio não foi buscar água. Cadê ele?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, scared, tense whisper, just woke up"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Foi ver o quarto onde você dormia pequena.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, sweet but eerie, calm whisper"
+    },
+    {
+     "quem": "nina",
+     "texto": "No 47? Aquela casa tá toda queimada!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, shocked, loud, panicking"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Eu tranquei ele lá dentro. Igualzinho sua mãe fez comigo.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, cold, slow, chilling"
+    },
+    {
+     "quem": "nina",
+     "texto": "Ele não tem nada a ver com isso!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, desperate, angry, crying"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Tem sim. Ele quer te levar embora daqui.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, possessive, low, menacing whisper"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Você desenhou isso um dia antes do fogo.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, slow, ominous revelation, whisper"
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó… o que eu fiz?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, broken, tearful whisper, terrified"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio! Cê tá aí dentro?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, shouting at a door at night, scared"
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina! A porta tá trancada por fora!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, muffled, desperate, shouting from inside"
+    },
+    {
+     "quem": "nina",
+     "texto": "A chave tá aqui… pendurada na fechadura.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, confused, frightened, low"
+    },
+    {
+     "quem": "caio",
+     "texto": "Abre logo! Achei uma coisa que você precisa ver.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, urgent, nervous"
+    },
+    {
+     "quem": "caio",
+     "texto": "Tirei a fuligem dessa parede. Olha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, quiet, tense, careful"
+    },
+    {
+     "quem": "nina",
+     "texto": "Um desenho de criança… uma casa pegando fogo.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, whisper, disturbed, slow"
+    },
+    {
+     "quem": "caio",
+     "texto": "E embaixo: desculpa, vó. Assinado, Nina.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, slow, grave, unsettling"
+    },
+    {
+     "quem": "nina",
+     "texto": "Eu não lembro de ter feito isso.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, shaky, scared, almost crying"
+    }
+   ]
+  }
+ ]
+}

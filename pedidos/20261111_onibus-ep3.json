@@ -1,0 +1,105 @@
+{
+ "id": "onibus-ep3",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Enceladus"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O banco do motorista estava vazio. E o volante virava sozinho.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, intriguing, low, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O Téo correu pelo corredor gritando pelo Seu Bento.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, urgent, faster"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ninguém respondeu. A catraca marcava um passageiro só: ele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, eerie"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Em cima do painel, tinha um jornal velho, dobrado.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, curious, low"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quinze de março de dois mil e seis. Acidente na porta do hospital.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, reading a headline, grave"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Duas fotos. O motorista antigo… e o cobrador.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, building suspense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O cobrador era o Seu Bento.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, revelation, slow, chilling"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ele também morreu naquela noite. E nunca parou de trabalhar.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, melancholic, low"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Lá na frente, o letreiro mudou sozinho.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, tense, low"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Agora dizia: hospital.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, ominous"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Atrás dele, alguém gritou de dor.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, sudden, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "No último banco, uma moça grávida segurava a barriga.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, whisper, eerie"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Era a mãe do Téo. Vinte anos mais nova.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, revelation, shocked, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O relógio do painel marcava onze e cinquenta e oito. Dois minutos antes do acidente.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, urgent, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E o banco do motorista… estava esperando por ele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, ominous cliffhanger, whisper"
+    }
+   ]
+  }
+ ]
+}
