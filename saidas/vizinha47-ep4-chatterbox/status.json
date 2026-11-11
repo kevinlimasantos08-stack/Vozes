@@ -1,0 +1,24 @@
+{
+ "ok": true,
+ "motor": "chatterbox",
+ "arquivos": [
+  "01_nina.wav",
+  "02_lurdes.wav",
+  "03_nina.wav",
+  "04_lurdes.wav",
+  "05_nina.wav",
+  "06_lurdes.wav",
+  "07_lurdes.wav",
+  "08_nina.wav",
+  "09_nina.wav",
+  "10_caio.wav",
+  "11_nina.wav",
+  "12_caio.wav",
+  "13_caio.wav",
+  "14_nina.wav",
+  "15_caio.wav",
+  "16_nina.wav"
+ ],
+ "segundos": 1200,
+ "modelos": null
+}
