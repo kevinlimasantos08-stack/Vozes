@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "motor": "gemini",
+ "arquivos": [
+  "cena1.wav (gemini-3.1-flash-tts-preview)",
+  "cena2.wav (gemini-3.1-flash-tts-preview)",
+  "cena3.wav (gemini-3.1-flash-tts-preview)",
+  "cena4.wav (gemini-3.1-flash-tts-preview)",
+  "cena5.wav (gemini-3.1-flash-tts-preview)",
+  "cena6.wav (gemini-3.1-flash-tts-preview)",
+  "cena7.wav (gemini-3.1-flash-tts-preview)",
+  "cena8.wav (gemini-3.1-flash-tts-preview)",
+  "cena9.wav (gemini-3.8-flash-tts)",
+  "cena10.wav (gemini-3.8-flash-tts)",
+  "cena11.wav (gemini-3.8-flash-tts)",
+  "cena12.wav (gemini-3.8-flash-tts)",
+  "cena13.wav (gemini-3.8-flash-tts)",
+  "cena14.wav (gemini-3.1-flash-tts-preview)",
+  "cena15.wav (gemini-3.1-flash-tts-preview)",
+  "cena16.wav (gemini-3.1-flash-tts-preview)",
+  "cena17.wav (gemini-2.5-flash-preview-tts)",
+  "cena18.wav (gemini-2.5-flash-preview-tts)",
+  "cena19.wav (gemini-2.5-flash-preview-tts)"
+ ],
+ "segundos": 743,
+ "modelos": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-2.5-pro-preview-tts",
+  "gemini-3.1-flash-tts-preview",
+  "gemini-3.8-flash-tts",
+  "gemini-3.8-flash-lite-tts"
+ ]
+}
