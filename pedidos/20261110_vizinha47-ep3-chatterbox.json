@@ -1,0 +1,107 @@
+{
+ "id": "vizinha47-ep3-chatterbox",
+ "motor": "chatterbox",
+ "versao": "v3",
+ "falas": [
+  {
+   "quem": "nina",
+   "texto": "Caio... cê ouviu isso?",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "caio",
+   "texto": "Ouvi. Tem alguém batendo na porta.",
+   "intensidade": 0.75
+  },
+  {
+   "quem": "nina",
+   "texto": "Às três da manhã? Se for a Dona Lurdes, eu não abro.",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "caio",
+   "texto": "Fica aqui. Eu vou ver.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "celia",
+   "texto": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais.",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "nina",
+   "texto": "Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "celia",
+   "texto": "Ela... falou com você?",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "nina",
+   "texto": "Falou. Ela mora aqui do lado, mãe.",
+   "intensidade": 0.75
+  },
+  {
+   "quem": "celia",
+   "texto": "Não, filha. A Lurdes morreu no incêndio.",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "nina",
+   "texto": "Então me conta. O que aconteceu naquela noite?",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "celia",
+   "texto": "Ela entrava no seu quarto toda noite. Pegava você no colo e cantava.",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "celia",
+   "texto": "E dizia que você era dela.",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "celia",
+   "texto": "Naquela noite, eu saí com você no colo. E tranquei a porta por fora.",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "nina",
+   "texto": "Com ela lá dentro?",
+   "intensidade": 0.75
+  },
+  {
+   "quem": "celia",
+   "texto": "Eu fui chamar a polícia. Quando voltei, a casa tava pegando fogo.",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "nina",
+   "texto": "Por que a senhora nunca me contou?",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "celia",
+   "texto": "Porque você chamava ela de vó.",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "nina",
+   "texto": "Caio? Você voltou?",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Shhh... ele foi buscar água.",
+   "intensidade": 0.45
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Dorme, minha menina. Agora ninguém tranca mais a porta.",
+   "intensidade": 0.45
+  }
+ ]
+}
