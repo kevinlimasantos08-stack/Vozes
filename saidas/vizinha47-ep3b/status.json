@@ -1,13 +1,34 @@
 {
- "ok": false,
+ "ok": true,
  "motor": "gemini",
+ "arquivos": [
+  "cena1.wav (gemini-3.1-flash-tts-preview)",
+  "cena2.wav (gemini-3.1-flash-tts-preview)",
+  "cena3.wav (gemini-3.1-flash-tts-preview)",
+  "cena4.wav (gemini-3.1-flash-tts-preview)",
+  "cena5.wav (gemini-3.1-flash-tts-preview)",
+  "cena6.wav (gemini-3.1-flash-tts-preview)",
+  "cena7.wav (gemini-3.1-flash-tts-preview)",
+  "cena8.wav (gemini-3.1-flash-tts-preview)",
+  "cena9.wav (gemini-3.1-flash-tts-preview)",
+  "cena10.wav (gemini-3.1-flash-tts-preview)",
+  "cena11.wav (gemini-3.1-flash-tts-preview)",
+  "cena12.wav (gemini-3.1-flash-tts-preview)",
+  "cena13.wav (gemini-3.1-flash-tts-preview)",
+  "cena14.wav (gemini-3.1-flash-tts-preview)",
+  "cena15.wav (gemini-3.8-flash-tts)",
+  "cena16.wav (gemini-3.8-flash-tts)",
+  "cena17.wav (gemini-3.8-flash-tts)",
+  "cena18.wav (gemini-3.8-flash-tts)",
+  "cena19.wav (gemini-3.8-flash-tts)",
+  "cena20.wav (gemini-3.8-flash-tts)"
+ ],
+ "segundos": 569,
  "modelos": [
   "gemini-2.5-flash-preview-tts",
   "gemini-2.5-pro-preview-tts",
   "gemini-3.1-flash-tts-preview",
   "gemini-3.8-flash-tts",
   "gemini-3.8-flash-lite-tts"
- ],
- "erro": "RuntimeError: gemini-2.5-flash-preview-tts: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.goo | gemini-3.1-flash-tts-preview: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.goo | gemini-3.8-flash-tts: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.goo",
- "detalhe": "Traceback (most recent call last):\n  File \"/home/runner/work/Vozes/Vozes/scripts/gerar.py\", line 295, in main\n    feitos = MOTORES[p[\"motor\"]](p, pasta)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Vozes/Vozes/scripts/gerar.py\", line 120, in rodar_gemini\n    audio, usado = gemini_bloco(k, modelos, b[\"falas\"], p[\"vozes\"], estilo)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Vozes/Vozes/scripts/gerar.py\", line 110, in gemini_bloco\n    raise RuntimeError(\" | \".join(erros))\nRuntimeError: gemini-2.5-flash-preview-tts: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.goo | gemini-3.1-flash-tts-preview: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.goo | gemini-3.8-flash-tts: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.goo\n"
+ ]
 }
