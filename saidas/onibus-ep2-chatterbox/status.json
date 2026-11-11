@@ -1,0 +1,15 @@
+{
+ "ok": true,
+ "motor": "chatterbox",
+ "arquivos": [
+  "01_narrador_onibus.wav",
+  "02_narrador_onibus.wav",
+  "03_narrador_onibus.wav",
+  "04_narrador_onibus.wav",
+  "05_narrador_onibus.wav",
+  "06_narrador_onibus.wav",
+  "07_narrador_onibus.wav"
+ ],
+ "segundos": 612,
+ "modelos": null
+}
