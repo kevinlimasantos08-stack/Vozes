@@ -1,0 +1,213 @@
+{
+ "id": "vizinha47-ep3b",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio… cê ouviu isso?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, half asleep, whispering, scared"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Ouvi. Tem alguém batendo na porta.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, sleepy, low voice"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Às três da manhã? Se for a Dona Lurdes, eu não abro.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, scared, whispering fast"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Fica aqui. Eu vou ver.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, calm, protective, getting up"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, tired, worried, soft"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, serious, holding back emotion"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Ela… falou com você?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, shocked, almost whispering, slow"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Falou. Ela mora aqui do lado, mãe.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, confused, a bit defensive"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Não, filha. A Lurdes morreu no incêndio.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, firm, sad, slow"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Então me conta. O que aconteceu naquela noite?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, trembling, pleading"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Ela entrava no seu quarto toda noite. Pegava você no colo e cantava.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, haunted memory, slow, low"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "E dizia que você era dela.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, whisper, chilling"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Naquela noite, eu saí com você no colo. E tranquei a porta por fora.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, guilty confession, slow, firm"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Com ela lá dentro?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, horrified, whisper"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Eu fui chamar a polícia. Quando voltei, a casa tava pegando fogo.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, crying softly, broken voice"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Por que a senhora nunca me contou?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, hurt, tearful"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Porque você chamava ela de vó.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, whisper, heavy, slow"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio? Você voltou?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, just woke up, scared whisper in the dark"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Shhh… ele foi buscar água.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, sweet eerie whisper"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Dorme, minha menina. Agora ninguém tranca mais a porta.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, lullaby whisper, slow, ominous"
+    }
+   ]
+  }
+ ]
+}
