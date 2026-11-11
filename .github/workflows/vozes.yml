@@ -27,8 +27,18 @@ jobs:
       - name: Instalar o que os pedidos pedem
         run: |
           python -m pip install --upgrade pip
-          if grep -lq '"motor": *"\(gemini\|refs\)"' pedidos/*.json 2>/dev/null; then pip install "google-genai>=2.25.0"; fi
-          if grep -lq '"motor": *"chatterbox"' pedidos/*.json 2>/dev/null; then pip install chatterbox-tts; fi
+          # só considera pedidos ainda sem resultado (sem saidas/<id>/status.json)
+          PEND=$(python - <<'PY'
+          import json, glob, os
+          for f in glob.glob("pedidos/*.json"):
+              try: d = json.load(open(f, encoding="utf-8"))
+              except Exception: continue
+              if not os.path.exists(f"saidas/{d.get('id')}/status.json"): print(d.get("motor", ""))
+          PY
+          )
+          echo "Motores pendentes: $PEND"
+          if echo "$PEND" | grep -qE "gemini|refs"; then pip install "google-genai>=2.25.0"; fi
+          if echo "$PEND" | grep -q "chatterbox"; then pip install --no-cache-dir chatterbox-tts; fi
 
       - name: Gerar
         env:
