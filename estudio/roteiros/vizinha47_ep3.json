@@ -33,7 +33,7 @@
     {
      "quem": "celia",
      "texto": "E tranquei a porta por fora.",
-     "audio": "/home/claude/reel/teaser_celia.wav",
+     "audio": "/home/claude/reel/ep3d/teaser00.wav",
      "destaque": [
       "por fora"
      ],
@@ -67,7 +67,7 @@
      "reacao": {
       "caio": "surpreso"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/01_nina.wav",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena1.wav",
      "antes": 1.0,
      "sfx": "batida"
     },
@@ -79,7 +79,7 @@
      ],
      "emocao": "surpreso",
      "camera": "medio",
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/02_caio.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena2.wav"
     },
     {
      "quem": "nina",
@@ -90,7 +90,7 @@
      ],
      "emocao": "medo",
      "camera": "close",
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/03_nina.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena3.wav"
     },
     {
      "quem": "caio",
@@ -103,7 +103,7 @@
      "reacao": {
       "nina": "medo"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/04_caio.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena4.wav"
     }
    ]
   },
@@ -126,7 +126,7 @@
      "reacao": {
       "nina": "neutro"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/05_celia.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena5.wav"
     },
     {
      "quem": "nina",
@@ -138,7 +138,7 @@
      "reacao": {
       "celia": "surpreso"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/06_nina.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena6.wav"
     },
     {
      "quem": "celia",
@@ -153,7 +153,7 @@
      "reacao": {
       "nina": "surpreso"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/07_celia.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena7.wav"
     },
     {
      "quem": "nina",
@@ -163,7 +163,7 @@
      ],
      "emocao": "surpreso",
      "camera": "medio",
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/08_nina.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena8.wav"
     },
     {
      "quem": "celia",
@@ -177,7 +177,7 @@
      "reacao": {
       "nina": "medo"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/09_celia.wav"
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3b/cena9.wav"
     },
     {
      "quem": "celia",
@@ -188,7 +188,7 @@
      ],
      "emocao": "medo",
      "camera": "close",
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/11_celia.wav"
+     "audio": "/home/claude/reel/ep3d/a00.wav"
     },
     {
      "quem": "celia",
@@ -201,7 +201,7 @@
      "reacao": {
       "nina": "medo"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/12_celia.wav"
+     "audio": "/home/claude/reel/ep3d/a01.wav"
     },
     {
      "quem": "celia",
@@ -216,7 +216,7 @@
      "reacao": {
       "nina": "surpreso"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/13_celia.wav"
+     "audio": "/home/claude/reel/ep3d/a02.wav"
     },
     {
      "quem": "nina",
@@ -227,7 +227,7 @@
      "emocao": "surpreso",
      "camera": "close",
      "tremor": true,
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/14_nina.wav"
+     "audio": "/home/claude/reel/ep3d/a03.wav"
     },
     {
      "quem": "celia",
@@ -237,7 +237,7 @@
      ],
      "emocao": "triste",
      "camera": "medio",
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/15_celia.wav"
+     "audio": "/home/claude/reel/ep3d/a04.wav"
     },
     {
      "quem": "nina",
@@ -247,7 +247,7 @@
      ],
      "emocao": "triste",
      "camera": "medio",
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/16_nina.wav"
+     "audio": "/home/claude/reel/ep3d/a05.wav"
     },
     {
      "quem": "celia",
@@ -261,7 +261,7 @@
      "reacao": {
       "nina": "surpreso"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/17_celia.wav"
+     "audio": "/home/claude/reel/ep3d/a06.wav"
     }
    ]
   },
@@ -289,7 +289,7 @@
      "reacao": {
       "lurdes": "feliz"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/18_nina.wav"
+     "audio": "/home/claude/reel/ep3d/b00.wav"
     },
     {
      "quem": "lurdes",
@@ -302,7 +302,7 @@
      "reacao": {
       "nina": "medo"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/19_lurdes.wav"
+     "audio": "/home/claude/reel/ep3d/b01.wav"
     },
     {
      "quem": "lurdes",
@@ -316,7 +316,7 @@
      "reacao": {
       "nina": "medo"
      },
-     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/20_lurdes.wav"
+     "audio": "/home/claude/reel/ep3d/b02.wav"
     }
    ]
   }
@@ -328,6 +328,6 @@
  "inicio": 0.0,
  "gap": 0.12,
  "pausa_max": 0.35,
- "vel_voz": 1.15,
+ "vel_voz": 1.05,
  "titulo_na_fala": 1
 }

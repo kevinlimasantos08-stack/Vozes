@@ -315,7 +315,11 @@ def cena_motorista(c, lt, T, t, emo):
     neblina(c, t, 600, 0.1)
     c.restore()
     c.set_source_rgb(0.12, 0.12, 0.14); c.set_line_width(14); rrect(c, 60, 180, W - 120, 820, 60); c.stroke()
-    toon(c, 560, 1150, 1.0, "bento", emo.get("bento", "neutro"), t, look=0.2)
+    if emo.get("vazio"):
+        rrect(c, 330, 1000, 460, 560, 80); fill_ol(c, (0.16, 0.16, 0.2), 8)
+        c.set_source_rgba(0.75, 0.88, 1, 0.08 + 0.05 * math.sin(t * 9)); rrect(c, 360, 1030, 400, 500, 70); c.fill()
+    else:
+        toon(c, 560, 1150, 1.0, "bento", emo.get("bento", "neutro"), t, look=0.2)
     # painel e volante
     c.set_source_rgb(0.08, 0.08, 0.1); c.rectangle(0, 1500, W, H); c.fill()
     g = cairo.LinearGradient(0, 1500, 0, 1560); g.add_color_stop_rgba(0, 0.3, 0.6, 1, 0.5); g.add_color_stop_rgba(1, 0.3, 0.6, 1, 0); c.set_source(g); c.rectangle(0, 1500, W, 60); c.fill()
@@ -330,7 +334,7 @@ def cena_catraca(c, lt, T, t, emo):
     rrect(c, 300, 820, 480, 900, 40); fill_ol(c, (0.55, 0.57, 0.62), 8)
     c.set_source_rgb(0.42, 0.44, 0.5); rrect(c, 330, 860, 420, 120, 20); c.fill()
     gira = eio((lt - T * 0.45) / 0.7)
-    num = "07" if gira > 0.6 else "06"
+    num = ("06" if gira > 0.6 else "07") if emo.get("reverso") else ("07" if gira > 0.6 else "06")
     c.set_source_rgb(0.05, 0.05, 0.05); rrect(c, 420, 880, 240, 80, 10); c.fill()
     fonte(c, 64); c.set_source_rgb(1, 0.25, 0.2) if gira > 0.6 else c.set_source_rgb(0.9, 0.2, 0.15)
     c.move_to(540 - lw_(c, num) / 2, 942); c.show_text(num)

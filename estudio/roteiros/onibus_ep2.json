@@ -138,7 +138,9 @@
     "Pra fora"
    ],
    "cena": "catraca",
-   "emocao": {},
+   "emocao": {
+    "reverso": true
+   },
    "pausa": 0.3,
    "impacto": false
   },
@@ -171,7 +173,7 @@
    ],
    "cena": "motorista",
    "emocao": {
-    "bento": "neutro"
+    "vazio": true
    },
    "pausa": 0.6,
    "impacto": true
