@@ -1,0 +1,87 @@
+{
+ "id": "vizinha47-ep4-chatterbox",
+ "motor": "chatterbox",
+ "versao": "v3",
+ "falas": [
+  {
+   "quem": "nina",
+   "texto": "O Caio não foi buscar água. Cadê ele?",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Foi ver o quarto onde você dormia pequena.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "nina",
+   "texto": "No 47? Aquela casa tá toda queimada!",
+   "intensidade": 0.7
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Eu tranquei ele lá dentro. Igualzinho sua mãe fez comigo.",
+   "intensidade": 0.55
+  },
+  {
+   "quem": "nina",
+   "texto": "Ele não tem nada a ver com isso!",
+   "intensidade": 0.75
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Tem sim. Ele quer te levar embora daqui.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Você desenhou isso um dia antes do fogo.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "nina",
+   "texto": "Vó… o que eu fiz?",
+   "intensidade": 0.6
+  },
+  {
+   "quem": "nina",
+   "texto": "Caio! Cê tá aí dentro?",
+   "intensidade": 0.65
+  },
+  {
+   "quem": "caio",
+   "texto": "Nina! A porta tá trancada por fora!",
+   "intensidade": 0.75
+  },
+  {
+   "quem": "nina",
+   "texto": "A chave tá aqui… pendurada na fechadura.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "caio",
+   "texto": "Abre logo! Achei uma coisa que você precisa ver.",
+   "intensidade": 0.65
+  },
+  {
+   "quem": "caio",
+   "texto": "Tirei a fuligem dessa parede. Olha.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "nina",
+   "texto": "Um desenho de criança… uma casa pegando fogo.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "caio",
+   "texto": "E embaixo: desculpa, vó. Assinado, Nina.",
+   "intensidade": 0.5
+  },
+  {
+   "quem": "nina",
+   "texto": "Eu não lembro de ter feito isso.",
+   "intensidade": 0.5
+  }
+ ]
+}
