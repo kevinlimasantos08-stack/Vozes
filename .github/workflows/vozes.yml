@@ -39,6 +39,7 @@ jobs:
           echo "Motores pendentes: $PEND"
           if echo "$PEND" | grep -qE "gemini|refs"; then pip install "google-genai>=2.25.0"; fi
           if echo "$PEND" | grep -q "chatterbox"; then pip install --no-cache-dir chatterbox-tts; fi
+          if echo "$PEND" | grep -q "transcrever"; then pip install --no-cache-dir faster-whisper; fi
 
       - name: Gerar
         env:

@@ -6,6 +6,7 @@ Motores:
   chatterbox  Chatterbox Multilingual (código aberto, MIT). Um arquivo por fala: <NN>_<quem>.wav
               Se existir refs/<quem>.wav, clona essa voz para manter o personagem fixo.
   urls        Baixa arquivos prontos (ex.: links do ElevenLabs): <nome>
+  transcrever Transcreve áudios (faster-whisper, local) para conferir legenda x voz: saidas/<id>/<nome>.json
   refs        Gera com Gemini as vozes de referência do elenco em refs/<quem>.wav (para o Chatterbox)
 
 Formato do pedido: ver README.md.
@@ -153,6 +154,22 @@ def rodar_chatterbox(p, pasta):
     return feitos
 
 
+def rodar_transcrever(p, pasta):
+    """Pedido: {"id", "motor": "transcrever", "arquivos": ["qa/x.mp3", ...], "modelo": "small"}"""
+    from faster_whisper import WhisperModel
+    m = WhisperModel(p.get("modelo", "small"), device="cpu", compute_type="int8")
+    feitos = []
+    for arq in p["arquivos"]:
+        segs, _ = m.transcribe(os.path.join(RAIZ, arq), language=p.get("lingua", "pt"), word_timestamps=True, vad_filter=False)
+        out = [{"ini": round(s.start, 2), "fim": round(s.end, 2), "texto": s.text.strip(),
+                "palavras": [[w.word.strip(), round(w.start, 2), round(w.end, 2)] for w in (s.words or [])]} for s in segs]
+        nome = os.path.splitext(os.path.basename(arq))[0] + ".json"
+        with open(os.path.join(pasta, nome), "w", encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=1)
+        feitos.append(nome)
+    return feitos
+
+
 def rodar_urls(p, pasta):
     feitos = []
     for a in p["arquivos"]:
@@ -274,7 +291,7 @@ def rodar_imagens(p, pasta):
     return feitos
 
 
-MOTORES = {"imagens": rodar_imagens, "modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "refs": rodar_refs}
+MOTORES = {"imagens": rodar_imagens, "modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "transcrever": rodar_transcrever, "refs": rodar_refs}
 
 
 def main():
