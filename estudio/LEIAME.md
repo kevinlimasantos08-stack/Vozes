@@ -1,0 +1,31 @@
+# Estúdio diário de séries — @continua.br
+
+Rotina de todo dia (17h): continuar **A Vizinha do 47** e **O Último Ônibus**, um episódio de cada.
+
+## Preparar o ambiente (sessão nova)
+```bash
+mkdir -p ~/.reel2d && cd ~/.reel2d
+pip install --break-system-packages -q kokoro-onnx soundfile pycairo
+for f in Bold Medium ExtraBold; do [ -s Poppins-$f.ttf ] || curl -sSL -o Poppins-$f.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-$f.ttf; done
+[ -s Jost.ttf ] || curl -sSL -o Jost.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/jost/Jost%5Bwght%5D.ttf"
+[ -s Italiana.ttf ] || curl -sSL -o Italiana.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/italiana/Italiana-Regular.ttf
+mkdir -p ~/.local/share/fonts && cp *.ttf ~/.local/share/fonts/ && fc-cache -f >/dev/null
+cp /home/claude/vozes/estudio/motores/*.py ~/.reel2d/
+```
+(O kokoro.onnx só é necessário se alguma fala ficar sem áudio pronto; com vozes do GitHub não precisa.)
+
+## Vozes (sempre pelo estúdio Vozes, Gemini)
+- Pedido em `pedidos/AAAAMMDD_<id>.json`, motor `gemini`, modelo `gemini-3.1-flash-tts-preview`.
+- **Economia de cota:** juntar falas em blocos de até 2 vozes (vários falantes) — a cota grátis tem limite de pedidos por dia. Narrador: até 4 frases por bloco. Cortar depois pelas pausas e conferir quem fala pela altura da voz.
+- Se der HTTP 429: avisar Kevin; não trocar de voz sem ele pedir.
+
+## Regras de qualidade (não negociáveis)
+1. Gancho forte nos 2 primeiros segundos (abertura fria com a frase mais forte do episódio; título com `titulo_na_fala` / `titulo_no_bloco`).
+2. Falas naturais, curtas, sem explicar para o público; nenhum personagem some sem motivo; cenário e pose condizentes com o momento (camas, sofá, rua…).
+3. Legenda no tempo da voz (os motores já alinham pela voz real); ritmo: `gap` 0.12, `pausa_max` 0.35–0.4, `vel_voz` ~1.05–1.15 se a voz estiver lenta.
+4. Transições suaves (já no motor). Som sem saturação (pico ≤ 0.9).
+5. 55–75 s, termina com pergunta nova para os comentários e "CONTINUA...".
+6. Versão leve para celular (crf 24–26, maxrate ≤ 6M, main 4.0, faststart), até ~20 MB.
+
+## Depois de cada episódio
+Atualizar `estudio/series/<serie>.md` (o que foi revelado, perguntas em aberto) e salvar o roteiro em `estudio/roteiros/`. Commit e push.

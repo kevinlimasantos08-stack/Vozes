@@ -1,0 +1,282 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 2",
+ "titulo": "QUEM GUARDOU\nESSA FOTO?",
+ "cenas": [
+  {
+   "cenario": "casa",
+   "personagens": [
+    "nina",
+    "caio"
+   ],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio, liguei pra minha mãe. Perguntei se eu já morei aqui.",
+     "bloco": 1,
+     "destaque": [
+      "morei aqui"
+     ],
+     "camera": "plano",
+     "reacao": {
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/reel/ep2/b1_00.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "E o que ela disse?",
+     "bloco": 1,
+     "destaque": [
+      "disse"
+     ],
+     "camera": "medio",
+     "audio": "/home/claude/reel/ep2/b1_01.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Ficou em silêncio. E desligou na minha cara.",
+     "bloco": 1,
+     "destaque": [
+      "silêncio",
+      "desligou"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "impacto": true,
+     "reacao": {
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/reel/ep2/b1_02.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina... olha o que eu achei no armário.",
+     "bloco": 1,
+     "destaque": [
+      "armário"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "audio": "/home/claude/reel/ep2/b1_03.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Uma foto? Sou eu! Com seis anos.",
+     "bloco": 1,
+     "destaque": [
+      "foto",
+      "seis anos"
+     ],
+     "emocao": "surpreso",
+     "camera": "close",
+     "audio": "/home/claude/reel/ep2/b1_04.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Na frente desta porta. Olha o número.",
+     "bloco": 1,
+     "destaque": [
+      "porta",
+      "número"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/reel/ep2/b1_05.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Quarenta e sete.",
+     "bloco": 1,
+     "destaque": [
+      "Quarenta e sete"
+     ],
+     "emocao": "medo",
+     "camera": "punch",
+     "tremor": true,
+     "pausa": 0.5,
+     "audio": "/home/claude/reel/ep2/b1_06.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "rua",
+   "personagens": [
+    "nina",
+    "lurdes"
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Achou a foto, né, minha filha?",
+     "bloco": 2,
+     "destaque": [
+      "foto"
+     ],
+     "camera": "plano",
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/reel/ep2/b2_00.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "A senhora colocou isso lá dentro?",
+     "bloco": 2,
+     "destaque": [
+      "colocou"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "audio": "/home/claude/reel/ep2/b2_01.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Eu guardei pra você. Por vinte anos.",
+     "bloco": 2,
+     "destaque": [
+      "vinte anos"
+     ],
+     "emocao": "feliz",
+     "camera": "close",
+     "reacao": {
+      "nina": "surpreso"
+     },
+     "audio": "/home/claude/reel/ep2/b2_02.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Minha mãe nunca falou dessa casa.",
+     "bloco": 2,
+     "destaque": [
+      "nunca"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "audio": "/home/claude/reel/ep2/b2_03.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Claro que não. Ela foi a última a sair.",
+     "bloco": 2,
+     "destaque": [
+      "última"
+     ],
+     "camera": "close",
+     "reacao": {
+      "nina": "surpreso"
+     },
+     "audio": "/home/claude/reel/ep2/b2_04.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "O que aconteceu no incêndio?",
+     "bloco": 2,
+     "destaque": [
+      "incêndio"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "audio": "/home/claude/reel/ep2/b2_05.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Pergunta pra ela... por que trancou a porta.",
+     "bloco": 2,
+     "destaque": [
+      "trancou"
+     ],
+     "camera": "punch",
+     "impacto": true,
+     "pausa": 0.6,
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/reel/ep2/b2_06.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "casa",
+   "personagens": [
+    "caio",
+    "nina"
+   ],
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Achei a notícia do incêndio. Teve uma vítima.",
+     "bloco": 3,
+     "destaque": [
+      "notícia",
+      "vítima"
+     ],
+     "camera": "plano",
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/reel/ep2/b3_00.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Quem?",
+     "bloco": 3,
+     "destaque": [
+      "Quem"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "audio": "/home/claude/reel/ep2/b3_01.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Uma senhora de setenta anos. O nome dela...",
+     "bloco": 3,
+     "destaque": [
+      "setenta anos"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "pausa": 0.5,
+     "audio": "/home/claude/reel/ep2/b3_02.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "...era Lurdes.",
+     "bloco": 3,
+     "destaque": [
+      "Lurdes"
+     ],
+     "emocao": "medo",
+     "camera": "punch",
+     "tremor": true,
+     "impacto": true,
+     "reacao": {
+      "nina": "surpreso"
+     },
+     "pausa": 0.5,
+     "audio": "/home/claude/reel/ep2/b3_03.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Então... com quem eu acabei de falar?",
+     "bloco": 3,
+     "destaque": [
+      "com quem"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "tremor": true,
+     "audio": "/home/claude/reel/ep2/b3_04.wav"
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "Quem é a Dona Lurdes?\nComente sua teoria."
+ }
+}

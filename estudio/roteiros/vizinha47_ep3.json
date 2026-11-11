@@ -1,0 +1,333 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 3",
+ "titulo": "ELA TRANCOU\nA PORTA",
+ "elenco_extra": {
+  "celia": {
+   "nome": "DONA CÉLIA",
+   "voz": "pf_dora",
+   "vel": 0.95,
+   "tom": -0.5,
+   "pele": "#D2A07A",
+   "cabelo": "#5A4636",
+   "estilo_cabelo": "curto",
+   "barba": false,
+   "roupa": "#6B4E3D",
+   "detalhe": "#EADFCC",
+   "calca": "#2F2B33",
+   "estilo_roupa": "cardigan",
+   "etiqueta": "#D98E5F",
+   "oculos": false,
+   "altura": 0.95
+  }
+ },
+ "cenas": [
+  {
+   "cenario": "sala",
+   "personagens": [
+    "nina",
+    "celia"
+   ],
+   "pose": "sentado",
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "E tranquei a porta por fora.",
+     "audio": "/home/claude/reel/teaser_celia.wav",
+     "destaque": [
+      "por fora"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.3,
+     "reacao": {
+      "nina": "surpreso"
+     }
+    }
+   ]
+  },
+  {
+   "cenario": "quarto",
+   "personagens": [
+    "nina",
+    "caio"
+   ],
+   "pose": "deitado",
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio… cê ouviu isso?",
+     "destaque": [
+      "ouviu"
+     ],
+     "emocao": "medo",
+     "camera": "plano",
+     "reacao": {
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/01_nina.wav",
+     "antes": 1.0,
+     "sfx": "batida"
+    },
+    {
+     "quem": "caio",
+     "texto": "Ouvi. Tem alguém batendo na porta.",
+     "destaque": [
+      "batendo"
+     ],
+     "emocao": "surpreso",
+     "camera": "medio",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/02_caio.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Às três da manhã? Se for a Dona Lurdes, eu não abro.",
+     "destaque": [
+      "três da manhã",
+      "não abro"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/03_nina.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Fica aqui. Eu vou ver.",
+     "destaque": [
+      "vou ver"
+     ],
+     "camera": "medio",
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/04_caio.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "sala",
+   "personagens": [
+    "nina",
+    "celia"
+   ],
+   "pose": "sentado",
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais.",
+     "destaque": [
+      "não dormi"
+     ],
+     "emocao": "triste",
+     "camera": "plano",
+     "reacao": {
+      "nina": "neutro"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/05_celia.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+     "destaque": [
+      "trancou"
+     ],
+     "camera": "medio",
+     "reacao": {
+      "celia": "surpreso"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/06_nina.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela… falou com você?",
+     "destaque": [
+      "falou"
+     ],
+     "emocao": "medo",
+     "camera": "punch",
+     "impacto": true,
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "surpreso"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/07_celia.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Falou. Ela mora aqui do lado, mãe.",
+     "destaque": [
+      "aqui do lado"
+     ],
+     "emocao": "surpreso",
+     "camera": "medio",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/08_nina.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Não, filha. A Lurdes morreu no incêndio.",
+     "destaque": [
+      "morreu"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/09_celia.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela entrava no seu quarto toda noite. Pegava você no colo e cantava.",
+     "destaque": [
+      "toda noite",
+      "cantava"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/11_celia.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "E dizia que você era dela.",
+     "destaque": [
+      "dela"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/12_celia.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Naquela noite, eu saí com você no colo. E tranquei a porta por fora.",
+     "destaque": [
+      "por fora"
+     ],
+     "emocao": "triste",
+     "camera": "punch",
+     "impacto": true,
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "surpreso"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/13_celia.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Com ela lá dentro?",
+     "destaque": [
+      "lá dentro"
+     ],
+     "emocao": "surpreso",
+     "camera": "close",
+     "tremor": true,
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/14_nina.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Eu fui chamar a polícia. Quando voltei, a casa tava pegando fogo.",
+     "destaque": [
+      "pegando fogo"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/15_celia.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Por que a senhora nunca me contou?",
+     "destaque": [
+      "nunca"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/16_nina.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Porque você chamava ela de vó.",
+     "destaque": [
+      "vó"
+     ],
+     "emocao": "triste",
+     "camera": "punch",
+     "pausa": 0.35,
+     "reacao": {
+      "nina": "surpreso"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/17_celia.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "quarto",
+   "personagens": [
+    "nina",
+    "lurdes"
+   ],
+   "pose": {
+    "nina": "deitado"
+   },
+   "camas_vazias": [
+    1100
+   ],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Caio? Você voltou?",
+     "destaque": [
+      "Caio"
+     ],
+     "emocao": "medo",
+     "camera": "plano",
+     "reacao": {
+      "lurdes": "feliz"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/18_nina.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Shhh… ele foi buscar água.",
+     "destaque": [
+      "água"
+     ],
+     "emocao": "feliz",
+     "camera": "close",
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/19_lurdes.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Dorme, minha menina. Agora ninguém tranca mais a porta.",
+     "destaque": [
+      "ninguém tranca"
+     ],
+     "camera": "punch",
+     "impacto": true,
+     "tremor": true,
+     "reacao": {
+      "nina": "medo"
+     },
+     "audio": "/home/claude/vozes/saidas/vizinha47-ep3-chatterbox/20_lurdes.wav"
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "Onde está o Caio?\nComente sua teoria."
+ },
+ "inicio": 0.0,
+ "gap": 0.12,
+ "pausa_max": 0.35,
+ "vel_voz": 1.15,
+ "titulo_na_fala": 1
+}

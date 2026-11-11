@@ -1,0 +1,165 @@
+{
+ "serie": "O Último Ônibus · Ep 1",
+ "titulo": "ELE NUNCA\nDESCE",
+ "blocos": [
+  {
+   "texto": "Todo dia, à meia-noite, o ônibus da linha doze faz uma parada que não existe.",
+   "destaque": [
+    "meia-noite",
+    "não existe"
+   ],
+   "cena": "estrada",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O ponto doze. Ninguém espera ali. Ninguém nunca esperou.",
+   "destaque": [
+    "ponto doze",
+    "Ninguém"
+   ],
+   "cena": "ponto",
+   "emocao": {},
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo pegava esse ônibus fazia uma semana. E reparou numa coisa.",
+   "destaque": [
+    "Téo",
+    "reparou"
+   ],
+   "cena": "interior",
+   "emocao": {
+    "teo": "neutro"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O Seu Bento, o motorista, sempre parava. Abria a porta. E esperava.",
+   "destaque": [
+    "Seu Bento",
+    "esperava"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "bento": "neutro"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Naquela noite, a porta abriu… e a catraca girou sozinha.",
+   "destaque": [
+    "catraca",
+    "sozinha"
+   ],
+   "cena": "catraca",
+   "emocao": {},
+   "pausa": 0.5,
+   "impacto": true
+  },
+  {
+   "texto": "O Téo contou os passageiros. Eram seis quando ele subiu.",
+   "destaque": [
+    "contou",
+    "seis"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Agora eram sete.",
+   "destaque": [
+    "sete"
+   ],
+   "cena": "corredor",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.7,
+   "impacto": true
+  },
+  {
+   "texto": "O Seu Bento olhou pelo espelho e disse, sem virar o rosto:",
+   "destaque": [
+    "espelho"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "serio"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Faz vinte anos que ele não desce.",
+   "destaque": [
+    "vinte anos",
+    "não desce"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "bento": "serio"
+   },
+   "pausa": 0.5,
+   "impacto": false
+  },
+  {
+   "texto": "O passageiro era o motorista que fazia essa linha antes dele.",
+   "destaque": [
+    "motorista",
+    "antes"
+   ],
+   "cena": "retrato",
+   "emocao": {},
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "E ele nunca desce, porque está esperando alguém.",
+   "destaque": [
+    "esperando alguém"
+   ],
+   "cena": "interior",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo olhou para o banco do lado. Estava vazio…",
+   "destaque": [
+    "banco",
+    "vazio"
+   ],
+   "cena": "banco",
+   "emocao": {},
+   "pausa": 0.6,
+   "impacto": false
+  },
+  {
+   "texto": "…mas estava quente.",
+   "destaque": [
+    "quente"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "pavor"
+   },
+   "pausa": 0.8,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "Por que ele esperava o Téo?\nComente sua teoria."
+ }
+}

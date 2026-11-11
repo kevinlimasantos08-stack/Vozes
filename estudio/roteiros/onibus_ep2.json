@@ -1,0 +1,184 @@
+{
+ "serie": "O Último Ônibus · Ep 2",
+ "titulo": "PRO\nTÉO",
+ "titulo_no_bloco": 1,
+ "pausa_max": 0.4,
+ "blocos": [
+  {
+   "texto": "Naquela noite, alguém desceu do ônibus no ponto doze. E não era o fantasma.",
+   "destaque": [
+    "ponto doze",
+    "fantasma"
+   ],
+   "cena": "descida",
+   "emocao": {
+    "flash": true
+   },
+   "pausa": 0.3,
+   "impacto": true
+  },
+  {
+   "texto": "Um dia antes, o Téo entrou no ônibus jurando que não ia sentar.",
+   "destaque": [
+    "Téo",
+    "não ia sentar"
+   ],
+   "cena": "interior",
+   "emocao": {
+    "teo": "serio"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Mas só tinha um banco livre. Aquele.",
+   "destaque": [
+    "Aquele"
+   ],
+   "cena": "banco",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Em cima dele, uma passagem velha. Amarelada.",
+   "destaque": [
+    "passagem"
+   ],
+   "cena": "bilhete",
+   "emocao": {
+    "lado": "frente"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "A data era de vinte anos atrás. O dia em que o Téo nasceu.",
+   "destaque": [
+    "vinte anos",
+    "nasceu"
+   ],
+   "cena": "bilhete",
+   "emocao": {
+    "lado": "frente"
+   },
+   "pausa": 0.3,
+   "impacto": true
+  },
+  {
+   "texto": "No verso, escrito à mão: pro Téo. Eu prometi te levar.",
+   "destaque": [
+    "prometi te levar"
+   ],
+   "cena": "bilhete",
+   "emocao": {
+    "lado": "verso"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo ligou pra mãe. Ela ficou muda. Depois contou tudo.",
+   "destaque": [
+    "mãe",
+    "contou tudo"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Vinte anos atrás, ela entrou em trabalho de parto dentro desse ônibus.",
+   "destaque": [
+    "trabalho de parto"
+   ],
+   "cena": "estrada",
+   "emocao": {},
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "O motorista pisou fundo pra chegar no hospital a tempo.",
+   "destaque": [
+    "pisou fundo",
+    "hospital"
+   ],
+   "cena": "retrato",
+   "emocao": {},
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Chegou. A mãe e o bebê se salvaram. Ele, não.",
+   "destaque": [
+    "se salvaram",
+    "Ele, não"
+   ],
+   "cena": "retrato",
+   "emocao": {},
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "O fantasma não queria assustar ninguém. Só queria terminar a viagem.",
+   "destaque": [
+    "terminar a viagem"
+   ],
+   "cena": "banco",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "No ponto doze, a catraca girou de novo. Pra fora.",
+   "destaque": [
+    "Pra fora"
+   ],
+   "cena": "catraca",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo olhou pela janela pra ver o fantasma ir embora.",
+   "destaque": [
+    "janela"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "neutro"
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Mas quem sumia na neblina… era o Seu Bento.",
+   "destaque": [
+    "Seu Bento"
+   ],
+   "cena": "descida",
+   "emocao": {},
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "E o ônibus continuava andando.",
+   "destaque": [
+    "continuava andando"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "bento": "neutro"
+   },
+   "pausa": 0.6,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "Então quem está dirigindo?\nComente sua teoria."
+ }
+}
