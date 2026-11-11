@@ -1,0 +1,160 @@
+{
+ "id": "onibus-toon-ep2",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Enceladus"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Naquela noite, alguém desceu do ônibus no ponto doze. E não era o fantasma.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, intriguing, low"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Um dia antes, o Téo entrou no ônibus jurando que não ia sentar.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, calm, storytelling"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas só tinha um banco livre. Aquele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, tense"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em cima dele, uma passagem velha. Amarelada.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, curious, low"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A data era de vinte anos atrás. O dia em que o Téo nasceu.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, revealing"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No verso, escrito à mão: pro Téo. Eu prometi te levar.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, whisper on the quote, chilling"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Téo ligou pra mãe. Ela ficou muda. Depois contou tudo.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, tense"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vinte anos atrás, ela entrou em trabalho de parto dentro desse ônibus.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, serious, building"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O motorista pisou fundo pra chegar no hospital a tempo.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, faster, urgent"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Chegou. A mãe e o bebê se salvaram. Ele, não.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, sad pause before the last words"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O fantasma não queria assustar ninguém. Só queria terminar a viagem.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, soft, emotional"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No ponto doze, a catraca girou de novo. Pra fora.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, tense, whisper at the end"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Téo olhou pela janela pra ver o fantasma ir embora.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, calm, almost relieved"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas quem sumia na neblina… era o Seu Bento.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, whisper, shocked"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E o ônibus continuava andando.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, very slow, chilling whisper"
+    }
+   ]
+  }
+ ]
+}
