@@ -1,0 +1,113 @@
+{
+ "id": "vizinha47-ep6",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Eu fui buscar o galão, sim.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, confessing, firm, tense, low"
+    },
+    {
+     "quem": "nina",
+     "texto": "A senhora trancou a vó lá dentro e foi buscar gasolina?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, shocked, angry, voice breaking"
+    },
+    {
+     "quem": "celia",
+     "texto": "Era pra queimar a casa vazia. De manhã.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, tired, firm, ashamed"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "E por que pegou fogo de madrugada?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, suspicious, tense"
+    },
+    {
+     "quem": "celia",
+     "texto": "Porque não fui eu. Quando voltei, já tava queimando.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, haunted, quiet"
+    },
+    {
+     "quem": "caio",
+     "texto": "Mas ela tava trancada. Quem acendeu, então?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, confused, pressing"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela mesma. Lá de dentro.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, cold, slow, chilling"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Ela se queimou só pra jogar a culpa em você?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, disbelief, whispering"
+    },
+    {
+     "quem": "celia",
+     "texto": "Pra ninguém nunca mais tirar você dela.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, grave, sad"
+    },
+    {
+     "quem": "nina",
+     "texto": "Mas ela era minha vó, mãe!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, desperate, crying"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela nunca foi sua vó, filha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, very soft, heartbreaking, slow"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Conta o resto, Célia. Conta de quem ela é filha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, eerie, calm, from far away, menacing"
+    },
+    {
+     "quem": "nina",
+     "texto": "Mãe… do que ela tá falando?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, scared, trembling, whispering"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "A menina que eu tirei dessa casa… não era a minha filha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, confessing, broken, slow"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Era a minha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, slow, cold, chilling whisper"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "onibus-ep5",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Enceladus"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A porta da casa da mãe abriu. E quem atendeu foi… ele mesmo.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, chilling revelation"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Mesmo rosto. Mesmos óculos. Mesmo nome.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, low, eerie, deliberate"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Lá de dentro, a mãe perguntou: filho, quem é?",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, soft, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O outro Téo olhou pra fora e disse: ninguém, mãe.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, cold, slow"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ele olhava pro Téo. Mas não via o Téo.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, whisper, eerie"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Na estante, uma foto: o bebê nascendo no hospital. Não no ônibus.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, curious, then grave"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Salvando a mãe, o Téo tinha apagado a própria vida.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, melancholic, low"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ele andou o dia inteiro. Ninguém esbarrou nele. Ninguém desviou.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, lonely, eerie"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "À meia-noite, ele voltou pro ponto doze.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, low, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O último ônibus parou. E a porta abriu sozinha.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, ominous, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "No retrovisor, o Seu Bento sorriu. Como se já esperasse por ele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, mysterious, low"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Téo passou pela catraca. E ela girou sozinha.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, tense, building"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Marcou sete. O passageiro que nunca desce.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, ominous cliffhanger, whisper"
+    }
+   ]
+  }
+ ]
+}
