@@ -1,0 +1,12 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "turno1g_cena1.json",
+  "turno1g_cena2.json",
+  "turno1g_cena3.json",
+  "turno1g_cena4.json"
+ ],
+ "segundos": 12,
+ "modelos": null
+}
