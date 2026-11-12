@@ -1,0 +1,11 @@
+{
+ "id": "qa-viz6-blocos",
+ "motor": "transcrever",
+ "arquivos": [
+  "qa/viz6_cena1.mp3",
+  "qa/viz6_cena2.mp3",
+  "qa/viz6_cena3.mp3",
+  "qa/viz6_cena4.mp3",
+  "qa/viz6_cena5.mp3"
+ ]
+}
