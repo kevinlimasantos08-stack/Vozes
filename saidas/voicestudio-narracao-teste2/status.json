@@ -1,0 +1,15 @@
+{
+ "ok": true,
+ "motor": "voicestudio",
+ "arquivos": [
+  "01_narrador.wav",
+  "02_narrador.wav",
+  "03_narrador.wav",
+  "04_narrador.wav",
+  "05_narrador.wav",
+  "06_narrador.wav",
+  "07_narrador.wav"
+ ],
+ "segundos": 403,
+ "modelos": null
+}
