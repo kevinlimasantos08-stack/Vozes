@@ -185,8 +185,10 @@ def rodar_voicestudio(p, pasta):
             kw["instruct"] = vozes.get(quem) or "male, young adult, moderate pitch"
         # mesma semente por personagem: ajuda a manter a voz parecida entre as falas
         kw["seed"] = semente + sum(map(ord, quem))
-        audio = modelo.generate(text=f["texto"], **kw)[0]
         nome = f"{i:02d}_{quem}.wav"
+        if os.path.exists(os.path.join(pasta, nome)):  # retomada: fala já feita numa execução anterior
+            feitos.append(nome); continue
+        audio = modelo.generate(text=f["texto"], **kw)[0]
         save_audio(os.path.join(pasta, nome), audio, modelo.sampling_rate)
         feitos.append(nome)
         print(f"  {nome}", flush=True)
@@ -356,6 +358,23 @@ def main():
             salvar_status(pasta, {"ok": False, "motor": p.get("motor"), "modelos": p.get("_disponiveis"), "erro": f"{type(e).__name__}: {e}",
                                   "detalhe": traceback.format_exc()[-1500:]})
             print(f"ERRO {pid}: {e}")
+        entregar(pid)
+
+
+def entregar(pid):
+    """Com ENTREGAR_CADA=1 (workflow), sobe o resultado de cada pedido assim que ele termina,
+    para um pedido longo não perder os outros se o job estourar o tempo."""
+    if os.environ.get("ENTREGAR_CADA") != "1":
+        return
+    import subprocess
+    sh = lambda *a: subprocess.run(list(a), cwd=RAIZ)
+    sh("git", "add", "saidas", "refs")
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=RAIZ).returncode != 0:
+        sh("git", "commit", "-q", "-m", f"Vozes geradas: {pid}")
+        for _ in range(3):
+            sh("git", "pull", "-q", "--rebase")
+            if subprocess.run(["git", "push", "-q"], cwd=RAIZ).returncode == 0:
+                break
 
 
 if __name__ == "__main__":

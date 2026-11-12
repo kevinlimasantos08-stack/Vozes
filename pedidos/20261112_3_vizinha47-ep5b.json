@@ -1,0 +1,47 @@
+{
+ "id": "vizinha47-ep5b",
+ "motor": "voicestudio",
+ "clonar": {
+  "nina": "Caio… cê ouviu isso? Às três da manhã? Se for a Dona Lurdes, eu não abro. Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+  "caio": "Ouvi. Tem alguém batendo na porta. Fica aqui. Eu vou ver. Nina, alguém tá batendo na porta. Não é ela, é a sua mãe!",
+  "lurdes": "Achou a foto, né, minha filha? Eu guardei pra você… Por vinte anos. Claro que não. Ela foi a última a sair. Shhh… Dorme, minha menina.",
+  "celia": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais. Não, filha. A Lurdes morreu no incêndio. Ela… falou com você?"
+ },
+ "vozes": {
+  "nina": "female, young adult, moderate pitch",
+  "caio": "male, young adult, moderate pitch",
+  "lurdes": "female, elderly, low pitch",
+  "celia": "female, middle-aged, moderate pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "lurdes",
+   "texto": "Ela foi buscar o galão."
+  },
+  {
+   "quem": "nina",
+   "texto": "Ela me tirou daqui… e voltou com fogo?"
+  },
+  {
+   "quem": "caio",
+   "texto": "Ouviu isso? Tem alguém lá fora."
+  },
+  {
+   "quem": "celia",
+   "texto": "Nina! Sai dessa casa. Agora."
+  },
+  {
+   "quem": "nina",
+   "texto": "Mãe? O que a senhora tá fazendo aqui?"
+  },
+  {
+   "quem": "celia",
+   "texto": "Vim te levar embora, filha. Sai daí."
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Ela voltou pra terminar o que começou."
+  }
+ ]
+}

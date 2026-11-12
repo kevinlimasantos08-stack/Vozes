@@ -1,0 +1,45 @@
+{
+ "id": "onibus-ep4b",
+ "motor": "voicestudio",
+ "clonar": {
+  "narrador_onibus": "Naquela noite, alguém desceu do ônibus no ponto doze. E não era o fantasma. Um dia antes, o Téo entrou no ônibus jurando que não ia sentar. A data era de vinte anos atrás. O dia em que o Téo nasceu. Vinte anos atrás, ela entrou em trabalho de parto dentro desse ônibus."
+ },
+ "vozes": {
+  "narrador_onibus": "male, middle-aged, low pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "narrador_onibus",
+   "texto": "Duas sombras de uniforme ajudaram a mãe dele a descer."
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "Pelo retrovisor, o Seu Bento sorriu. Pela primeira vez."
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "Aí tudo ficou branco."
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "O Téo acordou no ponto doze. Já era de manhã."
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "Do lado dele, esperando o ônibus, estava o Seu Bento. Vivo."
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "O Seu Bento olhou pro Téo e perguntou: a gente se conhece?"
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "O Téo pegou o celular pra ligar pra mãe."
+  },
+  {
+   "quem": "narrador_onibus",
+   "texto": "Mas o contato dela… não existia mais."
+  }
+ ]
+}

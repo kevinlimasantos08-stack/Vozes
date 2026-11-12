@@ -16,7 +16,7 @@ concurrency:
 jobs:
   vozes:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 170
     steps:
       - uses: actions/checkout@v4
 
@@ -58,7 +58,11 @@ jobs:
       - name: Gerar
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scripts/gerar.py
+          ENTREGAR_CADA: "1"
+        run: |
+          git config user.name "estudio-vozes"
+          git config user.email "actions@users.noreply.github.com"
+          python scripts/gerar.py
 
       - name: Devolver os áudios para o repositório
         run: |

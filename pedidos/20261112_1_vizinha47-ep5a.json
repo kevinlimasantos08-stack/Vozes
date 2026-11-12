@@ -1,0 +1,51 @@
+{
+ "id": "vizinha47-ep5a",
+ "motor": "voicestudio",
+ "clonar": {
+  "nina": "Caio… cê ouviu isso? Às três da manhã? Se for a Dona Lurdes, eu não abro. Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+  "caio": "Ouvi. Tem alguém batendo na porta. Fica aqui. Eu vou ver. Nina, alguém tá batendo na porta. Não é ela, é a sua mãe!",
+  "lurdes": "Achou a foto, né, minha filha? Eu guardei pra você… Por vinte anos. Claro que não. Ela foi a última a sair. Shhh… Dorme, minha menina.",
+  "celia": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais. Não, filha. A Lurdes morreu no incêndio. Ela… falou com você?"
+ },
+ "vozes": {
+  "nina": "female, young adult, moderate pitch",
+  "caio": "male, young adult, moderate pitch",
+  "lurdes": "female, elderly, low pitch",
+  "celia": "female, middle-aged, moderate pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "lurdes",
+   "texto": "Você desenhou o que ouviu sua mãe dizer."
+  },
+  {
+   "quem": "nina",
+   "texto": "Vó… fui eu que coloquei fogo?"
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Não, minha menina. Você só desenhou o que ouviu."
+  },
+  {
+   "quem": "nina",
+   "texto": "Ouvi o quê?"
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Sua mãe no telefone, na noite anterior."
+  },
+  {
+   "quem": "lurdes",
+   "texto": "Ela disse: amanhã essa casa não existe mais."
+  },
+  {
+   "quem": "caio",
+   "texto": "Nina… então sua mãe mentiu pra você."
+  },
+  {
+   "quem": "nina",
+   "texto": "Ela disse que foi chamar a polícia…"
+  }
+ ]
+}
