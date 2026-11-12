@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "onibus-ep3.json"
+ ],
+ "segundos": 25,
+ "modelos": null
+}
