@@ -156,7 +156,18 @@
      "estado": "fechado",
      "em": 0
     }
-   ]
+   ],
+   "pos": [
+    1.2,
+    -2.8,
+    2.0
+   ],
+   "mira": [
+    -1.1,
+    0.9,
+    1.1
+   ],
+   "lente": 26
   },
   {
    "de": "f2",
@@ -239,7 +250,7 @@
   },
   {
    "de": "f9",
-   "camera": "aberto",
+   "camera": "geral",
    "alvo": "rafa",
    "acoes": [
     {
@@ -325,12 +336,33 @@
      "em": "f9+0.3",
      "dur": 1.2
     }
-   ]
+   ],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
   },
   {
    "de": "f10",
-   "camera": "frente",
-   "alvo": "g5",
+   "camera": "geral",
+   "pos": [
+    -1.1,
+    2.0,
+    1.48
+   ],
+   "mira": [
+    -1.1,
+    3.62,
+    1.3
+   ],
+   "lente": 42,
    "acoes": []
   },
   {
@@ -379,8 +411,18 @@
   },
   {
    "de": "f13",
-   "camera": "detalhe",
-   "alvo": "rafa",
+   "camera": "geral",
+   "pos": [
+    -0.55,
+    0.62,
+    1.55
+   ],
+   "mira": [
+    0.25,
+    0.9,
+    1.45
+   ],
+   "lente": 40,
    "acoes": [
     {
      "quem": "rafa",
@@ -392,8 +434,18 @@
   },
   {
    "de": "f14",
-   "camera": "aberto",
-   "alvo": "rafa",
+   "camera": "geral",
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19,
    "acoes": [
     {
      "quem": "g1",
@@ -458,60 +510,77 @@
      "em": "f14+0.2",
      "dur": 4,
      "manter": true
-    },
+    }
+   ]
+  },
+  {
+   "de": "f14+1.5",
+   "camera": "geral",
+   "pos": [
+    -1.1,
+    2.0,
+    1.48
+   ],
+   "mira": [
+    -1.1,
+    3.62,
+    1.3
+   ],
+   "lente": 42,
+   "acoes": [
     {
      "quem": "g1",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g2",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g3",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g4",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g5",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g6",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g7",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     },
     {
      "quem": "g8",
      "acao": "olhos",
      "estado": "arregalado",
-     "em": "f14.fim-0.6"
+     "em": "f14+1.8"
     }
    ]
   }
  ],
  "noite": {
-  "fator": 0.2,
+  "fator": 0.24,
   "fator_personagem": 0.75,
   "fundo": "#05060A"
  },
@@ -649,5 +718,5 @@
   }
  },
  "semente": 7,
- "pedido_em": 1794517332
+ "pedido_em": 1794520371
 }
