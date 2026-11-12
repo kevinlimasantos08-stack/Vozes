@@ -5,6 +5,8 @@ Motores:
   gemini      Gemini TTS (precisa do segredo GEMINI_API_KEY). Gera um arquivo por bloco (até 2 vozes): cena<N>.wav
   chatterbox  Chatterbox Multilingual (código aberto, MIT). Um arquivo por fala: <NN>_<quem>.wav
               Se existir refs/<quem>.wav, clona essa voz para manter o personagem fixo.
+  voicestudio VoiceStudio / OmniVoice (código aberto; modelo CC-BY-NC, uso não comercial). Um arquivo por fala.
+              Voz descrita em "vozes" ou clonada de refs/<quem>.wav (com o texto em "clonar").
   urls        Baixa arquivos prontos (ex.: links do ElevenLabs): <nome>
   transcrever Transcreve áudios (faster-whisper, local) para conferir legenda x voz: saidas/<id>/<nome>.json
   refs        Gera com Gemini as vozes de referência do elenco em refs/<quem>.wav (para o Chatterbox)
@@ -154,6 +156,43 @@ def rodar_chatterbox(p, pasta):
     return feitos
 
 
+def rodar_voicestudio(p, pasta):
+    """VoiceStudio (github.com/debpalash/VoiceStudio), motor OmniVoice. Um arquivo por fala: <NN>_<quem>.wav
+
+    Pedido: {"id", "motor": "voicestudio",
+             "vozes": {"<quem>": "male, young adult, moderate pitch"},   # descrição (inglês) por personagem
+             "clonar": {"<quem>": "texto exato falado em refs/<quem>.wav"},  # opcional: clona a voz de refs/
+             "velocidade": 1.0, "semente": 7,
+             "falas": [{"quem", "texto", "velocidade"?}]}
+    Licença do modelo OmniVoice: CC-BY-NC (uso não comercial).
+    """
+    import torch
+    from omnivoice.models.omnivoice import OmniVoice
+    from omnivoice.utils.audio import save_audio
+    from omnivoice.utils.dtype import tts_dtype_name
+    torch.set_num_threads(os.cpu_count() or 2)
+    modelo = OmniVoice.from_pretrained("k2-fsa/OmniVoice", device_map="cpu", dtype=getattr(torch, tts_dtype_name("cpu")))
+    vozes, clonar = p.get("vozes", {}), p.get("clonar", {})
+    semente = int(p.get("semente", 7))
+    feitos = []
+    for i, f in enumerate(p["falas"], 1):
+        quem = f["quem"]
+        kw = {"language": p.get("lingua", "pt"), "speed": float(f.get("velocidade", p.get("velocidade", 1.0)))}
+        ref = os.path.join(RAIZ, "refs", f"{quem}.wav")
+        if quem in clonar and os.path.exists(ref):
+            kw.update(ref_audio=ref, ref_text=clonar[quem])
+        else:
+            kw["instruct"] = vozes.get(quem) or "male, young adult, moderate pitch"
+        # mesma semente por personagem: ajuda a manter a voz parecida entre as falas
+        kw["seed"] = semente + sum(map(ord, quem))
+        audio = modelo.generate(text=f["texto"], **kw)[0]
+        nome = f"{i:02d}_{quem}.wav"
+        save_audio(os.path.join(pasta, nome), audio, modelo.sampling_rate)
+        feitos.append(nome)
+        print(f"  {nome}", flush=True)
+    return feitos
+
+
 def rodar_transcrever(p, pasta):
     """Pedido: {"id", "motor": "transcrever", "arquivos": ["qa/x.mp3", ...], "modelo": "small"}"""
     from faster_whisper import WhisperModel
@@ -291,7 +330,7 @@ def rodar_imagens(p, pasta):
     return feitos
 
 
-MOTORES = {"imagens": rodar_imagens, "modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "urls": rodar_urls, "transcrever": rodar_transcrever, "refs": rodar_refs}
+MOTORES = {"imagens": rodar_imagens, "modelos": rodar_modelos, "diagnostico": rodar_diagnostico, "gemini": rodar_gemini, "chatterbox": rodar_chatterbox, "voicestudio": rodar_voicestudio, "urls": rodar_urls, "transcrever": rodar_transcrever, "refs": rodar_refs}
 
 
 def main():

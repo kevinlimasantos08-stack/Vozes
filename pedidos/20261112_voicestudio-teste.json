@@ -1,0 +1,12 @@
+{
+ "id": "voicestudio-teste",
+ "motor": "voicestudio",
+ "vozes": {
+  "narrador": "male, young adult, moderate pitch",
+  "ana": "female, young adult, moderate pitch"
+ },
+ "falas": [
+  {"quem": "narrador", "texto": "Estúdio de vozes atualizado. Agora com o VoiceStudio."},
+  {"quem": "ana", "texto": "Perfeito! Cada personagem ganha a sua própria voz."}
+ ]
+}

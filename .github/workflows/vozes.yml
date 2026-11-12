@@ -24,6 +24,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      # guarda o modelo do VoiceStudio (OmniVoice, ~2,4 GB) entre as execuções
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-omnivoice-c5fdb5cc
+
       - name: Instalar o que os pedidos pedem
         run: |
           python -m pip install --upgrade pip
@@ -40,6 +46,14 @@ jobs:
           if echo "$PEND" | grep -qE "gemini|refs"; then pip install "google-genai>=2.25.0"; fi
           if echo "$PEND" | grep -q "chatterbox"; then pip install --no-cache-dir chatterbox-tts; fi
           if echo "$PEND" | grep -q "transcrever"; then pip install --no-cache-dir faster-whisper; fi
+          if echo "$PEND" | grep -q "voicestudio"; then
+            # VoiceStudio em commit fixado; só o motor OmniVoice, em CPU
+            git clone -q https://github.com/debpalash/VoiceStudio.git "$RUNNER_TEMP/voicestudio"
+            git -C "$RUNNER_TEMP/voicestudio" checkout -q c1050c16d9b3881e5d4161ee58ccc0582b3f20f9
+            pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+            pip install "transformers>=5.10.0" accelerate pydub soundfile numpy "huggingface_hub>=1.7" "hf-xet>=1.1"
+            echo "PYTHONPATH=$RUNNER_TEMP/voicestudio" >> "$GITHUB_ENV"
+          fi
 
       - name: Gerar
         env:
