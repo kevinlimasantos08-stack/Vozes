@@ -32,7 +32,7 @@ def git(*a, ok=False):
 def enviar(arquivos, msg):
     git("pull", "-q", "--rebase", ok=True)
     git("add", *arquivos)
-    git("commit", "-qm", msg + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>")
+    git("commit", "-qm", msg + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01YPTaVjp6EC2DCjXvD1RbPN")
     for _ in range(3):
         if subprocess.run(["git", "-C", REPO, "push", "-q"], capture_output=True).returncode == 0:
             return
