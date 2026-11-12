@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "motor": "voicestudio",
+ "arquivos": [
+  "01_narrador.wav"
+ ],
+ "segundos": 297,
+ "modelos": null
+}
