@@ -1,0 +1,13 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "nina.json",
+  "caio.json",
+  "lurdes.json",
+  "celia.json",
+  "narrador_onibus.json"
+ ],
+ "segundos": 24,
+ "modelos": null
+}
