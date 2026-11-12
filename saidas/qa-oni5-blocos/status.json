@@ -1,0 +1,12 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "oni5_cena1.json",
+  "oni5_cena2.json",
+  "oni5_cena3.json",
+  "oni5_cena4.json"
+ ],
+ "segundos": 27,
+ "modelos": null
+}
