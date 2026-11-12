@@ -62,13 +62,23 @@ def lin(h):
 
 
 MATS = {}
+# modo noite (terror): {"fator": 0.3, "fator_personagem": 0.6, "luz": ["#hex", ...], "fundo": "#hex"}
+# escurece e esfria as cores; as cores de "luz" (telas, lâmpadas, fantasmas) ficam acesas.
+NOITE = ROT.get("noite") or None
+LUZ = {"#6CB6E2", "#F6E7C1", "#5BA7D8"} | set((NOITE or {}).get("luz", []))
+FATOR = [None]   # fator atual (o do cenário ou o do personagem em construção)
 
 
 def mat(cor):
-    if cor not in MATS:
-        m = bpy.data.materials.new(cor); m.diffuse_color = lin(cor); m.roughness = 0.8
-        MATS[cor] = m
-    return MATS[cor]
+    f = FATOR[0] if FATOR[0] is not None else (NOITE or {}).get("fator", 0.3)
+    chave = cor if not NOITE or cor in LUZ else f"{cor}@{f}"
+    if chave not in MATS:
+        m = bpy.data.materials.new(chave); c = lin(cor)
+        if NOITE and cor not in LUZ:
+            c = (c[0] * f * 0.8, c[1] * f * 0.9, c[2] * f * 1.15, 1.0)
+        m.diffuse_color = c; m.roughness = 0.8
+        MATS[chave] = m
+    return MATS[chave]
 
 
 def _fin(o, cor, bevel=0.0, suave=False, pai=None):
@@ -413,7 +423,10 @@ class Boneco:
 
 BONECOS = {}
 for quem in ROT.get("personagens", []):
+    if NOITE:
+        FATOR[0] = 1.0 if ELENCO[quem].get("fantasma") else NOITE.get("fator_personagem", 0.6)
     BONECOS[quem] = Boneco(quem, ELENCO[quem])
+FATOR[0] = None
 
 
 def ang_para(b, alvo):
@@ -614,6 +627,11 @@ def acao(b, nome, t0, dur, a):
     if nome == "olhos":
         b.olhos_estado(q0, a.get("estado", "normal"))
         return t0
+    if nome in ("oculto", "surgir"):   # some/aparece num corte, sem piscar
+        for o in b.todos:
+            b.chave(o, "hide_render", q0, nome == "oculto", constante=True)
+        b.visivel = nome == "surgir"
+        return t0
     if nome in ("sumir", "aparecer"):
         vis_final = nome == "aparecer"
         seq = [(0, vis_final), (2, not vis_final), (5, vis_final), (8, not vis_final), (10, vis_final), (13, not vis_final), (14, vis_final)]
@@ -810,7 +828,7 @@ for pl in PLANOS[1:]:
                 max(ant, key=lambda kp: kp.co.x).interpolation = "CONSTANT"
 
 # ================================================================== render (Workbench: cor chapada, sombra e contorno)
-w = bpy.data.worlds.new("mundo"); w.color = lin(FUNDO)[:3]; sc.world = w
+w = bpy.data.worlds.new("mundo"); w.color = lin((NOITE or {}).get("fundo", "#07080D") if NOITE else FUNDO)[:3]; sc.world = w
 sc.render.engine = "BLENDER_WORKBENCH"
 sc.render.fps = FPS
 por = math.ceil(NQ / NPARTES)
@@ -823,7 +841,7 @@ sh = sc.display.shading
 sh.light = "STUDIO"
 sh.color_type = "MATERIAL"
 sh.show_shadows = True
-sh.shadow_intensity = 0.3
+sh.shadow_intensity = 0.55 if NOITE else 0.3
 sh.show_cavity = True
 sh.cavity_type = "BOTH"
 sh.cavity_ridge_factor = 0.6

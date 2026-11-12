@@ -45,6 +45,9 @@ def finalizar(rot, video, narr, saida):
     voz, fim_voz = preparar(narr, frases, atraso, tmp)
     dur_video = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", video]).decode())
     total = max(dur_video, fim_voz + 0.9)
+    t_fin = total
+    if rot.get("final"):
+        total += 3.2
     print(f"narração termina em {fim_voz:.1f}s; vídeo 3D tem {dur_video:.1f}s; final {total:.1f}s")
 
     # ---- mix
@@ -104,12 +107,24 @@ def finalizar(rot, video, narr, saida):
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                             "-i", wav, "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac",
                             "-b:a", "160k", "-shortest", "-movflags", "+faststart", saida], stdin=subprocess.PIPE)
+    card = None
+    if rot.get("final"):
+        card = Image.new("RGB", (W, H), (4, 4, 8)); d = ImageDraw.Draw(card)
+        fT = R.fonte(jost, 118, 800); fq = R.fonte(jost, 54, 600)
+        tt_ = rot["final"].get("titulo", "CONTINUA..."); b = fT.getbbox(tt_)
+        d.text(((W - b[2]) // 2, 780), tt_, font=fT, fill=M["destaque"])
+        for j, l in enumerate(rot["final"].get("texto", "").split("\n")):
+            b = fq.getbbox(l); d.text(((W - b[2]) // 2, 960 + j * 78), l, font=fq, fill=(235, 235, 240))
     fr_i = 0; capa = False
     while True:
         raw = dec.stdout.read(W * H * 3)
         if len(raw) < W * H * 3:
             break
         tt = fr_i / FPS
+        if card is not None and tt >= t_fin:
+            k = min(1.0, (tt - t_fin) / 0.4)
+            im = Image.blend(Image.new("RGB", (W, H), (0, 0, 0)), card, k)
+            enc.stdin.write(im.tobytes()); fr_i += 1; continue
         im = Image.frombytes("RGB", (W, H), raw)
         im = Image.composite(im, preto, vin)
         if selo is not None:

@@ -125,7 +125,7 @@ def T(ref, base=0.0):
     return float(s) + desloc
 
 
-r3d = {k: EP[k] for k in ("cenario", "personagens", "planos") if k in EP}
+r3d = {k: EP[k] for k in ("cenario", "personagens", "planos", "noite") if k in EP}
 r3d.update({"tempos": TEMPOS, "duracao": DUR, "elenco_extra": EP.get("elenco_extra", {}), "semente": EP.get("semente", 7),
             "pedido_em": int(time.time())})   # muda sempre, para o push disparar o render
 video = os.path.join(PASTA, "video3d.mp4")
@@ -157,6 +157,6 @@ for p in planos:
             g0 = T(a.get("em"), p["_t0"]); glitch = [g0, g0 + 0.6]
 rot = {"titulo": EP.get("titulo", ""), "serie": EP.get("serie", ""), "frases": EP["frases"],
        "atraso": EP.get("atraso", 0.3), "cortes": cortes, "glitch": glitch,
-       "impacto": T(EP["impacto"]) if EP.get("impacto") else None}
+       "impacto": T(EP["impacto"]) if EP.get("impacto") else None, "final": EP.get("final")}
 TF.finalizar(rot, video, wav, SAIDA)
 print("VÍDEO FINAL:", SAIDA, flush=True)
