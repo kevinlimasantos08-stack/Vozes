@@ -1,0 +1,100 @@
+{
+ "id": "turno-ep1-gemini",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Charon"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O ponto do escritório registrou oito entradas às três da manhã.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, calm, chilling"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Só tinha uma pessoa no prédio: o Rafa.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, matter-of-fact"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Era a primeira noite dele no turno da madrugada.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, quiet"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O chefe tinha deixado uma única regra:",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, serious"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "não olhe para as outras mesas depois das três.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, whispered warning"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Às três e um, ele ouviu um teclado. Depois outro.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, tense, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E mais outro.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, whisper"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O Rafa levantou devagar.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, slow, tense"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Todas as mesas estavam ocupadas.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, chilling revelation"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Gente de crachá antigo e pele cinza, de olhos fechados, digitando sem parar.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, eerie, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Quando ele olhou pra trás, alguém já estava sentado na cadeira dele.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, horrified, low"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E na tela de todos, a mesma frase:",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, ominous"
+    },
+    {
+     "quem": "narrador",
+     "texto": "você é o nono.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, whisper, terrifying"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Aí, todos pararam de digitar. E abriram os olhos.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, slow, final, chilling"
+    }
+   ]
+  }
+ ]
+}
