@@ -20,6 +20,13 @@
 - O chefe sabia? Por que contratou o Rafa para esse turno?
 - O que eles digitam a noite inteira?
 
+## Lições de câmera (Ep 1)
+- O escritório tem 8 mesas apertadas: `frente`/`close`/`detalhe` em personagem sentado ou cercado entram na cabeça de outro boneco. Nos planos-chave use `geral` com `pos`/`mira`/`lente` fixos.
+- Close do fantasma da mesa2 (g2): `"pos": [-1.1, 2.0, 1.48], "mira": [-1.1, 3.62, 1.3], "lente": 42`. Geral da sala: `"pos": [3.9, -4.7, 2.6], "mira": [-0.6, 1.4, 0.8], "lente": 19`.
+- Rafa no `centro` virado para a mesa5: `pos [-0.55, 0.62, 1.55]` com lente 40 deu um close extremo do olho; para ver o rosto inteiro, use lente ~24.
+- Render: 9 bonecos e 53 s levaram ~40 min (4 partes de ~35 min).
+- Narração VoiceStudio sai rápida (~3 palavras/s): acelerar com `atempo=0.9` na narracao.wav e usar `pausa` de 0.6–1.4 s por frase.
+
 ## Ideias guardadas para os próximos
 - Os crachás têm a mesma data; o Rafa acha a ficha de contratação dele com a mesma data, 20 anos antes.
 - O ponto do Rafa mostra que ele "bateu a entrada" antes de chegar ao prédio.

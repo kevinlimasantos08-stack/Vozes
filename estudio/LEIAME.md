@@ -1,6 +1,7 @@
 # Estúdio diário de séries — @continua.br
 
 Rotina de todo dia (17h): continuar **A Vizinha do 47** e **O Último Ônibus**, um episódio de cada.
+Série nova (12/11): **O Último Turno**: terror 3D com narrador (VoiceStudio), bíblia em `estudio/series/turno.md`, roteiros em `estudio/roteiros/turno_epN.json`. Rodar com `cp motor/toon.py ~/.reel2d/toon3d.py; cp motor/toon_finaliza.py ~/.reel2d/; cd ~/.reel2d && python3 toon3d.py <ep>.json --repo /home/claude/vozes` (sem `-I`), ~1 h por episódio entre voz e render.
 
 ## Preparar o ambiente (sessão nova)
 ```bash
