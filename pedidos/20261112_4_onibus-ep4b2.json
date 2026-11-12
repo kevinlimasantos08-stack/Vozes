@@ -1,0 +1,45 @@
+{
+ "id": "onibus-ep4b2",
+ "motor": "voicestudio",
+ "clonar": {
+  "narrador_onibus_curto": "Naquela noite, alguém desceu do ônibus no ponto doze. E não era o fantasma."
+ },
+ "vozes": {
+  "narrador_onibus_curto": "male, middle-aged, low pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Duas sombras de uniforme ajudaram a mãe dele a descer."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Pelo retrovisor, o Seu Bento sorriu. Pela primeira vez."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Aí tudo ficou branco."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "O Téo acordou no ponto doze. Já era de manhã."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Do lado dele, esperando o ônibus, estava o Seu Bento. Vivo."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "O Seu Bento olhou pro Téo e perguntou: a gente se conhece?"
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "O Téo pegou o celular pra ligar pra mãe."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Mas o contato dela… não existia mais."
+  }
+ ]
+}

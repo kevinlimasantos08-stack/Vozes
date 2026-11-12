@@ -1,0 +1,45 @@
+{
+ "id": "onibus-ep4a2",
+ "motor": "voicestudio",
+ "clonar": {
+  "narrador_onibus_curto": "Naquela noite, alguém desceu do ônibus no ponto doze. E não era o fantasma."
+ },
+ "vozes": {
+  "narrador_onibus_curto": "male, middle-aged, low pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "O Téo sentou no banco do motorista. E o volante parou de girar."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Onze e cinquenta e nove. O hospital estava logo ali."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Lá atrás, a mãe dele gritava cada vez mais alto."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Foi aí que ele viu: um caminhão sem farol, na contramão."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "Era assim que todo mundo tinha morrido."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "O Téo jogou o volante pra direita com toda a força."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "O caminhão passou raspando. Os vidros tremeram."
+  },
+  {
+   "quem": "narrador_onibus_curto",
+   "texto": "E o ônibus parou na porta do hospital. Inteiro."
+  }
+ ]
+}

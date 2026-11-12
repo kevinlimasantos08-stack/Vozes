@@ -1,0 +1,47 @@
+{
+ "id": "vizinha47-ep5b2",
+ "motor": "voicestudio",
+ "clonar": {
+  "nina_curto": "Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+  "caio_curto": "Fica aqui. Eu vou ver. Nina, alguém tá batendo na porta.",
+  "lurdes_curto": "Achou a foto, né, minha filha? Eu guardei pra você…",
+  "celia_curto": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais."
+ },
+ "vozes": {
+  "nina_curto": "female, young adult, moderate pitch",
+  "caio_curto": "male, young adult, moderate pitch",
+  "lurdes_curto": "female, elderly, low pitch",
+  "celia_curto": "female, middle-aged, moderate pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "lurdes_curto",
+   "texto": "Ela foi buscar o galão."
+  },
+  {
+   "quem": "nina_curto",
+   "texto": "Ela me tirou daqui… e voltou com fogo?"
+  },
+  {
+   "quem": "caio_curto",
+   "texto": "Ouviu isso? Tem alguém lá fora."
+  },
+  {
+   "quem": "celia_curto",
+   "texto": "Nina! Sai dessa casa. Agora."
+  },
+  {
+   "quem": "nina_curto",
+   "texto": "Mãe? O que a senhora tá fazendo aqui?"
+  },
+  {
+   "quem": "celia_curto",
+   "texto": "Vim te levar embora, filha. Sai daí."
+  },
+  {
+   "quem": "lurdes_curto",
+   "texto": "Ela voltou pra terminar o que começou."
+  }
+ ]
+}
