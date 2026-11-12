@@ -625,7 +625,10 @@ def acao(b, nome, t0, dur, a):
         b.chave(b.cabeca, "rotation_euler", q1 + 4, (0, 0, 0)); b.neutro_bracos(q1 + 6)
         return t0 + dur
     if nome == "olhos":
+        # segura o estado anterior até a troca (sem isso, os olhos mudam devagar desde a chave anterior)
+        b.olhos_estado(max(1, q0 - 2), getattr(b, "estado_olhos", "normal"))
         b.olhos_estado(q0, a.get("estado", "normal"))
+        b.estado_olhos = a.get("estado", "normal")
         return t0
     if nome in ("oculto", "surgir"):   # some/aparece num corte, sem piscar
         for o in b.todos:
@@ -855,7 +858,7 @@ sc.display.light_direction = (0.45, -0.35, 0.82)
 sc.display.shadow_shift = 0.1
 sc.display.shadow_focus = 0.6
 sc.view_settings.view_transform = "Standard"
-sc.view_settings.exposure = 0.75
+sc.view_settings.exposure = 0.65 if NOITE else 0.75
 sc.render.image_settings.file_format = "PNG"
 sc.render.filepath = os.path.join(OUT, "f_")
 print(f"motor: {NQ} quadros no total; esta parte {sc.frame_start}-{sc.frame_end}", flush=True)
