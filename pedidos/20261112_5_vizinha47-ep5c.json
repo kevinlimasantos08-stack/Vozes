@@ -1,0 +1,30 @@
+{
+ "id": "vizinha47-ep5c",
+ "motor": "voicestudio",
+ "clonar": {
+  "nina_curto": "Mãe, a Dona Lurdes disse que a senhora trancou a porta.",
+  "caio_curto": "Fica aqui. Eu vou ver. Nina, alguém tá batendo na porta.",
+  "celia_curto": "Desculpa a hora, filha. Depois que você me ligou, eu não dormi mais."
+ },
+ "vozes": {
+  "nina_curto": "female, young adult, moderate pitch",
+  "caio_curto": "male, young adult, moderate pitch",
+  "lurdes_curto": "female, elderly, low pitch",
+  "celia_curto": "female, middle-aged, moderate pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "caio_curto",
+   "texto": "É a voz da sua mãe."
+  },
+  {
+   "quem": "nina_curto",
+   "texto": "A senhora mentiu pra mim a vida inteira!"
+  },
+  {
+   "quem": "celia_curto",
+   "texto": "Menti pra te proteger. Dela."
+  }
+ ]
+}
