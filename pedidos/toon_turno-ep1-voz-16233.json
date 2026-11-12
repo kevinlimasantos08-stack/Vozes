@@ -1,0 +1,66 @@
+{
+ "id": "turno-ep1-voz-16233",
+ "motor": "voicestudio",
+ "vozes": {
+  "narrador": "male, elderly, very low pitch"
+ },
+ "velocidade": 1.0,
+ "falas": [
+  {
+   "quem": "narrador",
+   "texto": "O ponto do escritório registrou oito entradas às três da manhã."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Só tinha uma pessoa no prédio: o Rafa."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Era a primeira noite dele no turno da madrugada."
+  },
+  {
+   "quem": "narrador",
+   "texto": "O chefe tinha deixado uma única regra:"
+  },
+  {
+   "quem": "narrador",
+   "texto": "não olhe para as outras mesas depois das três."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Às três e um, ele ouviu um teclado. Depois outro."
+  },
+  {
+   "quem": "narrador",
+   "texto": "E mais outro."
+  },
+  {
+   "quem": "narrador",
+   "texto": "O Rafa levantou devagar."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Todas as mesas estavam ocupadas."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Gente de crachá antigo e pele cinza, de olhos fechados, digitando sem parar."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Quando ele olhou pra trás, alguém já estava sentado na cadeira dele."
+  },
+  {
+   "quem": "narrador",
+   "texto": "E na tela de todos, a mesma frase:"
+  },
+  {
+   "quem": "narrador",
+   "texto": "você é o nono."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Aí, todos pararam de digitar. E abriram os olhos."
+  }
+ ]
+}
