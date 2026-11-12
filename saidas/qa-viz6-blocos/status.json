@@ -1,0 +1,13 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "viz6_cena1.json",
+  "viz6_cena2.json",
+  "viz6_cena3.json",
+  "viz6_cena4.json",
+  "viz6_cena5.json"
+ ],
+ "segundos": 12,
+ "modelos": null
+}
