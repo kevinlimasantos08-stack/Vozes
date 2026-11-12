@@ -1,0 +1,4 @@
+parte 1 em 2015s, 320 quadros
+parte 2 em 2051s, 320 quadros
+parte 3 em 1369s, 320 quadros
+parte 4 em 2303s, 317 quadros
