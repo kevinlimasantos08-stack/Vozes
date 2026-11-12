@@ -1,0 +1,6 @@
+{
+ "id": "voicestudio-narracao-teste",
+ "motor": "voicestudio",
+ "vozes": {"narrador": "male, middle-aged, low pitch"},
+ "falas": [{"quem": "narrador", "texto": "Primeiro teste: a mãe dele. O Caio entrou em casa e gritou: mãe, cheguei! Dona Lurdes nem tirou o olho da novela. Ele passou bem na frente da TV. Nada. Até que ela virou, olhou direto pra ele e disse: quem deixou essa porta aberta?"}]
+}

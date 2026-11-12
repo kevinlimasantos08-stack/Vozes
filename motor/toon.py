@@ -55,21 +55,30 @@ def esperar(caminho, minutos, rotulo):
 wav = os.path.join(PASTA, "narracao.wav")
 if SO in ("tudo", "voz") and not os.path.exists(wav):
     vid = f"{ID}-voz-{int(time.time()) % 100000}"
-    pedido = {"id": vid, "motor": "gemini", "modelo": EP.get("modelo_voz", "gemini-3.8-flash-tts"),
+    texto_todo = " ".join(f["texto"] for f in EP["frases"])
+    VS = EP.get("motor_voz") == "voicestudio"
+    if VS:  # VoiceStudio / OmniVoice (modelo CC-BY-NC: uso não comercial)
+        pedido = {"id": vid, "motor": "voicestudio",
+                  "vozes": {"narrador": EP.get("voz_vs", "male, middle-aged, low pitch")},
+                  "velocidade": EP.get("velocidade_voz", 1.0),
+                  "falas": [{"quem": "narrador", "texto": texto_todo}]}
+    else:
+        pedido = {"id": vid, "motor": "gemini", "modelo": EP.get("modelo_voz", "gemini-3.8-flash-tts"),
               "vozes": {"narrador": EP.get("voz", "Schedar")},
               "estilo": EP.get("estilo", "narrador de mistério, voz próxima e intrigante, ritmo ágil"),
-              "blocos": [{"n": 1, "falas": [{"quem": "narrador", "texto": " ".join(f["texto"] for f in EP["frases"]),
+              "blocos": [{"n": 1, "falas": [{"quem": "narrador", "texto": texto_todo,
                                               "estilo": EP.get("estilo_en", "Brazilian Portuguese accent, mysterious storyteller, intimate, short dramatic pauses")}]}]}
     rel = f"pedidos/toon_{vid}.json"
     json.dump(pedido, open(os.path.join(REPO, rel), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     enviar([rel], f"Narração: {ID}")
-    print("Narração pedida ao Gemini.", flush=True)
-    if not esperar(f"saidas/{vid}/status.json", 12, "narração"):
-        sys.exit("A narração não voltou em 12 minutos; confira a aba Actions do repositório Vozes.")
+    limite = 25 if VS else 12
+    print("Narração pedida ao " + ("VoiceStudio." if VS else "Gemini."), flush=True)
+    if not esperar(f"saidas/{vid}/status.json", limite, "narração"):
+        sys.exit(f"A narração não voltou em {limite} minutos; confira a aba Actions do repositório Vozes.")
     st = json.load(open(os.path.join(REPO, f"saidas/{vid}/status.json")))
     if not st.get("ok"):
         sys.exit("Erro na narração: " + json.dumps(st, ensure_ascii=False)[:500])
-    shutil.copy(os.path.join(REPO, f"saidas/{vid}/cena1.wav"), wav)
+    shutil.copy(os.path.join(REPO, f"saidas/{vid}/" + ("01_narrador.wav" if VS else "cena1.wav")), wav)
     print("Narração pronta.", flush=True)
 if SO == "voz":
     sys.exit()
