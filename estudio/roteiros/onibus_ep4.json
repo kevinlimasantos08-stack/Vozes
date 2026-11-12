@@ -1,0 +1,212 @@
+{
+ "serie": "O Último Ônibus · Ep 4",
+ "titulo": "ELE VAI\nDIRIGIR?",
+ "titulo_no_bloco": 0,
+ "pausa_max": 0.45,
+ "blocos": [
+  {
+   "texto": "O Téo sentou no banco do motorista. E o volante parou de girar.",
+   "destaque": [
+    "banco do motorista",
+    "parou"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "quem": "teo",
+    "teo": "serio"
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "Onze e cinquenta e nove. O hospital estava logo ali.",
+   "destaque": [
+    "Onze e cinquenta e nove",
+    "hospital"
+   ],
+   "cena": "hospital",
+   "emocao": {},
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Lá atrás, a mãe dele gritava cada vez mais alto.",
+   "destaque": [
+    "gritava"
+   ],
+   "cena": "mae",
+   "emocao": {
+    "dor": true
+   },
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Foi aí que ele viu: um caminhão sem farol, na contramão.",
+   "destaque": [
+    "caminhão sem farol",
+    "contramão"
+   ],
+   "cena": "caminhao",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Era assim que todo mundo tinha morrido.",
+   "destaque": [
+    "todo mundo"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "pavor"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo jogou o volante pra direita com toda a força.",
+   "destaque": [
+    "volante",
+    "toda a força"
+   ],
+   "cena": "motorista",
+   "emocao": {
+    "quem": "teo",
+    "teo": "medo",
+    "gira": true
+   },
+   "pausa": 0.1,
+   "impacto": false
+  },
+  {
+   "texto": "O caminhão passou raspando. Os vidros tremeram.",
+   "destaque": [
+    "raspando",
+    "tremeram"
+   ],
+   "cena": "caminhao",
+   "emocao": {
+    "passa": true
+   },
+   "pausa": 0.3,
+   "impacto": true
+  },
+  {
+   "texto": "E o ônibus parou na porta do hospital. Inteiro.",
+   "destaque": [
+    "Inteiro"
+   ],
+   "cena": "hospital",
+   "emocao": {
+    "parado": true
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Duas sombras de uniforme ajudaram a mãe dele a descer.",
+   "destaque": [
+    "sombras de uniforme"
+   ],
+   "cena": "hospital",
+   "emocao": {
+    "parado": true,
+    "sombras": true
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Pelo retrovisor, o Seu Bento sorriu. Pela primeira vez.",
+   "destaque": [
+    "sorriu",
+    "primeira vez"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "neutro"
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "Aí tudo ficou branco.",
+   "destaque": [
+    "branco"
+   ],
+   "cena": "branco",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo acordou no ponto doze. Já era de manhã.",
+   "destaque": [
+    "ponto doze",
+    "manhã"
+   ],
+   "cena": "ponto_dia",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Do lado dele, esperando o ônibus, estava o Seu Bento. Vivo.",
+   "destaque": [
+    "Seu Bento",
+    "Vivo"
+   ],
+   "cena": "ponto_dia",
+   "emocao": {
+    "bento": "neutro",
+    "teo": "surpreso"
+   },
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "O Seu Bento olhou pro Téo e perguntou: a gente se conhece?",
+   "destaque": [
+    "a gente se conhece"
+   ],
+   "cena": "ponto_dia",
+   "emocao": {
+    "bento": "neutro",
+    "olha": true,
+    "teo": "neutro"
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo pegou o celular pra ligar pra mãe.",
+   "destaque": [
+    "mãe"
+   ],
+   "cena": "celular",
+   "emocao": {},
+   "pausa": 0.2,
+   "impacto": false
+  },
+  {
+   "texto": "Mas o contato dela… não existia mais.",
+   "destaque": [
+    "não existia mais"
+   ],
+   "cena": "celular",
+   "emocao": {
+    "vazio": true
+   },
+   "pausa": 0.6,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "O que mais o Téo mudou?\nComente sua teoria."
+ },
+ "vel_voz": 1.06
+}

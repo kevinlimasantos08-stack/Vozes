@@ -21,6 +21,7 @@ cp /home/claude/vozes/estudio/motores/*.py ~/.reel2d/
 - **Pedidos que falharam ficam rodando de novo a cada push** (o gerar.py refaz todo pedido sem `status.json` ok). Depois que um pedido Gemini falhar por 429 e as falas forem refeitas no Chatterbox, mover o pedido falho para `pedidos/arquivo/` para não gastar cota nem tempo.
 - **Cortar blocos de várias frases:** o narrador faz pausas dentro da frase (". E…"). Conferir as pausas mais longas contra a estrutura do texto antes de aceitar o corte; se precisar, cortar em tempos fixos.
 - **Conferência de legenda x voz:** motor `transcrever` (faster-whisper no GitHub): pôr o mp3 em `qa/` e o pedido `{"id": "qa-<ep>", "motor": "transcrever", "arquivos": ["qa/<ep>.mp3"]}`. (O ambiente da conversa não baixa modelos do Hugging Face.)
+- **VoiceStudio (Kevin pediu em 12/11):** motor `voicestudio` com `clonar` usando `refs/<quem>_curto.wav` (4–7 s; com refs longas leva ~6 min por fala, com as curtas ~4 min). Dividir em pedidos de até 8 falas (o estúdio entrega cada pedido assim que termina; limite do job 170 min). Para cortar ref: `ffmpeg -ss A -to B -i ref.wav` (o -ss ANTES do -i; depois do -i, o afade deixou o corte mudo). Licença do modelo: CC-BY-NC (uso não comercial).
 - Personagem novo sem ref: montar `refs/<id>.wav` (10–25 s, só a voz dele) a partir de falas Gemini já geradas.
 
 ## Regras de qualidade (não negociáveis)

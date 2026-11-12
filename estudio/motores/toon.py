@@ -322,7 +322,8 @@ def cena_motorista(c, lt, T, t, emo):
         rrect(c, 330, 1000, 460, 560, 80); fill_ol(c, (0.16, 0.16, 0.2), 8)
         c.set_source_rgba(0.75, 0.88, 1, 0.08 + 0.05 * math.sin(t * 9)); rrect(c, 360, 1030, 400, 500, 70); c.fill()
     else:
-        toon(c, 560, 1150, 1.0, "bento", emo.get("bento", "neutro"), t, look=0.2)
+        quem = emo.get("quem", "bento")
+        toon(c, 560, 1150, 1.0, quem, emo.get(quem, "neutro"), t, look=0.2 + (math.sin(t * 7) * 0.4 if emo.get("gira") else 0))
     # painel e volante
     c.set_source_rgb(0.08, 0.08, 0.1); c.rectangle(0, 1500, W, H); c.fill()
     g = cairo.LinearGradient(0, 1500, 0, 1560); g.add_color_stop_rgba(0, 0.3, 0.6, 1, 0.5); g.add_color_stop_rgba(1, 0.3, 0.6, 1, 0); c.set_source(g); c.rectangle(0, 1500, W, 60); c.fill()
@@ -587,9 +588,115 @@ def cena_mae(c, lt, T, t, emo):
     c.set_source_rgb(*hx("#3E76AA")); rrect(c, 180, 1580, W - 360, 90, 30); c.fill()
     c.set_source_rgba(0.75, 0.88, 1, 0.06 + 0.05 * math.sin(t * 7)); c.paint()
 
+def predio_hospital(c, x, base, s, t, sombras=0.0):
+    c.save(); c.translate(x, base); c.scale(s, s)
+    rrect(c, -420, -900, 840, 900, 10); fill_ol(c, (0.78, 0.8, 0.84), 8)
+    rnd = random.Random(21)
+    for wy in range(-840, -260, 140):
+        for wx in range(-370, 371, 150):
+            on = rnd.random() < 0.55
+            c.rectangle(wx, wy, 90, 90); c.set_source_rgb(*((1, 0.85, 0.5) if on else (0.2, 0.22, 0.3))); c.fill()
+    c.set_source_rgb(0.85, 0.12, 0.12); c.rectangle(-30, -1080, 60, 180); c.fill(); c.rectangle(-90, -1020, 180, 60); c.fill()
+    rrect(c, -300, -230, 600, 80, 10); fill_ol(c, (0.1, 0.12, 0.2), 5)
+    fonte(c, 54); c.set_source_rgb(1, 1, 1); l = "MATERNIDADE"; c.move_to(-lw_(c, l) / 2, -170); c.show_text(l)
+    c.rectangle(-140, -140, 280, 140); c.set_source_rgb(0.95, 0.9, 0.7); c.fill()
+    if sombras > 0:
+        for k, dx in enumerate((-70, 70)):
+            c.set_source_rgba(0.05, 0.05, 0.08, 0.9 * sombras)
+            c.arc(dx, -105, 26, 0, 2 * math.pi); c.fill(); rrect(c, dx - 32, -80, 64, 80, 20); c.fill()
+            if k == 0: c.rectangle(dx - 34, -132, 68, 12); c.fill()
+    c.restore()
+
+def cena_hospital(c, lt, T, t, emo):
+    ceu(c, (0.02, 0.03, 0.08), (0.1, 0.07, 0.16), t)
+    predios(c, 1350, 200, (0.05, 0.05, 0.1), 700, 7)
+    c.set_source_rgb(0.1, 0.1, 0.12); c.rectangle(0, 1350, W, H); c.fill()
+    predio_hospital(c, W / 2 + 120, 1350, 0.75, t, sombras=eo((lt - 0.3) / 1.0) if emo.get("sombras") else 0)
+    if emo.get("parado"):
+        onibus_lado(c, -260, 1640, 0.62, 0, porta=eio((lt - 0.5) / 0.8))
+    else:
+        k = eo(lt / max(1.0, T)); onibus_lado(c, -900 + 650 * k, 1640, 0.62, t, roda=t * 14 * (1 - k))
+    neblina(c, t, 1300, 0.15)
+
+def cena_caminhao(c, lt, T, t, emo):
+    c.set_source_rgb(0.02, 0.02, 0.05); c.paint()
+    c.save(); rrect(c, 60, 180, W - 120, 1100, 60); c.clip()
+    g = cairo.LinearGradient(0, 180, 0, 1280); g.add_color_stop_rgb(0, 0.03, 0.04, 0.12); g.add_color_stop_rgb(1, 0.1, 0.07, 0.15); c.set_source(g); c.paint()
+    c.set_source_rgb(0.08, 0.08, 0.1); c.move_to(W / 2 - 40, 700); c.line_to(W / 2 + 40, 700); c.line_to(W + 300, 1280); c.line_to(-300, 1280); c.close_path(); c.fill()
+    for i in range(6):
+        k = ((t * 1.4 + i / 6) % 1) ** 2
+        c.set_source_rgb(0.95, 0.85, 0.4); c.rectangle(W / 2 - (4 + 30 * k) / 2, 700 + 580 * k, 4 + 30 * k, 6 + 70 * k); c.fill()
+    passa = emo.get("passa")
+    k = eio(lt / max(1.2, T * 0.9)) if not passa else 1.0
+    if passa:  # caminhão passa raspando pela esquerda
+        q = eio(lt / 0.9); sz = 2.6 + 2.5 * q; cx = W / 2 - 120 - 900 * q; cy = 760 + 200 * q
+    else:
+        sz = 0.25 + 2.2 * k; cx = W / 2 - 60 * k; cy = 720 + 80 * k
+    c.save(); c.translate(cx, cy); c.scale(sz, sz)
+    rrect(c, -120, -150, 240, 170, 14); fill_ol(c, (0.12, 0.12, 0.14), 4)
+    c.set_source_rgb(0.18, 0.2, 0.26); rrect(c, -100, -135, 200, 70, 8); c.fill()
+    c.set_source_rgb(0.25, 0.25, 0.27); c.rectangle(-110, -40, 220, 30); c.fill()
+    for dx in (-80, 80): c.arc(dx, -25, 14, 0, 2 * math.pi); c.set_source_rgb(0.3, 0.3, 0.3); c.fill()
+    c.restore()
+    c.restore()
+    c.set_source_rgb(0.12, 0.12, 0.14); c.set_line_width(14); rrect(c, 60, 180, W - 120, 1100, 60); c.stroke()
+    c.set_source_rgb(0.08, 0.08, 0.1); c.rectangle(0, 1500, W, H); c.fill()
+    if passa:
+        tr = clamp(1 - lt / 1.2)
+        c.translate(math.sin(t * 60) * 20 * tr, math.cos(t * 53) * 20 * tr)
+    elif k > 0.7:
+        c.set_source_rgba(1, 0.1, 0.05, 0.12 * math.sin(t * 20) ** 2); c.paint()
+
+def cena_branco(c, lt, T, t, emo):
+    a = eo(lt / max(0.5, T * 0.6))
+    interior_fundo(c, t)
+    c.set_source_rgba(1, 1, 1, a); c.paint()
+
+def cena_ponto_dia(c, lt, T, t, emo):
+    ceu(c, (0.55, 0.7, 0.9), (0.98, 0.8, 0.6), 0)
+    c.set_source_rgba(1, 0.9, 0.6, 0.8); c.arc(880, 520, 90, 0, 2 * math.pi); c.fill()
+    predios(c, 1350, 300, (0.45, 0.48, 0.6), 800, 4, janelas=False)
+    c.set_source_rgb(0.42, 0.42, 0.45); c.rectangle(0, 1350, W, H); c.fill()
+    c.set_source_rgb(0.55, 0.55, 0.58); c.rectangle(0, 1350, W, 60); c.fill()
+    px = 860
+    c.set_source_rgb(0.3, 0.32, 0.36); c.rectangle(px, 760, 14, 600); c.fill()
+    c.arc(px + 7, 740, 90, 0, 2 * math.pi); fill_ol(c, hx("#E8B23A"), 8)
+    fonte(c, 100); c.set_source_rgb(0.1, 0.1, 0.1); s2 = "12"; c.move_to(px + 7 - lw_(c, s2) / 2, 776); c.show_text(s2)
+    rrect(c, 160, 1210, 620, 34, 10); fill_ol(c, (0.45, 0.32, 0.22), 6)
+    for bx in (200, 740): c.set_source_rgb(0.25, 0.25, 0.27); c.rectangle(bx, 1244, 14, 110); c.fill()
+    if emo.get("bento"):
+        toon(c, 620, 900, 0.72, "bento", emo.get("bento"), t, look=-0.6 if emo.get("olha") else 0.3)
+        toon(c, 300, 920, 0.68, "teo", emo.get("teo", "neutro"), t, look=0.6)
+    else:
+        toon(c, 420, 920, 0.72, "teo", emo.get("teo", "medo"), t, look=math.sin(t * 1.5) * 0.7)
+
+def cena_celular(c, lt, T, t, emo):
+    c.set_source_rgb(0.5, 0.62, 0.8); c.paint()
+    c.save(); c.translate(W / 2, 960); c.rotate(-0.03 + math.sin(t * 0.8) * 0.01)
+    rrect(c, -330, -640, 660, 1280, 70); fill_ol(c, (0.08, 0.08, 0.1), 8)
+    c.set_source_rgb(0.97, 0.97, 0.98); rrect(c, -300, -600, 600, 1200, 50); c.fill()
+    fonte(c, 70); c.set_source_rgb(0.1, 0.1, 0.12); c.move_to(-260, -490); c.show_text("Contatos")
+    rrect(c, -260, -450, 520, 80, 40); c.set_source_rgb(0.9, 0.9, 0.92); c.fill()
+    fonte(c, 56, "Medium"); c.set_source_rgb(0.2, 0.2, 0.25)
+    busca = "" if not emo.get("vazio") else "Mãe"[: int(clamp(lt / 0.6) * 3)]
+    c.move_to(-220, -395); c.show_text(busca + ("|" if int(t * 3) % 2 else ""))
+    if emo.get("vazio"):
+        fonte(c, 64); c.set_source_rgba(0.45, 0.45, 0.5, eo((lt - 0.6) / 0.6)); l = "Nenhum contato"
+        c.move_to(-lw_(c, l) / 2, 0); c.show_text(l)
+        c.set_source_rgba(0.85, 0.15, 0.1, 0.12 * eo((lt - 0.6) / 0.6)); c.paint()
+    else:
+        lista = ["Aula Cálculo", "Lucas", "Pizzaria", "Renata", "Trabalho"]
+        rol = -60 * eio(lt / max(1.0, T))
+        for i, nome in enumerate(lista):
+            y = -260 + i * 140 + rol
+            c.set_source_rgb(0.85, 0.85, 0.88); c.arc(-210, y - 15, 38, 0, 2 * math.pi); c.fill()
+            c.set_source_rgb(0.1, 0.1, 0.12); fonte(c, 58, "Medium"); c.move_to(-150, y); c.show_text(nome)
+    c.restore()
+
 CENAS = dict(bilhete=cena_bilhete, descida=cena_descida, estrada=cena_estrada, ponto=cena_ponto, interior=cena_interior, motorista=cena_motorista, catraca=cena_catraca,
              teo_close=cena_teo_close, corredor=cena_corredor, espelho=cena_espelho, retrato=cena_retrato, banco=cena_banco,
-             teo_corredor=cena_teo_corredor, jornal=cena_jornal, painel=cena_painel, mae=cena_mae)
+             teo_corredor=cena_teo_corredor, jornal=cena_jornal, painel=cena_painel, mae=cena_mae,
+             hospital=cena_hospital, caminhao=cena_caminhao, branco=cena_branco, ponto_dia=cena_ponto_dia, celular=cena_celular)
 
 # ------------------------------------------------------------------ áudio
 def ler_audio(p, vel=1.0):

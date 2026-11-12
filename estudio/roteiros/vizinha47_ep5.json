@@ -1,0 +1,324 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 5",
+ "titulo": "O QUE A\nNINA OUVIU",
+ "elenco_extra": {
+  "celia": {
+   "nome": "DONA CÉLIA",
+   "voz": "pf_dora",
+   "vel": 0.95,
+   "tom": -0.5,
+   "pele": "#D2A07A",
+   "cabelo": "#5A4636",
+   "estilo_cabelo": "curto",
+   "barba": false,
+   "roupa": "#6B4E3D",
+   "detalhe": "#EADFCC",
+   "calca": "#2F2B33",
+   "estilo_roupa": "cardigan",
+   "etiqueta": "#D98E5F",
+   "oculos": false,
+   "altura": 0.95
+  }
+ },
+ "cenas": [
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "lurdes"
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Você desenhou o que ouviu sua mãe dizer.",
+     "destaque": [
+      "ouviu",
+      "sua mãe"
+     ],
+     "audio": "/home/claude/eps/viz5a/t.wav",
+     "emocao": "feliz",
+     "camera": "plano",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.44999999999999996
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "nina",
+    "lurdes",
+    "caio"
+   ],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Vó… fui eu que coloquei fogo?",
+     "destaque": [
+      "fogo"
+     ],
+     "audio": "/home/claude/eps/viz5a/a1.wav",
+     "emocao": "triste",
+     "camera": "plano",
+     "reacao": {
+      "lurdes": "feliz",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Não, minha menina. Você só desenhou o que ouviu.",
+     "destaque": [
+      "desenhou",
+      "ouviu"
+     ],
+     "audio": "/home/claude/eps/viz5a/a2.wav",
+     "emocao": "feliz",
+     "camera": "close",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Ouvi o quê?",
+     "destaque": [
+      "o quê"
+     ],
+     "audio": "/home/claude/eps/viz5a/a3.wav",
+     "emocao": "surpreso",
+     "camera": "medio",
+     "reacao": {
+      "lurdes": "neutro",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Sua mãe no telefone, na noite anterior.",
+     "destaque": [
+      "telefone"
+     ],
+     "audio": "/home/claude/eps/viz5a/a4.wav",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo",
+      "caio": "surpreso"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Ela disse: amanhã essa casa não existe mais.",
+     "destaque": [
+      "não existe mais"
+     ],
+     "audio": "/home/claude/eps/viz5a/a5.wav",
+     "emocao": "bravo",
+     "camera": "punch",
+     "impacto": true,
+     "pausa": 0.5,
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina… então sua mãe mentiu pra você.",
+     "destaque": [
+      "mentiu"
+     ],
+     "audio": "/home/claude/eps/viz5a/a6.wav",
+     "emocao": "surpreso",
+     "camera": "medio",
+     "reacao": {
+      "nina": "triste",
+      "lurdes": "neutro"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Ela disse que foi chamar a polícia…",
+     "destaque": [
+      "polícia"
+     ],
+     "audio": "/home/claude/eps/viz5a/a7.wav",
+     "emocao": "triste",
+     "camera": "close",
+     "reacao": {
+      "lurdes": "neutro",
+      "caio": "triste"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Ela foi buscar o galão.",
+     "destaque": [
+      "galão"
+     ],
+     "audio": "/home/claude/eps/viz5a/a8.wav",
+     "emocao": "bravo",
+     "camera": "punch",
+     "tremor": true,
+     "pausa": 0.5,
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Ela me tirou daqui… e voltou com fogo?",
+     "destaque": [
+      "voltou com fogo"
+     ],
+     "audio": "/home/claude/eps/viz5a/a9.wav",
+     "emocao": "medo",
+     "camera": "close",
+     "pausa": 0.44999999999999996,
+     "reacao": {
+      "lurdes": "triste",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "caio",
+     "texto": "Ouviu isso? Tem alguém lá fora.",
+     "destaque": [
+      "lá fora"
+     ],
+     "audio": "/home/claude/eps/viz5a/b1.wav",
+     "emocao": "medo",
+     "camera": "plano",
+     "antes": 0.8,
+     "reacao": {
+      "nina": "medo",
+      "lurdes": "feliz"
+     }
+    },
+    {
+     "quem": "celia",
+     "texto": "Nina! Sai dessa casa. Agora.",
+     "destaque": [
+      "Agora"
+     ],
+     "audio": "/home/claude/eps/viz5a/b2.wav",
+     "emocao": "bravo",
+     "camera": "plano",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo",
+      "lurdes": "bravo"
+     }
+    },
+    {
+     "quem": "caio",
+     "texto": "É a voz da sua mãe.",
+     "destaque": [
+      "sua mãe"
+     ],
+     "audio": "/home/claude/eps/viz5a/b1b.wav",
+     "emocao": "surpreso",
+     "camera": "close",
+     "pausa": 0.44999999999999996,
+     "reacao": {
+      "nina": "surpreso",
+      "lurdes": "bravo"
+     }
+    }
+   ]
+  },
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "celia"
+   ],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Mãe? O que a senhora tá fazendo aqui?",
+     "destaque": [
+      "Mãe"
+     ],
+     "audio": "/home/claude/eps/viz5a/b3.wav",
+     "camera": "plano",
+     "reacao": {
+      "celia": "medo"
+     }
+    },
+    {
+     "quem": "celia",
+     "texto": "Vim te levar embora, filha. Sai daí.",
+     "destaque": [
+      "levar embora"
+     ],
+     "audio": "/home/claude/eps/viz5a/b4.wav",
+     "emocao": "medo",
+     "camera": "medio",
+     "pausa": 0.5
+    },
+    {
+     "quem": "nina",
+     "texto": "A senhora mentiu pra mim a vida inteira!",
+     "destaque": [
+      "mentiu"
+     ],
+     "audio": "/home/claude/eps/viz5a/b3b.wav",
+     "camera": "plano",
+     "reacao": {
+      "celia": "triste"
+     }
+    },
+    {
+     "quem": "celia",
+     "texto": "Menti pra te proteger. Dela.",
+     "destaque": [
+      "Dela"
+     ],
+     "audio": "/home/claude/eps/viz5a/b4b.wav",
+     "emocao": "medo",
+     "camera": "punch",
+     "pausa": 0.55
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "nina",
+    "lurdes",
+    "caio"
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Ela voltou pra terminar o que começou.",
+     "destaque": [
+      "terminar"
+     ],
+     "audio": "/home/claude/eps/viz5a/c1.wav",
+     "emocao": "bravo",
+     "camera": "punch",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.75,
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo"
+     }
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "A Célia vai queimar a casa de novo?\nComente sua teoria."
+ },
+ "inicio": 0.0,
+ "gap": 0.2,
+ "pausa_max": 0.55,
+ "vel_voz": 1.0,
+ "titulo_na_fala": 1
+}
