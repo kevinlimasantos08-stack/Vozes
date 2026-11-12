@@ -1,0 +1,16 @@
+{
+ "ok": true,
+ "motor": "voicestudio",
+ "arquivos": [
+  "01_narrador_onibus_curto.wav",
+  "02_narrador_onibus_curto.wav",
+  "03_narrador_onibus_curto.wav",
+  "04_narrador_onibus_curto.wav",
+  "05_narrador_onibus_curto.wav",
+  "06_narrador_onibus_curto.wav",
+  "07_narrador_onibus_curto.wav",
+  "08_narrador_onibus_curto.wav"
+ ],
+ "segundos": 1841,
+ "modelos": null
+}
