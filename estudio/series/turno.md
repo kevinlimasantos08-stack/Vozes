@@ -2,7 +2,9 @@
 
 **Gênero:** terror macabro. **Estilo:** 3D toon de noite (motor `blender/toon/motor.py` com `"noite"`), narrador em terceira pessoa; os personagens não falam, só agem (sentar, digitar, levantar, virar, olhar, medo, surgir/oculto).
 **Orquestrador:** `motor/toon.py` (voz → 3D no GitHub, workflow "Estúdio Toon" → finalização com legenda, título e cartão "CONTINUA..."). Episódio em JSON salvo em `estudio/roteiros/turno_epN.json`.
-**Voz do narrador (escolha do Kevin, 12/11):** VoiceStudio com voz descrita `"male, elderly, very low pitch"` (semente fixa = mesma voz em todos os episódios); `pausa_voz` 0.9 entre frases. Uso não comercial (CC-BY-NC).
+**Voz do narrador:** Gemini **Charon** (estúdio Vozes), estilo `"Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, <tom da frase>"`, em blocos de até 4 frases (pedido `pedidos/20261112_16_turno-ep1-gemini.json`); cortar as frases pela transcrição (motor `transcrever`) e montar a `narracao.wav` com 1,3 s entre frases. Sem atempo.
+- A voz VoiceStudio descrita ("male, elderly, very low pitch") foi **reprovada pelo Kevin** (12/11): artificial, e o sotaque mudava de uma frase para outra. Não usar.
+- Reserva (cota do Gemini esgotada): Chatterbox clonando `refs/narrador_turno.wav` (15 s, Charon) ou VoiceStudio clonando `refs/narrador_turno_curto.wav` (6 s; texto: "O ponto do escritório registrou oito entradas às três da manhã.").
 **Duração:** ~60 s (Kevin escolheu 60 s e repositório público para ter minutos ilimitados no GitHub Actions).
 **Cenário:** `escritorio` de noite (`"noite": {"fator": 0.32, "fator_personagem": 0.7, "fundo": "#06070C"}`); telas dos monitores acesas; fantasmas com `"fantasma": true` ficam pálidos e "acesos".
 
@@ -25,7 +27,7 @@
 - Close do fantasma da mesa2 (g2): `"pos": [-1.1, 2.0, 1.48], "mira": [-1.1, 3.62, 1.3], "lente": 42`. Geral da sala: `"pos": [3.9, -4.7, 2.6], "mira": [-0.6, 1.4, 0.8], "lente": 19`.
 - Rafa no `centro` virado para a mesa5: `pos [-0.55, 0.62, 1.55]` com lente 40 deu um close extremo do olho; para ver o rosto inteiro, use lente ~24.
 - Render: 9 bonecos e 53 s levaram ~40 min (4 partes de ~35 min).
-- Narração VoiceStudio sai rápida (~3 palavras/s): acelerar com `atempo=0.9` na narracao.wav e usar `pausa` de 0.6–1.4 s por frase.
+- Com o Gemini Charon (~2,4 palavras/s) e `pausa` de 0,3–1,1 s, o Ep 1 deu ~64 s.
 
 ## Ideias guardadas para os próximos
 - Os crachás têm a mesma data; o Rafa acha a ficha de contratação dele com a mesma data, 20 anos antes.
