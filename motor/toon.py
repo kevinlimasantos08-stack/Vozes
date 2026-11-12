@@ -61,7 +61,8 @@ if SO in ("tudo", "voz") and not os.path.exists(wav):
         pedido = {"id": vid, "motor": "voicestudio",
                   "vozes": {"narrador": EP.get("voz_vs", "male, middle-aged, low pitch")},
                   "velocidade": EP.get("velocidade_voz", 1.0),
-                  "falas": [{"quem": "narrador", "texto": texto_todo}]}
+                  # uma fala por frase: o OmniVoice encurta as pausas, e o corte das frases precisa delas
+                  "falas": [{"quem": "narrador", "texto": f["texto"]} for f in EP["frases"]]}
     else:
         pedido = {"id": vid, "motor": "gemini", "modelo": EP.get("modelo_voz", "gemini-3.8-flash-tts"),
               "vozes": {"narrador": EP.get("voz", "Schedar")},
@@ -78,7 +79,17 @@ if SO in ("tudo", "voz") and not os.path.exists(wav):
     st = json.load(open(os.path.join(REPO, f"saidas/{vid}/status.json")))
     if not st.get("ok"):
         sys.exit("Erro na narração: " + json.dumps(st, ensure_ascii=False)[:500])
-    shutil.copy(os.path.join(REPO, f"saidas/{vid}/" + ("01_narrador.wav" if VS else "cena1.wav")), wav)
+    if VS:  # junta as frases com uma pausa fixa entre elas
+        import numpy as np, soundfile as sf
+        partes, sr = [], None
+        for i in range(1, len(EP["frases"]) + 1):
+            a, sr = sf.read(os.path.join(REPO, f"saidas/{vid}/{i:02d}_narrador.wav"), dtype="float32")
+            if a.ndim > 1:
+                a = a.mean(axis=1)
+            partes += [a, np.zeros(int(sr * float(EP["frases"][i - 1].get("pausa_voz", 0.6))), dtype="float32")]
+        sf.write(wav, np.concatenate(partes[:-1]), sr)
+    else:
+        shutil.copy(os.path.join(REPO, f"saidas/{vid}/cena1.wav"), wav)
     print("Narração pronta.", flush=True)
 if SO == "voz":
     sys.exit()

@@ -1,0 +1,37 @@
+{
+ "id": "voicestudio-narracao-teste2",
+ "motor": "voicestudio",
+ "vozes": {
+  "narrador": "male, middle-aged, low pitch"
+ },
+ "falas": [
+  {
+   "quem": "narrador",
+   "texto": "Primeiro teste: a mãe dele."
+  },
+  {
+   "quem": "narrador",
+   "texto": "O Caio entrou em casa e gritou: mãe, cheguei!"
+  },
+  {
+   "quem": "narrador",
+   "texto": "Dona Lurdes nem tirou o olho da novela."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Ele passou bem na frente da TV."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Nada."
+  },
+  {
+   "quem": "narrador",
+   "texto": "Até que ela virou, olhou direto pra ele e disse:"
+  },
+  {
+   "quem": "narrador",
+   "texto": "quem deixou essa porta aberta?"
+  }
+ ]
+}
