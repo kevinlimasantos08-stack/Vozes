@@ -1,0 +1,43 @@
+{
+ "id": "vizinha47-ep6b",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Vazia? Ela tava trancada lá dentro!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, outraged, loud, crying"
+    },
+    {
+     "quem": "celia",
+     "texto": "Eu ia abrir a porta antes de acender. Eu juro.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, pleading, desperate"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Nina… a porta do 47 tá abrindo sozinha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, scared, whispering"
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, scared, trembling whisper"
+    }
+   ]
+  }
+ ]
+}
