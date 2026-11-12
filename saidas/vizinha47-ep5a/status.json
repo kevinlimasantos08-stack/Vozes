@@ -1,0 +1,16 @@
+{
+ "ok": true,
+ "motor": "voicestudio",
+ "arquivos": [
+  "01_lurdes.wav",
+  "02_nina.wav",
+  "03_lurdes.wav",
+  "04_nina.wav",
+  "05_lurdes.wav",
+  "06_lurdes.wav",
+  "07_caio.wav",
+  "08_nina.wav"
+ ],
+ "segundos": 2861,
+ "modelos": null
+}
