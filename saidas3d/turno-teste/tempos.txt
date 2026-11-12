@@ -1,0 +1,4 @@
+parte 1 em 224s, 45 quadros
+parte 2 em 250s, 45 quadros
+parte 3 em 199s, 45 quadros
+parte 4 em 252s, 43 quadros
