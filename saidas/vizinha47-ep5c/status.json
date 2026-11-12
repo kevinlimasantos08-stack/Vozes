@@ -1,0 +1,11 @@
+{
+ "ok": true,
+ "motor": "voicestudio",
+ "arquivos": [
+  "01_caio_curto.wav",
+  "02_nina_curto.wav",
+  "03_celia_curto.wav"
+ ],
+ "segundos": 300,
+ "modelos": null
+}
