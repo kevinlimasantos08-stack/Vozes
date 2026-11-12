@@ -1,0 +1,174 @@
+{
+ "serie": "O Último Ônibus · Ep 5",
+ "titulo": "QUEM ABRIU\nA PORTA?",
+ "titulo_no_bloco": 0,
+ "pausa_max": 0.45,
+ "vel_voz": 1.06,
+ "blocos": [
+  {
+   "texto": "A porta da casa da mãe abriu. E quem atendeu foi… ele mesmo.",
+   "destaque": [
+    "ele mesmo"
+   ],
+   "cena": "porta",
+   "emocao": {
+    "abre": true,
+    "teo": "medo"
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "Mesmo rosto. Mesmos óculos. Mesmo nome.",
+   "destaque": [
+    "rosto",
+    "óculos",
+    "nome"
+   ],
+   "cena": "dois_teos",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Lá de dentro, a mãe perguntou: filho, quem é?",
+   "destaque": [
+    "filho, quem é?"
+   ],
+   "cena": "porta",
+   "emocao": {
+    "mae": true,
+    "teo": "surpreso"
+   },
+   "pausa": 0.25,
+   "impacto": false
+  },
+  {
+   "texto": "O outro Téo olhou pra fora e disse: ninguém, mãe.",
+   "destaque": [
+    "ninguém"
+   ],
+   "cena": "porta",
+   "emocao": {
+    "mae": true,
+    "olha": true,
+    "teo": "medo"
+   },
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "Ele olhava pro Téo. Mas não via o Téo.",
+   "destaque": [
+    "não via"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "pavor"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Na estante, uma foto: o bebê nascendo no hospital. Não no ônibus.",
+   "destaque": [
+    "hospital",
+    "Não no ônibus"
+   ],
+   "cena": "foto",
+   "emocao": {},
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "Salvando a mãe, o Téo tinha apagado a própria vida.",
+   "destaque": [
+    "apagado",
+    "própria vida"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "Ele andou o dia inteiro. Ninguém esbarrou nele. Ninguém desviou.",
+   "destaque": [
+    "Ninguém esbarrou",
+    "desviou"
+   ],
+   "cena": "calcada",
+   "emocao": {
+    "teo": "triste"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "À meia-noite, ele voltou pro ponto doze.",
+   "destaque": [
+    "meia-noite",
+    "ponto doze"
+   ],
+   "cena": "ponto",
+   "emocao": {
+    "sem_onibus": true
+   },
+   "pausa": 0.25,
+   "impacto": false
+  },
+  {
+   "texto": "O último ônibus parou. E a porta abriu sozinha.",
+   "destaque": [
+    "abriu sozinha"
+   ],
+   "cena": "ponto",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "No retrovisor, o Seu Bento sorriu. Como se já esperasse por ele.",
+   "destaque": [
+    "sorriu",
+    "esperasse"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "neutro",
+    "sorri": true
+   },
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "O Téo passou pela catraca. E ela girou sozinha.",
+   "destaque": [
+    "girou sozinha"
+   ],
+   "cena": "catraca",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Marcou sete. O passageiro que nunca desce.",
+   "destaque": [
+    "sete",
+    "nunca desce"
+   ],
+   "cena": "catraca",
+   "emocao": {
+    "fixo": "07"
+   },
+   "pausa": 0.6,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "O Téo virou o sétimo passageiro?\nComente sua teoria."
+ }
+}

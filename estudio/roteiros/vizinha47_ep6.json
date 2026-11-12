@@ -1,0 +1,332 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 6",
+ "titulo": "QUEM ACENDEU\nO FOGO?",
+ "elenco_extra": {
+  "celia": {
+   "nome": "DONA CÉLIA",
+   "voz": "pf_dora",
+   "vel": 0.95,
+   "tom": -0.5,
+   "pele": "#D2A07A",
+   "cabelo": "#5A4636",
+   "estilo_cabelo": "curto",
+   "barba": false,
+   "roupa": "#6B4E3D",
+   "detalhe": "#EADFCC",
+   "calca": "#2F2B33",
+   "estilo_roupa": "cardigan",
+   "etiqueta": "#D98E5F",
+   "oculos": false,
+   "altura": 0.95
+  }
+ },
+ "cenas": [
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "caio",
+    "nina",
+    "celia"
+   ],
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Eu fui buscar o galão, sim.",
+     "destaque": [
+      "galão"
+     ],
+     "emocao": "triste",
+     "camera": "punch",
+     "impacto": true,
+     "pausa": 0.4,
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/01.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "A senhora trancou a vó lá dentro e foi buscar gasolina?",
+     "destaque": [
+      "trancou",
+      "gasolina"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz6/falas/02.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Era pra queimar a casa vazia. De manhã.",
+     "destaque": [
+      "casa vazia"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/03.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Vazia? Ela tava trancada lá dentro!",
+     "destaque": [
+      "trancada"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "audio": "/home/claude/eps/viz6/falas/x1.wav",
+     "reacao": {
+      "celia": "triste",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "celia",
+     "texto": "Eu ia abrir a porta antes de acender. Eu juro.",
+     "destaque": [
+      "Eu juro"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "audio": "/home/claude/eps/viz6/falas/x2.wav",
+     "reacao": {
+      "nina": "bravo",
+      "caio": "surpreso"
+     }
+    },
+    {
+     "quem": "caio",
+     "texto": "E por que pegou fogo de madrugada?",
+     "destaque": [
+      "madrugada"
+     ],
+     "emocao": "surpreso",
+     "camera": "medio",
+     "reacao": {
+      "celia": "triste",
+      "nina": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/04.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Porque não fui eu. Quando voltei, já tava queimando.",
+     "destaque": [
+      "não fui eu",
+      "queimando"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz6/falas/05.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Mas ela tava trancada. Quem acendeu, então?",
+     "destaque": [
+      "Quem acendeu"
+     ],
+     "emocao": "bravo",
+     "camera": "plano",
+     "reacao": {
+      "celia": "neutro",
+      "nina": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/06.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela mesma. Lá de dentro.",
+     "destaque": [
+      "Ela mesma"
+     ],
+     "emocao": "medo",
+     "camera": "punch",
+     "tremor": true,
+     "pausa": 0.45,
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/07.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Ela se queimou só pra jogar a culpa em você?",
+     "destaque": [
+      "culpa"
+     ],
+     "emocao": "surpreso",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/08.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Pra ninguém nunca mais tirar você dela.",
+     "destaque": [
+      "você dela"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz6/falas/09.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Mas ela era minha vó, mãe!",
+     "destaque": [
+      "minha vó"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "caio": "triste"
+     },
+     "audio": "/home/claude/eps/viz6/falas/10.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela nunca foi sua vó, filha.",
+     "destaque": [
+      "nunca"
+     ],
+     "emocao": "triste",
+     "camera": "punch",
+     "impacto": true,
+     "pausa": 0.5,
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz6/falas/11.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina… a porta do 47 tá abrindo sozinha.",
+     "destaque": [
+      "abrindo sozinha"
+     ],
+     "emocao": "medo",
+     "camera": "plano",
+     "tremor": true,
+     "audio": "/home/claude/eps/viz6/falas/x3.wav",
+     "reacao": {
+      "nina": "medo",
+      "celia": "medo"
+     }
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó?",
+     "destaque": [
+      "Vó"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "pausa": 0.5,
+     "audio": "/home/claude/eps/viz6/falas/x4.wav",
+     "reacao": {
+      "celia": "medo",
+      "caio": "medo"
+     }
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Conta o resto, Célia. Conta de quem ela é filha.",
+     "destaque": [
+      "de quem",
+      "filha"
+     ],
+     "camera": "plano",
+     "tremor": true,
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo",
+      "celia": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/12.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Mãe… do que ela tá falando?",
+     "destaque": [
+      "falando"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "celia": "medo",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz6/falas/13.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "A menina que eu tirei dessa casa… não era minha filha.",
+     "destaque": [
+      "não era",
+      "minha filha"
+     ],
+     "emocao": "triste",
+     "camera": "punch",
+     "pausa": 0.5,
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz6/falas/14.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [
+    "lurdes"
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Era minha.",
+     "destaque": [
+      "minha"
+     ],
+     "emocao": "bravo",
+     "camera": "punch",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.8,
+     "audio": "/home/claude/eps/viz6/falas/15.wav"
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "De quem a Nina é filha de verdade?\nComente sua teoria."
+ },
+ "inicio": 0.0,
+ "gap": 0.18,
+ "pausa_max": 0.5,
+ "vel_voz": 1.0,
+ "titulo_na_fala": 1
+}

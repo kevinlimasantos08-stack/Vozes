@@ -16,8 +16,11 @@
 - **Ep 3 ("Quem dirige?"):** banco do motorista vazio, volante girando sozinho; catraca marca 01 passageiro (o Téo); jornal de 15/03/2006 "Acidente com ônibus da linha 12" na porta do hospital, fotos do motorista antigo e do cobrador — o cobrador era o Seu Bento (morreu naquela noite e nunca parou de trabalhar); o letreiro muda de "12 CENTRO" para "HOSPITAL"; no último banco, uma moça grávida em trabalho de parto: a mãe do Téo, 20 anos mais nova; relógio do painel 23:58, dois minutos antes do acidente; o banco do motorista está esperando por ele.
 
 - **Ep 4 ("Ele vai dirigir?"):** o Téo assume o volante às 23:59; um caminhão sem farol vem na contramão (era assim que todos morreram); o Téo desvia, o ônibus para inteiro na porta da maternidade; duas sombras de uniforme ajudam a mãe a descer; o Seu Bento sorri no retrovisor pela primeira vez; tudo fica branco; o Téo acorda de manhã no ponto 12 ao lado do Seu Bento, vivo, que pergunta "a gente se conhece?"; no celular, o contato da mãe não existe mais.
+- **Ep 5 ("Quem abriu a porta?", Gemini):** na casa da mãe, quem abre a porta é outro Téo (mesmo rosto, óculos, nome); a mãe pergunta "filho, quem é?" e ele diz "ninguém, mãe" — não vê o Téo; na estante, foto do bebê nascido na maternidade (15/03/2006), não no ônibus: salvando a mãe, o Téo apagou a própria vida; ninguém esbarra nele o dia inteiro; à meia-noite volta ao ponto 12, a porta do ônibus abre sozinha, o Seu Bento sorri no retrovisor "como se já esperasse"; a catraca gira sozinha e marca 07: o passageiro que nunca desce.
 
 ## Perguntas em aberto
+- O Téo virou o sétimo passageiro (um fantasma)? (gancho do Ep 5) Tem volta? O Seu Bento da noite sabe quem ele é?
+- Respondido no Ep 5: o contato sumiu porque nesta linha do tempo nasceu outro Téo, no hospital.
 - O que mais o Téo mudou? Por que o contato da mãe sumiu — ela não existe mais, ou ele nunca nasceu no ônibus? (gancho do Ep 4)
 - O Seu Bento vivo não lembra dele: e o motorista antigo, também está vivo?
 - Respondido no Ep 4: o Téo dirigiu e evitou o acidente.
@@ -29,4 +32,4 @@
 estrada, ponto, interior, motorista, catraca, teo_close, corredor, espelho, retrato, banco, bilhete (emocao.lado = frente/verso), descida (Bento de costas sumindo na neblina).
 Novas no Ep 3: teo_corredor (Téo correndo pelo corredor), jornal (emocao.foco = chega | titulo | fotos | bento), painel (letreiro; emocao.texto, emocao.de para trocar o texto com falha, emocao.relogio = 23:58), mae (moça grávida no último banco; emocao.dor). Também: motorista emocao.gira (volante girando sozinho), catraca emocao.fixo = "01" (contador parado).
 Novas no Ep 4: hospital (emocao.parado, emocao.sombras), caminhao (emocao.passa), branco, ponto_dia (emocao.bento, olha, teo), celular (emocao.vazio = "Nenhum contato"); motorista aceita emocao.quem = "teo".
-Personagens toon: teo, bento, antigo, mae (cabelo longo). Para cenas novas, criar a função `cena_<nome>` e registrar em `CENAS`.
+Novas no Ep 5: porta (emocao.abre, mae, olha), dois_teos, foto (bebê na maternidade), calcada (gente atravessando o Téo); ponto aceita emocao.sem_onibus; espelho aceita emocao.sorri (rosto mais baixo, sorriso visível); catraca com fixo não toca o clique.\nPersonagens toon: teo, teo2 (o outro Téo), bento, antigo, mae (cabelo longo), mae_hoje (grisalha, óculos). Para cenas novas, criar a função `cena_<nome>` e registrar em `CENAS`.

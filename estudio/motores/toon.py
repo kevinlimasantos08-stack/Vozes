@@ -258,6 +258,8 @@ def cena_ponto(c, lt, T, t, emo):
         y = rnd.uniform(1100, 1500) + math.sin(t * 3 + i) * 30
         c.save(); c.translate(x, y); c.rotate(t * 3 + i); c.set_source_rgba(0.6, 0.4, 0.2, 0.8); ell(c, 0, 0, 14, 7); c.fill(); c.restore()
     # ônibus chegando pela direita
+    if emo.get("sem_onibus"):
+        neblina(c, t, 1300, 0.2); return
     chega = eo(lt / max(0.6, T * 0.5))
     onibus_lado(c, W + 50 - chega * 700, 1480, 0.7, t * (1 - chega), porta=eio((lt - T * 0.55) / 0.8), roda=t * 14 * (1 - chega))
     neblina(c, t, 1300, 0.2)
@@ -399,7 +401,7 @@ def cena_espelho(c, lt, T, t, emo):
     rrect(c, -470, -230, 940, 460, 120); fill_ol(c, (0.15, 0.15, 0.17), 14)
     rrect(c, -440, -200, 880, 400, 100); c.clip()
     c.set_source_rgb(0.18, 0.16, 0.2); c.paint()
-    toon(c, 40, 120, 2.2, "bento", emo.get("bento", "serio"), t, look=-0.7)
+    toon(c, 40, -25 if emo.get("sorri") else 120, 1.9 if emo.get("sorri") else 2.2, "bento", emo.get("bento", "serio"), t, look=-0.7)
     g = cairo.LinearGradient(-440, -200, 440, 200); g.add_color_stop_rgba(0, 1, 1, 1, 0.12); g.add_color_stop_rgba(0.5, 1, 1, 1, 0); c.set_source(g); c.paint()
     c.restore()
     c.set_source_rgb(0.1, 0.1, 0.12); c.rectangle(W / 2 - 20, 0, 40, 540); c.fill()
@@ -698,6 +700,97 @@ CENAS = dict(bilhete=cena_bilhete, descida=cena_descida, estrada=cena_estrada, p
              teo_corredor=cena_teo_corredor, jornal=cena_jornal, painel=cena_painel, mae=cena_mae,
              hospital=cena_hospital, caminhao=cena_caminhao, branco=cena_branco, ponto_dia=cena_ponto_dia, celular=cena_celular)
 
+
+# ---- Ep 5: a porta da mãe, os dois Téos, a foto e a calçada
+PERS["teo2"] = dict(PERS["teo"])
+PERS["mae_hoje"] = dict(pele=hx("#B9825A"), cabelo=hx("#6E6660"), roupa=hx("#7A5C9E"), oculos=True, careca=False, bone=False, barba=None, longo=True)
+
+def casa_dia(c, t):
+    ceu(c, (0.6, 0.72, 0.9), (0.98, 0.86, 0.7), 0)
+    c.set_source_rgb(*hx("#D9C7A6")); c.rectangle(0, 300, W, 1100); c.fill()
+    for y in range(330, 1400, 70): c.set_source_rgba(0, 0, 0, 0.05); c.rectangle(0, y, W, 4); c.fill()
+    c.set_source_rgb(0.45, 0.43, 0.42); c.rectangle(0, 1400, W, H); c.fill()
+    c.set_source_rgb(0.55, 0.53, 0.52); c.rectangle(0, 1400, W, 50); c.fill()
+
+def cena_porta(c, lt, T, t, emo):
+    casa_dia(c, t)
+    dx0, dy0, dw, dh = 330, 520, 440, 880
+    rrect(c, dx0 - 40, dy0 - 40, dw + 80, dh + 40, 10); fill_ol(c, (0.95, 0.93, 0.88), 8)
+    fonte(c, 64); c.set_source_rgb(0.2, 0.2, 0.22); c.move_to(dx0 + dw / 2 - 40, dy0 - 70); c.show_text("125")
+    c.save(); c.rectangle(dx0, dy0, dw, dh); c.clip()
+    g = cairo.LinearGradient(0, dy0, 0, dy0 + dh); g.add_color_stop_rgb(0, 0.35, 0.28, 0.24); g.add_color_stop_rgb(1, 0.2, 0.16, 0.14); c.set_source(g); c.paint()
+    if emo.get("mae"):
+        ap = eo((lt - 0.2) / 0.8)
+        c.save(); c.push_group(); toon(c, dx0 + dw - 90, dy0 + 260, 0.42, "mae_hoje", "neutro", t, look=-0.5); c.pop_group_to_source(); c.paint_with_alpha(0.85 * ap); c.restore()
+    if emo.get("filho", True):
+        olha = emo.get("olha")
+        toon(c, dx0 + dw / 2 - 10, dy0 + 330, 0.62, "teo2", "serio" if olha else "neutro", t, look=(-0.1 if olha else -0.6))
+    abre = eio(lt / 0.9) if emo.get("abre") else 1.0
+    pw = dw * (1 - abre * 0.85)
+    rrect(c, dx0, dy0, pw, dh, 6); fill_ol(c, hx("#6B3E26"), 8)
+    c.set_source_rgb(0.85, 0.7, 0.3); c.arc(dx0 + pw - 40, dy0 + dh / 2, 14, 0, 2 * math.pi); c.fill()
+    c.restore()
+    # o Téo de costas para nós, no primeiro plano à esquerda
+    e = emo.get("teo", "medo")
+    toon(c, 195, 1330, 1.1, "teo", e, t, look=0.9)
+    if emo.get("olha"):
+        c.set_source_rgba(0.75, 0.88, 1, 0.05 + 0.04 * math.sin(t * 9)); c.paint()
+
+def cena_dois_teos(c, lt, T, t, emo):
+    g = cairo.LinearGradient(0, 0, 0, H); g.add_color_stop_rgb(0, 0.12, 0.12, 0.18); g.add_color_stop_rgb(1, 0.03, 0.03, 0.06); c.set_source(g); c.paint()
+    ap = eo(lt / 0.8)
+    toon(c, W / 2 - 250 * ap, 920, 1.05, "teo", "medo", t, look=0.7)
+    toon(c, W / 2 + 250 * ap, 920, 1.05, "teo2", "serio", t + 0.6, look=0.0)
+    # linha de falha entre os dois
+    c.set_source_rgba(1, 0.55, 0.15, 0.5 + 0.3 * math.sin(t * 13)); c.set_line_width(4)
+    c.move_to(W / 2, 300)
+    for k in range(1, 15): c.line_to(W / 2 + math.sin(t * 20 + k * 1.7) * 14, 300 + k * 80)
+    c.stroke()
+    if int(t * 12) % 17 == 0:
+        c.set_source_rgba(1, 1, 1, 0.08); c.paint()
+
+def cena_foto(c, lt, T, t, emo):
+    c.set_source_rgb(0.22, 0.17, 0.14); c.paint()
+    c.set_source_rgb(0.4, 0.28, 0.18); c.rectangle(0, 1300, W, 70); c.fill()
+    c.set_source_rgb(0.3, 0.2, 0.13); c.rectangle(0, 1370, W, 30); c.fill()
+    c.save(); c.translate(W / 2, 880); s = 1.0 + 0.12 * eio(lt / max(1.0, T)); c.scale(s, s); c.rotate(0.03)
+    rrect(c, -330, -420, 660, 820, 14); fill_ol(c, (0.75, 0.6, 0.35), 8)
+    c.rectangle(-280, -370, 560, 620); c.set_source_rgb(0.85, 0.9, 0.92); c.fill()
+    c.save(); c.rectangle(-280, -370, 560, 620); c.clip()
+    c.set_source_rgb(0.9, 0.93, 0.95); c.rectangle(-280, -370, 560, 620); c.fill()
+    rrect(c, -180, -330, 360, 64, 8); fill_ol(c, (0.1, 0.12, 0.2), 4)
+    fonte(c, 36); c.set_source_rgb(1, 1, 1); l = "MATERNIDADE"; c.move_to(-lw_(c, l) / 2, -286); c.show_text(l)
+    c.set_source_rgb(0.85, 0.12, 0.12); c.rectangle(200, -330, 20, 60); c.fill(); c.rectangle(180, -310, 60, 20); c.fill()
+    rrect(c, -230, 20, 460, 200, 30); fill_ol(c, (0.75, 0.85, 0.95), 6)  # berço
+    ell(c, 0, 0, 170, 90); fill_ol(c, (0.95, 0.85, 0.6), 6)  # manta
+    c.arc(-90, -30, 62, 0, 2 * math.pi); fill_ol(c, hx("#C08A5E"), 5)  # bebê
+    for sx in (-1, 1):
+        c.set_source_rgb(0.07, 0.06, 0.08); c.set_line_width(5); c.arc(-90 + sx * 22, -36, 9, 0.1 * math.pi, 0.9 * math.pi); c.stroke()
+    c.restore()
+    fonte(c, 40, "Medium"); c.set_source_rgb(0.2, 0.15, 0.1); l = "TÉO · 15/03/2006"; c.move_to(-lw_(c, l) / 2, 340); c.show_text(l)
+    c.restore()
+    g = cairo.RadialGradient(W / 2, 880, 100, W / 2, 880, 900); g.add_color_stop_rgba(0, 1, 0.85, 0.6, 0.15); g.add_color_stop_rgba(1, 0, 0, 0, 0.3); c.set_source(g); c.paint()
+
+def cena_calcada(c, lt, T, t, emo):
+    ceu(c, (0.55, 0.68, 0.88), (0.95, 0.75, 0.55), 0)
+    predios(c, 1350, 600, (0.5, 0.5, 0.62), 900, 11, janelas=False)
+    c.set_source_rgb(0.5, 0.5, 0.52); c.rectangle(0, 1350, W, H); c.fill()
+    c.set_source_rgb(0.6, 0.6, 0.62); c.rectangle(0, 1350, W, 50); c.fill()
+    # Téo parado, meio transparente
+    c.save(); c.push_group(); toon(c, W / 2, 920, 0.8, "teo", emo.get("teo", "triste"), t, look=math.sin(t * 1.3) * 0.8); c.pop_group_to_source(); c.paint_with_alpha(0.75 + 0.15 * math.sin(t * 3)); c.restore()
+    # gente passando através dele
+    cores = [hx("#3C6E71"), hx("#9E3D3D"), hx("#5B5B8F"), hx("#C2884A")]
+    for i in range(4):
+        v = 260 + i * 70; d = 1 if i % 2 else -1
+        x = (W / 2 + d * (-W * 0.7 + ((t * v + i * 450) % (W * 1.4))))
+        y = 980 + (i % 2) * 70
+        bob = abs(math.sin(t * 8 + i)) * 10
+        c.set_source_rgba(*cores[i], 0.9); c.arc(x, y - 180 - bob, 70, 0, 2 * math.pi); c.fill()
+        rrect(c, x - 90, y - 110 - bob, 180, 330, 70); c.fill()
+
+CENAS_EP5 = dict(porta=cena_porta, dois_teos=cena_dois_teos, foto=cena_foto, calcada=cena_calcada)
+CENAS.update(CENAS_EP5)
+
 # ------------------------------------------------------------------ áudio
 def ler_audio(p, vel=1.0):
     af = "adeclip,highpass=f=70,lowpass=f=11000,silenceremove=start_periods=1:start_threshold=-42dB:stop_periods=-1:stop_threshold=-42dB:stop_duration=0.2:stop_silence=0.12" + (f",atempo={vel}" if vel != 1 else "")
@@ -885,7 +978,7 @@ def main():
         s = int((b["_ini"] - 0.15) * SR); mx[s:s + len(w)] += w[:n - s]
     for b in blocos:
         if b.get("impacto"): s = int(max(0, b["_ini"] - 0.05) * SR); mx[s:s + len(bm)] += bm[:n - s]
-        if b["cena"] == "catraca":
+        if b["cena"] == "catraca" and not b.get("emocao", {}).get("fixo"):
             T = b["_fim"] - b["_ini"]; s = int((b["_ini"] + T * 0.45 + 0.3) * SR); mx[s:s + len(ck)] += ck[:n - s]
     mx = (mx / max(1.0, np.abs(mx).max() / 0.85) * 32767).astype(np.int16)[: int(total * SR)]
     wv = base + ".a.wav"

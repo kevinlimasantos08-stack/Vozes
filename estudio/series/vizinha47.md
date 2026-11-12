@@ -2,7 +2,7 @@
 
 **Estilo:** 2D recortado (motor `estudio/motores/reel2d.py`, modo `ficcao`), diálogo entre personagens.
 **Vozes VoiceStudio (desde o Ep 5, pedido do Kevin):** clonadas de `refs/<personagem>_curto.wav` (refs curtas de 4–6 s; texto exato no pedido `pedidos/20261112_3_vizinha47-ep5b2.json`, campo `clonar`). ~4 min por fala no GitHub; dividir em pedidos de até 8 falas. Lurdes acelerada com atempo 1.1.
-**Vozes Gemini (estúdio Vozes):** Nina = Leda · Caio = Puck · Dona Lurdes = Gacrux · Dona Célia (mãe da Nina) = Kore.
+**Vozes Gemini (estúdio Vozes; padrão da rotina diária, Chatterbox se der 429):** Nina = Leda · Caio = Puck · Dona Lurdes = Gacrux · Dona Célia (mãe da Nina) = Kore.
 **Elenco extra no JSON:** `celia` (ver `estudio/roteiros/vizinha47_ep3.json`, campo `elenco_extra`).
 
 ## Personagens
@@ -18,8 +18,12 @@
 - **Ep 4 ("O desenho na parede"):** a Lurdes trancou o Caio dentro do 47 ("igualzinho sua mãe fez comigo"; "ele quer te levar embora daqui"); a chave estava pendurada na fechadura por fora; no quarto queimado o Caio limpa a fuligem e acha um desenho de giz: casa pegando fogo + "DESCULPA VÓ - NINA"; a Nina não lembra; a Lurdes aparece: "você desenhou isso um dia antes do fogo"; a Nina, pela primeira vez, chama ela de "vó": "o que eu fiz?". Vozes: Chatterbox (cota do Gemini esgotada).
 
 - **Ep 5 ("O que a Nina ouviu"):** a Nina não pôs fogo — desenhou o que ouviu a mãe dizer ao telefone na noite anterior: "amanhã essa casa não existe mais"; segundo a Lurdes, a Célia não foi chamar a polícia, "foi buscar o galão"; a Célia aparece na porta do 47 de madrugada: "Nina! Sai dessa casa. Agora." / "Vim te levar embora"; a Nina: "a senhora mentiu pra mim a vida inteira!"; a Célia: "Menti pra te proteger. Dela."; a Lurdes: "Ela voltou pra terminar o que começou."
+- **Ep 6 ("Quem acendeu o fogo?", Gemini):** na frente do 47, de madrugada, a Célia confessa que foi buscar o galão — mas para queimar a casa vazia, de manhã, e ia abrir a porta antes; quando voltou, já queimava: segundo ela, a Lurdes acendeu o fogo lá de dentro "pra ninguém nunca mais tirar você dela"; "ela nunca foi sua vó"; a porta do 47 abre sozinha, a voz da Lurdes: "Conta de quem ela é filha"; a Célia: "A menina que eu tirei dessa casa… não era minha filha." / a Lurdes: "Era minha."
 
 ## Perguntas em aberto (para os próximos)
+- A Nina é filha da Lurdes? (gancho do Ep 6) Então quem é a Célia, e onde está a filha verdadeira dela?
+- A Célia diz a verdade sobre a Lurdes ter acendido o fogo?
+- Respondido no Ep 6: a Célia buscou o galão (para queimar a casa vazia de manhã), mas diz que não acendeu.
 - A Célia veio queimar o 47 de novo (com a Nina e o Caio dentro)? (gancho do Ep 5)
 - Proteger a Nina "dela" — a Lurdes é o perigo? A Lurdes mente sobre o galão?
 - O que aconteceu de verdade naquela noite? Quem está dizendo a verdade, a mãe ou a "vó"?
