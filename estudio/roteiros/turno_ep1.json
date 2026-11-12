@@ -1,0 +1,790 @@
+{
+ "id": "turno-ep1",
+ "titulo": "QUEM BATEU\nO PONTO?",
+ "serie": "O Último Turno · Ep 1",
+ "cenario": "escritorio",
+ "personagens": [
+  "rafa",
+  "g1",
+  "g2",
+  "g3",
+  "g4",
+  "g5",
+  "g6",
+  "g7",
+  "g8"
+ ],
+ "elenco_extra": {
+  "g1": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#AEB9C2",
+   "cabelo": "#4E5862",
+   "camisa": "#7D8A93",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "g2": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B5BFC6",
+   "cabelo": "#4E5862",
+   "camisa": "#8A949C",
+   "calca": "#3A4148",
+   "estilo": "longo"
+  },
+  "g3": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#A9B3BC",
+   "cabelo": "#4E5862",
+   "camisa": "#76838C",
+   "calca": "#3A4148",
+   "estilo": "longo"
+  },
+  "g4": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B9C2C8",
+   "cabelo": "#4E5862",
+   "camisa": "#868F96",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "g5": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#A6B1BA",
+   "cabelo": "#4E5862",
+   "camisa": "#7A8790",
+   "calca": "#3A4148",
+   "estilo": "coque"
+  },
+  "g6": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B2BCC4",
+   "cabelo": "#4E5862",
+   "camisa": "#8E979E",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "g7": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#ACB6BF",
+   "cabelo": "#4E5862",
+   "camisa": "#808C95",
+   "calca": "#3A4148",
+   "estilo": "careca"
+  },
+  "g8": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B7C0C7",
+   "cabelo": "#4E5862",
+   "camisa": "#737F88",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  }
+ },
+ "noite": {
+  "fator": 0.24,
+  "fator_personagem": 0.75,
+  "fundo": "#05060A"
+ },
+ "motor_voz": "voicestudio",
+ "voz_vs": "male, elderly, very low pitch",
+ "velocidade_voz": 1.0,
+ "frases": [
+  {
+   "texto": "O ponto do escritório registrou oito entradas às três da manhã.",
+   "destaque": [
+    "oito entradas",
+    "três da manhã"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.0
+  },
+  {
+   "texto": "Só tinha uma pessoa no prédio: o Rafa.",
+   "destaque": [
+    "uma pessoa"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0.9
+  },
+  {
+   "texto": "Era a primeira noite dele no turno da madrugada.",
+   "destaque": [
+    "primeira noite"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0.9
+  },
+  {
+   "texto": "O chefe tinha deixado uma única regra:",
+   "destaque": [
+    "única regra"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0.6
+  },
+  {
+   "texto": "não olhe para as outras mesas depois das três.",
+   "destaque": [
+    "não olhe"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.1
+  },
+  {
+   "texto": "Às três e um, ele ouviu um teclado. Depois outro.",
+   "destaque": [
+    "teclado"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0.8
+  },
+  {
+   "texto": "E mais outro.",
+   "destaque": [
+    "outro"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.0
+  },
+  {
+   "texto": "O Rafa levantou devagar.",
+   "destaque": [
+    "devagar"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0.9
+  },
+  {
+   "texto": "Todas as mesas estavam ocupadas.",
+   "destaque": [
+    "ocupadas"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.0
+  },
+  {
+   "texto": "Gente de crachá antigo e pele cinza, de olhos fechados, digitando sem parar.",
+   "destaque": [
+    "pele cinza",
+    "olhos fechados"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.0
+  },
+  {
+   "texto": "Quando ele olhou pra trás, alguém já estava sentado na cadeira dele.",
+   "destaque": [
+    "cadeira dele"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.1
+  },
+  {
+   "texto": "E na tela de todos, a mesma frase:",
+   "destaque": [
+    "mesma frase"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0.7
+  },
+  {
+   "texto": "você é o nono.",
+   "destaque": [
+    "nono"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 1.4
+  },
+  {
+   "texto": "Aí, todos pararam de digitar. E abriram os olhos.",
+   "destaque": [
+    "abriram os olhos"
+   ],
+   "pausa_voz": 0.9,
+   "pausa": 0
+  }
+ ],
+ "impacto": "f13",
+ "atraso": 0.3,
+ "planos": [
+  {
+   "de": 0,
+   "camera": "geral",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "sentar",
+     "lugar": "mesa5"
+    },
+    {
+     "quem": "rafa",
+     "acao": "digitar",
+     "em": 0,
+     "ate_t": "f6"
+    },
+    {
+     "quem": "g1",
+     "acao": "sentar",
+     "lugar": "mesa1"
+    },
+    {
+     "quem": "g1",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g1",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g2",
+     "acao": "sentar",
+     "lugar": "mesa2"
+    },
+    {
+     "quem": "g2",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g2",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g3",
+     "acao": "sentar",
+     "lugar": "mesa3"
+    },
+    {
+     "quem": "g3",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g3",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g4",
+     "acao": "sentar",
+     "lugar": "mesa4"
+    },
+    {
+     "quem": "g4",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g4",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g5",
+     "acao": "sentar",
+     "lugar": "mesa6"
+    },
+    {
+     "quem": "g5",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g5",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g6",
+     "acao": "sentar",
+     "lugar": "mesa7"
+    },
+    {
+     "quem": "g6",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g6",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g7",
+     "acao": "sentar",
+     "lugar": "mesa8"
+    },
+    {
+     "quem": "g7",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g7",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    },
+    {
+     "quem": "g8",
+     "acao": "ir_para",
+     "ate": "porta"
+    },
+    {
+     "quem": "g8",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g8",
+     "acao": "olhos",
+     "estado": "fechado",
+     "em": 0
+    }
+   ],
+   "pos": [
+    1.2,
+    -2.8,
+    2.0
+   ],
+   "mira": [
+    -1.1,
+    0.9,
+    1.1
+   ],
+   "lente": 26
+  },
+  {
+   "de": "f2",
+   "camera": "frente",
+   "alvo": "rafa",
+   "acoes": []
+  },
+  {
+   "de": "f3",
+   "camera": "lateral",
+   "alvo": "rafa",
+   "acoes": []
+  },
+  {
+   "de": "f4",
+   "camera": "close",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "olhar",
+     "para": "baixo",
+     "em": "+0.3",
+     "dur": 2
+    }
+   ]
+  },
+  {
+   "de": "f6",
+   "camera": "frente",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "olhar",
+     "para": "esq",
+     "em": "f6+1.0",
+     "dur": 1.2
+    },
+    {
+     "quem": "rafa",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f6+0.8"
+    }
+   ]
+  },
+  {
+   "de": "f7",
+   "camera": "detalhe",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "procurar",
+     "em": "+0.1",
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "de": "f8",
+   "camera": "lateral",
+   "alvo": "rafa",
+   "lado": -1,
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "levantar",
+     "em": "+0.2"
+    },
+    {
+     "quem": "rafa",
+     "acao": "andar",
+     "ate": "centro",
+     "em": "+0.4",
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "de": "f9",
+   "camera": "geral",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "g1",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g2",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g3",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g4",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g5",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g6",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g7",
+     "acao": "surgir",
+     "em": "f9"
+    },
+    {
+     "quem": "g1",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g2",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g3",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g4",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g5",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g6",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g7",
+     "acao": "digitar",
+     "em": "f9",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "rafa",
+     "acao": "medo",
+     "em": "f9+0.3",
+     "dur": 1.2
+    }
+   ],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
+  },
+  {
+   "de": "f10",
+   "camera": "geral",
+   "pos": [
+    -1.1,
+    2.0,
+    1.48
+   ],
+   "mira": [
+    -1.1,
+    3.62,
+    1.3
+   ],
+   "lente": 42,
+   "acoes": []
+  },
+  {
+   "de": "f11",
+   "camera": "dois",
+   "alvo": "rafa",
+   "com": "g8",
+   "acoes": [
+    {
+     "quem": "g8",
+     "acao": "sentar",
+     "lugar": "mesa5",
+     "em": "f11"
+    },
+    {
+     "quem": "g8",
+     "acao": "surgir",
+     "em": "f11"
+    },
+    {
+     "quem": "g8",
+     "acao": "digitar",
+     "em": "f11",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "rafa",
+     "acao": "virar",
+     "para": "g8",
+     "em": "f11+0.6",
+     "dur": 0.5
+    },
+    {
+     "quem": "rafa",
+     "acao": "surpresa",
+     "em": "f11+1.3",
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "de": "f12",
+   "camera": "costas",
+   "alvo": "g2",
+   "acoes": []
+  },
+  {
+   "de": "f13",
+   "camera": "geral",
+   "pos": [
+    -0.55,
+    0.62,
+    1.55
+   ],
+   "mira": [
+    0.25,
+    0.9,
+    1.45
+   ],
+   "lente": 40,
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "medo",
+     "em": "+0.1",
+     "dur": 2.0
+    }
+   ]
+  },
+  {
+   "de": "f14",
+   "camera": "geral",
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19,
+   "acoes": [
+    {
+     "quem": "g1",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g2",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g3",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g4",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g5",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g6",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g7",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    },
+    {
+     "quem": "g8",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f14+0.2",
+     "dur": 4,
+     "manter": true
+    }
+   ]
+  },
+  {
+   "de": "f14+1.5",
+   "camera": "geral",
+   "pos": [
+    -1.1,
+    2.0,
+    1.48
+   ],
+   "mira": [
+    -1.1,
+    3.62,
+    1.3
+   ],
+   "lente": 42,
+   "acoes": [
+    {
+     "quem": "g1",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g2",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g3",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g4",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g5",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g6",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g7",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    },
+    {
+     "quem": "g8",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f14+1.8"
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "O que acontece com o nono?\nComente sua teoria."
+ },
+ "cauda": 2.0
+}
