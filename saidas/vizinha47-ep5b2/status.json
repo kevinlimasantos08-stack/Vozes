@@ -1,7 +1,15 @@
 {
- "ok": false,
+ "ok": true,
  "motor": "voicestudio",
- "modelos": null,
- "erro": "ValueError: [clone_ref_unusable] Reference audio has no usable sound — the clip is empty or completely silent, so there is no voice to clone. Record again closer to the microphone (check that the correct input device is selected and its level moves while you speak), or choose a different reference clip.",
- "detalhe": " audio = modelo.generate(text=f[\"texto\"], **kw)[0]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 158, in inference_mode\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/voicestudio/omnivoice/models/omnivoice.py\", line 946, in generate\n    full_task = self._preprocess_all(\n                ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/voicestudio/omnivoice/models/omnivoice.py\", line 1485, in _preprocess_all\n    self.create_voice_clone_prompt(\n  File \"/home/runner/work/_temp/voicestudio/omnivoice/models/omnivoice.py\", line 1017, in create_voice_clone_prompt\n    return self._create_voice_clone_prompt(ref_audio, ref_text, preprocess_prompt)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/voicestudio/omnivoice/models/omnivoice.py\", line 1053, in _create_voice_clone_prompt\n    validate_clone_reference(ref_wav, ref_rms)\n  File \"/home/runner/work/_temp/voicestudio/omnivoice/utils/audio.py\", line 388, in validate_clone_reference\n    raise ValueError(\nValueError: [clone_ref_unusable] Reference audio has no usable sound — the clip is empty or completely silent, so there is no voice to clone. Record again closer to the microphone (check that the correct input device is selected and its level moves while you speak), or choose a different reference clip.\n"
+ "arquivos": [
+  "01_lurdes_curto.wav",
+  "02_nina_curto.wav",
+  "03_caio_curto.wav",
+  "04_celia_curto.wav",
+  "05_nina_curto.wav",
+  "06_celia_curto.wav",
+  "07_lurdes_curto.wav"
+ ],
+ "segundos": 699,
+ "modelos": null
 }
