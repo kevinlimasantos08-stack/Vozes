@@ -1,0 +1,10 @@
+{
+ "id": "qa-oni5-blocos",
+ "motor": "transcrever",
+ "arquivos": [
+  "qa/oni5_cena1.mp3",
+  "qa/oni5_cena2.mp3",
+  "qa/oni5_cena3.mp3",
+  "qa/oni5_cena4.mp3"
+ ]
+}
