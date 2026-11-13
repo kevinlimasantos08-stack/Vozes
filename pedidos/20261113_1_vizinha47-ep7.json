@@ -1,0 +1,118 @@
+{
+ "id": "vizinha47-ep7",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "A minha filha morreu dentro dessa casa.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, breaking a long silence, grave, low, heavy"
+    },
+    {
+     "quem": "nina",
+     "texto": "Que filha, mãe? A sua filha sou eu!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, confused, hurt, rising voice"
+    },
+    {
+     "quem": "celia",
+     "texto": "Você é neta dela. A minha se chamava Bia.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, soft, sad, slow, guilty"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "E aí a senhora ficou com a Nina no lugar da Bia?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, shocked, accusing, tense"
+    },
+    {
+     "quem": "celia",
+     "texto": "Fiquei com a única coisa que essa casa me devia.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, cold, bitter, firm"
+    },
+    {
+     "quem": "caio",
+     "texto": "Trancada por quem?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, quick, tense, pressing"
+    },
+    {
+     "quem": "celia",
+     "texto": "Por essa mulher aí. Foi por isso que eu tranquei ela também.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, angry, trembling, finally confessing"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Você roubou a minha neta, Célia.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, eerie, calm, slow, menacing, from a dark doorway"
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó… e a minha mãe de verdade?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, scared, trembling, almost whispering"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Era minha filha. Morreu no dia que você nasceu.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, tender, sad, slow"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Mentira. Eu nunca tive a chave daquele quarto.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, cold, firm, offended"
+    },
+    {
+     "quem": "nina",
+     "texto": "Então quem tinha?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, whispering, afraid of the answer"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Você sabe, Célia. A chave tava no seu bolso.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, slow, chilling whisper, final revelation"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "E a Bia? Como ela morreu aqui?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, shaky, demanding"
+    },
+    {
+     "quem": "celia",
+     "texto": "Brincando com você. No seu quarto.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, quiet, painful, slow"
+    },
+    {
+     "quem": "nina",
+     "texto": "Comigo? Eu nem lembro de nenhuma Bia.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, disbelief, scared"
+    },
+    {
+     "quem": "celia",
+     "texto": "Ela ficou trancada lá dentro. Quando abriram, era tarde.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, broken, low, haunted"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "id": "onibus-ep6",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Enceladus"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pra descer desse ônibus, alguém tem que subir no seu lugar.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, chilling, ominous rule"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Foi o que o Seu Bento disse, olhando pelo retrovisor.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, low, mysterious"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Foi assim que o motorista antigo desceu: quando o Téo subiu pela primeira vez.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, revelation, grave"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Agora, o lugar dele era do Téo.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, melancholic"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ele olhou pro corredor. Seis bancos ocupados por ninguém.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, eerie, low"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Seis passageiros esperando a vez de descer.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, whisper, eerie"
+    },
+    {
+     "quem": "narrador",
+     "texto": "À meia-noite, o ônibus parou no ponto doze.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, tense, low"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E, pela primeira vez, tinha alguém esperando.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, suspense, slow"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Era a mãe dele. Cabelo grisalho. Os mesmos olhos.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, soft, emotional, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ninguém via o Téo. Mas ela olhou direto pra ele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, tense, chilling"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E disse: eu lembro de você. Foi você que dirigiu naquela noite.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, quiet, emotional, mysterious"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A porta abriu. A catraca esperou.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow, ominous"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Se ela subisse, o Téo descia. E ela ficava no lugar dele.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, grave, building tension"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A mãe pôs o pé no primeiro degrau.",
+     "estilo": "Brazilian Portuguese accent, deep male storyteller narrating a night horror story, natural pace, slow whisper, ominous cliffhanger"
+    }
+   ]
+  }
+ ]
+}
