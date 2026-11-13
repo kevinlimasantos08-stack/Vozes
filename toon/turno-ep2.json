@@ -1,0 +1,707 @@
+{
+ "cenario": "escritorio",
+ "personagens": [
+  "rafa",
+  "g1",
+  "g2",
+  "g3",
+  "g4",
+  "g5",
+  "g6",
+  "g7",
+  "g8",
+  "vulto"
+ ],
+ "planos": [
+  {
+   "de": 0,
+   "camera": "geral",
+   "acoes": [
+    {
+     "quem": "vulto",
+     "acao": "ir_para",
+     "ate": "porta"
+    },
+    {
+     "quem": "vulto",
+     "acao": "oculto",
+     "em": 0
+    },
+    {
+     "quem": "g1",
+     "acao": "sentar",
+     "lugar": "mesa1"
+    },
+    {
+     "quem": "g1",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g1",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g2",
+     "acao": "sentar",
+     "lugar": "mesa2"
+    },
+    {
+     "quem": "g2",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g2",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g3",
+     "acao": "sentar",
+     "lugar": "mesa3"
+    },
+    {
+     "quem": "g3",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g3",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g4",
+     "acao": "sentar",
+     "lugar": "mesa4"
+    },
+    {
+     "quem": "g4",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g4",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g5",
+     "acao": "sentar",
+     "lugar": "mesa6"
+    },
+    {
+     "quem": "g5",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g5",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g6",
+     "acao": "sentar",
+     "lugar": "mesa7"
+    },
+    {
+     "quem": "g6",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g6",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g7",
+     "acao": "sentar",
+     "lugar": "mesa8"
+    },
+    {
+     "quem": "g7",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g7",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "g8",
+     "acao": "sentar",
+     "lugar": "mesa5"
+    },
+    {
+     "quem": "g8",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": 0
+    },
+    {
+     "quem": "g8",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": 0,
+     "dur": 3.5
+    },
+    {
+     "quem": "rafa",
+     "acao": "ir_para",
+     "ate": "centro",
+     "olhando": "g8"
+    },
+    {
+     "quem": "rafa",
+     "acao": "medo",
+     "em": "+0.4",
+     "dur": 2.0
+    }
+   ],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
+  },
+  {
+   "de": "f2",
+   "camera": "acompanha",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "correr",
+     "ate": "porta",
+     "em": "f2+0.1"
+    }
+   ]
+  },
+  {
+   "de": "f3",
+   "camera": "costas",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "procurar",
+     "em": "+0.2",
+     "dur": 1.8
+    }
+   ]
+  },
+  {
+   "de": "f4",
+   "camera": "geral",
+   "acoes": [
+    {
+     "quem": "g1",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g2",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g3",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g4",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g5",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g6",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g7",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "g8",
+     "acao": "digitar",
+     "em": "f4+0.3",
+     "ate_t": "f14"
+    },
+    {
+     "quem": "rafa",
+     "acao": "virar",
+     "para": "centro",
+     "em": "f4+0.8",
+     "dur": 0.5
+    }
+   ],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
+  },
+  {
+   "de": "f5",
+   "camera": "acompanha",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "andar",
+     "ate": "corredor",
+     "em": "f5+0.1",
+     "chegar_olhando": "g2"
+    }
+   ]
+  },
+  {
+   "de": "f6",
+   "camera": "costas",
+   "alvo": "g2",
+   "acoes": []
+  },
+  {
+   "de": "f7",
+   "camera": "geral",
+   "acoes": [],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
+  },
+  {
+   "de": "f8",
+   "camera": "geral",
+   "pos": [
+    -1.1,
+    2.0,
+    1.48
+   ],
+   "mira": [
+    -1.1,
+    3.62,
+    1.3
+   ],
+   "lente": 42,
+   "acoes": [
+    {
+     "quem": "g2",
+     "acao": "olhar",
+     "para": "rafa",
+     "em": "f8+0.6",
+     "dur": 2.5
+    }
+   ]
+  },
+  {
+   "de": "f9",
+   "camera": "dois",
+   "alvo": "rafa",
+   "com": "g8",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "virar",
+     "para": "g8",
+     "em": "f9+0.1",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "de": "f10",
+   "camera": "geral",
+   "pos": [
+    -0.3,
+    1.6,
+    1.6
+   ],
+   "mira": [
+    0.6,
+    2.8,
+    1.45
+   ],
+   "lente": 30,
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f10+0.8"
+    },
+    {
+     "quem": "rafa",
+     "acao": "medo",
+     "em": "f10+1.0",
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "de": "f11",
+   "camera": "costas",
+   "alvo": "g8",
+   "acoes": []
+  },
+  {
+   "de": "f12",
+   "camera": "geral",
+   "pos": [
+    0.2,
+    3.3,
+    1.85
+   ],
+   "mira": [
+    0.2,
+    5.5,
+    2.2
+   ],
+   "lente": 30,
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "virar",
+     "para": "porta",
+     "em": "f12",
+     "dur": 0.4
+    }
+   ]
+  },
+  {
+   "de": "f13",
+   "camera": "lateral",
+   "alvo": "rafa",
+   "acoes": [
+    {
+     "quem": "rafa",
+     "acao": "surpresa",
+     "em": "f13+0.2",
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "de": "f14",
+   "camera": "geral",
+   "acoes": [
+    {
+     "quem": "g1",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g2",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g3",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g4",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g5",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g6",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g7",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    },
+    {
+     "quem": "g8",
+     "acao": "olhar",
+     "para": "porta",
+     "em": "f14+0.3",
+     "dur": 5,
+     "manter": true
+    }
+   ],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
+  },
+  {
+   "de": "f15",
+   "camera": "geral",
+   "pos": [
+    0.0,
+    0.6,
+    1.7
+   ],
+   "mira": [
+    1.8,
+    5.1,
+    1.2
+   ],
+   "lente": 26,
+   "acoes": [
+    {
+     "quem": "vulto",
+     "acao": "surgir",
+     "em": "f15+0.6"
+    },
+    {
+     "quem": "rafa",
+     "acao": "medo",
+     "em": "f15+0.8",
+     "dur": 2.0
+    }
+   ]
+  }
+ ],
+ "noite": {
+  "fator": 0.24,
+  "fator_personagem": 0.75,
+  "fundo": "#05060A"
+ },
+ "tempos": [
+  {
+   "t0": 0.3,
+   "dur": 6.38
+  },
+  {
+   "t0": 7.24,
+   "dur": 1.82
+  },
+  {
+   "t0": 9.41,
+   "dur": 3.26
+  },
+  {
+   "t0": 13.23,
+   "dur": 3.36
+  },
+  {
+   "t0": 17.08,
+   "dur": 3.82
+  },
+  {
+   "t0": 21.25,
+   "dur": 6.24
+  },
+  {
+   "t0": 28.05,
+   "dur": 2.88
+  },
+  {
+   "t0": 31.42,
+   "dur": 1.98
+  },
+  {
+   "t0": 34.03,
+   "dur": 7.78
+  },
+  {
+   "t0": 42.23,
+   "dur": 3.86
+  },
+  {
+   "t0": 46.58,
+   "dur": 3.98
+  },
+  {
+   "t0": 51.26,
+   "dur": 2.36
+  },
+  {
+   "t0": 53.97,
+   "dur": 4.98
+  },
+  {
+   "t0": 59.44,
+   "dur": 2.72
+  },
+  {
+   "t0": 62.72,
+   "dur": 2.38
+  }
+ ],
+ "duracao": 67.3,
+ "elenco_extra": {
+  "g1": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#AEB9C2",
+   "cabelo": "#4E5862",
+   "camisa": "#7D8A93",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "g2": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B5BFC6",
+   "cabelo": "#4E5862",
+   "camisa": "#8A949C",
+   "calca": "#3A4148",
+   "estilo": "longo"
+  },
+  "g3": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#A9B3BC",
+   "cabelo": "#4E5862",
+   "camisa": "#76838C",
+   "calca": "#3A4148",
+   "estilo": "longo"
+  },
+  "g4": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B9C2C8",
+   "cabelo": "#4E5862",
+   "camisa": "#868F96",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "g5": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#A6B1BA",
+   "cabelo": "#4E5862",
+   "camisa": "#7A8790",
+   "calca": "#3A4148",
+   "estilo": "coque"
+  },
+  "g6": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B2BCC4",
+   "cabelo": "#4E5862",
+   "camisa": "#8E979E",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "g7": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#ACB6BF",
+   "cabelo": "#4E5862",
+   "camisa": "#808C95",
+   "calca": "#3A4148",
+   "estilo": "careca"
+  },
+  "g8": {
+   "base": "figurante",
+   "fantasma": true,
+   "pele": "#B7C0C7",
+   "cabelo": "#4E5862",
+   "camisa": "#737F88",
+   "calca": "#3A4148",
+   "estilo": "curto"
+  },
+  "vulto": {
+   "base": "figurante",
+   "pele": "#8C6A55",
+   "cabelo": "#15171B",
+   "camisa": "#1C2026",
+   "calca": "#14161A",
+   "estilo": "curto",
+   "altura": 1.04
+  }
+ },
+ "semente": 7,
+ "pedido_em": 1794607782
+}
