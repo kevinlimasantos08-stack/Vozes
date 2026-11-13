@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "turno-ep2.json"
+ ],
+ "segundos": 15,
+ "modelos": null
+}
