@@ -175,7 +175,7 @@
    "pausa": 0.42
   },
   {
-   "texto": "O nome era Rafael. A foto era a dele.",
+   "texto": "O nome era Rafael. A foto era dele.",
    "destaque": [
     "Rafael",
     "dele"
@@ -205,7 +205,7 @@
    "pausa": 0.49
   },
   {
-   "texto": "Só que o Rafa não tinha batido o ponto.",
+   "texto": "Só que o Rafa não tinha batido ponto.",
    "destaque": [
     "não tinha batido"
    ],
@@ -405,8 +405,7 @@
   },
   {
    "de": "f2",
-   "camera": "acompanha",
-   "alvo": "rafa",
+   "camera": "geral",
    "acoes": [
     {
      "quem": "rafa",
@@ -414,7 +413,18 @@
      "ate": "porta",
      "em": "f2+0.1"
     }
-   ]
+   ],
+   "pos": [
+    3.9,
+    -4.7,
+    2.6
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    0.8
+   ],
+   "lente": 19
   },
   {
    "de": "f3",
@@ -563,9 +573,7 @@
   },
   {
    "de": "f9",
-   "camera": "dois",
-   "alvo": "rafa",
-   "com": "g8",
+   "camera": "geral",
    "acoes": [
     {
      "quem": "rafa",
@@ -574,7 +582,18 @@
      "em": "f9+0.1",
      "dur": 0.5
     }
-   ]
+   ],
+   "pos": [
+    0.4,
+    -1.6,
+    1.9
+   ],
+   "mira": [
+    -0.6,
+    1.4,
+    1.1
+   ],
+   "lente": 26
   },
   {
    "de": "f10",
@@ -607,9 +626,27 @@
   },
   {
    "de": "f11",
-   "camera": "costas",
-   "alvo": "g8",
-   "acoes": []
+   "camera": "geral",
+   "acoes": [
+    {
+     "quem": "g8",
+     "acao": "olhar",
+     "para": "frente",
+     "em": "f11",
+     "dur": 3
+    }
+   ],
+   "pos": [
+    -1.1,
+    -0.8,
+    1.48
+   ],
+   "mira": [
+    -1.1,
+    0.82,
+    1.3
+   ],
+   "lente": 42
   },
   {
    "de": "f12",
@@ -733,26 +770,26 @@
    "de": "f15",
    "camera": "geral",
    "pos": [
-    0.0,
-    0.6,
-    1.7
+    2.2,
+    1.6,
+    1.75
    ],
    "mira": [
     1.8,
     5.1,
     1.2
    ],
-   "lente": 26,
+   "lente": 28,
    "acoes": [
     {
      "quem": "vulto",
      "acao": "surgir",
-     "em": "f15+0.6"
+     "em": "f15+0.2"
     },
     {
      "quem": "rafa",
      "acao": "medo",
-     "em": "f15+0.8",
+     "em": "f15+0.6",
      "dur": 2.0
     }
    ]

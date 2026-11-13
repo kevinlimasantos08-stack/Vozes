@@ -39,6 +39,10 @@
 - Render: 9 bonecos e 53 s levaram ~40 min (4 partes de ~35 min).
 - Com o Gemini Charon (~2,4 palavras/s) e `pausa` de 0,3–1,1 s, o Ep 1 deu ~64 s.
 
+- Ep 2: câmeras `dois` (Rafa + g8 na mesa5) e `costas` do g8 entraram na cabeça do fantasma; trocadas por `geral` fixas: mesa5 com o Rafa ao fundo `pos [0.4,-1.6,1.9] mira [-0.6,1.4,1.1] lente 26`; rosto do g8 `pos [-1.1,-0.8,1.48] mira [-1.1,0.82,1.3] lente 42`; porta vista de dentro da sala `pos [2.2,1.6,1.75] mira [1.8,5.1,1.2] lente 28`. `acompanha` do Rafa correndo também passou por cabeças: use o geral da sala.
+- Se um job do render falhar com `curl: (22) ... 403` ao baixar o Blender, é instabilidade do site: reenviar o roteiro (rodar o toon3d de novo).
+- Não deixar mudanças sem commit no repositório enquanto o toon3d espera o render: o `git pull --rebase` falha calado e ele nunca vê o vídeo pronto.
+
 ## Ideias guardadas para os próximos
 - (usadas no Ep 2: ficha com a mesma data, 20 anos antes; ponto registrando entrada que o Rafa não bateu)
 - O chefe aparece de dia e não tem reflexo no vidro.
