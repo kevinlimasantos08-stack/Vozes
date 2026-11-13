@@ -93,7 +93,6 @@
   "fator_personagem": 0.75,
   "fundo": "#05060A"
  },
- "motor_voz": "voicestudio",
  "voz_vs": "male, elderly, very low pitch",
  "velocidade_voz": 1.0,
  "frases": [
@@ -104,7 +103,7 @@
     "três da manhã"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.0
+   "pausa": 0.8
   },
   {
    "texto": "Só tinha uma pessoa no prédio: o Rafa.",
@@ -112,7 +111,7 @@
     "uma pessoa"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0.9
+   "pausa": 0.72
   },
   {
    "texto": "Era a primeira noite dele no turno da madrugada.",
@@ -120,7 +119,7 @@
     "primeira noite"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0.9
+   "pausa": 0.72
   },
   {
    "texto": "O chefe tinha deixado uma única regra:",
@@ -128,7 +127,7 @@
     "única regra"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0.6
+   "pausa": 0.48
   },
   {
    "texto": "não olhe para as outras mesas depois das três.",
@@ -136,7 +135,7 @@
     "não olhe"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.1
+   "pausa": 0.88
   },
   {
    "texto": "Às três e um, ele ouviu um teclado. Depois outro.",
@@ -144,7 +143,7 @@
     "teclado"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0.8
+   "pausa": 0.64
   },
   {
    "texto": "E mais outro.",
@@ -152,7 +151,7 @@
     "outro"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.0
+   "pausa": 0.8
   },
   {
    "texto": "O Rafa levantou devagar.",
@@ -160,7 +159,7 @@
     "devagar"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0.9
+   "pausa": 0.72
   },
   {
    "texto": "Todas as mesas estavam ocupadas.",
@@ -168,7 +167,7 @@
     "ocupadas"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.0
+   "pausa": 0.8
   },
   {
    "texto": "Gente de crachá antigo e pele cinza, de olhos fechados, digitando sem parar.",
@@ -177,7 +176,7 @@
     "olhos fechados"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.0
+   "pausa": 0.8
   },
   {
    "texto": "Quando ele olhou pra trás, alguém já estava sentado na cadeira dele.",
@@ -185,7 +184,7 @@
     "cadeira dele"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.1
+   "pausa": 0.88
   },
   {
    "texto": "E na tela de todos, a mesma frase:",
@@ -193,7 +192,7 @@
     "mesma frase"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0.7
+   "pausa": 0.56
   },
   {
    "texto": "você é o nono.",
@@ -201,7 +200,7 @@
     "nono"
    ],
    "pausa_voz": 0.9,
-   "pausa": 1.4
+   "pausa": 1.12
   },
   {
    "texto": "Aí, todos pararam de digitar. E abriram os olhos.",
@@ -209,7 +208,7 @@
     "abriram os olhos"
    ],
    "pausa_voz": 0.9,
-   "pausa": 0
+   "pausa": 0.0
   }
  ],
  "impacto": "f13",
@@ -428,6 +427,12 @@
      "acao": "procurar",
      "em": "+0.1",
      "dur": 1.6
+    },
+    {
+     "quem": "rafa",
+     "acao": "olhos",
+     "estado": "arregalado",
+     "em": "f7"
     }
    ]
   },
@@ -625,7 +630,7 @@
     0.9,
     1.45
    ],
-   "lente": 40,
+   "lente": 24,
    "acoes": [
     {
      "quem": "rafa",
@@ -786,5 +791,6 @@
   "titulo": "CONTINUA...",
   "texto": "O que acontece com o nono?\nComente sua teoria."
  },
- "cauda": 2.0
+ "cauda": 2.0,
+ "voz": "Charon"
 }
