@@ -958,6 +958,7 @@ def main():
     # posições dos personagens por cena
     def layout(cena):
         ids = [p for p in cena["personagens"] if p in bonecos]
+        if cena.get("xs") and len(cena["xs"]) == len(ids): return list(zip(ids, cena["xs"]))
         xs = {1: [810], 2: [520, 1100], 3: [360, 810, 1260]}.get(len(ids), [300 + i * 340 for i in range(len(ids))])
         return list(zip(ids, xs))
 

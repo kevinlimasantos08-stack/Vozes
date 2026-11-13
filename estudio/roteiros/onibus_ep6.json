@@ -1,0 +1,181 @@
+{
+ "serie": "O Último Ônibus · Ep 6",
+ "titulo": "QUEM SOBE\nNO LUGAR?",
+ "titulo_no_bloco": 0,
+ "pausa_max": 0.45,
+ "vel_voz": 1.06,
+ "blocos": [
+  {
+   "texto": "Pra descer desse ônibus, alguém tem que subir no seu lugar.",
+   "destaque": [
+    "subir",
+    "seu lugar"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "serio"
+   },
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "Foi o que o Seu Bento disse, olhando pelo retrovisor.",
+   "destaque": [
+    "retrovisor"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "neutro",
+    "sorri": true
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Foi assim que o motorista antigo desceu: quando o Téo subiu pela primeira vez.",
+   "destaque": [
+    "desceu",
+    "Téo subiu"
+   ],
+   "cena": "retrato",
+   "emocao": {},
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "Agora, o lugar dele era do Téo.",
+   "destaque": [
+    "era do Téo"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "serio"
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "Ele olhou pro corredor. Seis bancos ocupados por ninguém.",
+   "destaque": [
+    "Seis bancos",
+    "ninguém"
+   ],
+   "cena": "corredor",
+   "emocao": {},
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Seis passageiros esperando a vez de descer.",
+   "destaque": [
+    "esperando",
+    "descer"
+   ],
+   "cena": "corredor",
+   "emocao": {},
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "À meia-noite, o ônibus parou no ponto doze.",
+   "destaque": [
+    "meia-noite",
+    "ponto doze"
+   ],
+   "cena": "ponto",
+   "emocao": {},
+   "pausa": 0.25,
+   "impacto": false
+  },
+  {
+   "texto": "E, pela primeira vez, tinha alguém esperando.",
+   "destaque": [
+    "alguém esperando"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "longe": true
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Era a mãe dele. Cabelo grisalho. Os mesmos olhos.",
+   "destaque": [
+    "mãe dele",
+    "mesmos olhos"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "perto": true
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "Ninguém via o Téo. Mas ela olhou direto pra ele.",
+   "destaque": [
+    "direto pra ele"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "E disse: eu lembro de você. Foi você que dirigiu naquela noite.",
+   "destaque": [
+    "eu lembro de você",
+    "dirigiu"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "olha": true
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "A porta abriu. A catraca esperou.",
+   "destaque": [
+    "catraca esperou"
+   ],
+   "cena": "catraca",
+   "emocao": {
+    "fixo": "07"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Se ela subisse, o Téo descia. E ela ficava no lugar dele.",
+   "destaque": [
+    "ela ficava"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "pavor"
+   },
+   "pausa": 0.35,
+   "impacto": true
+  },
+  {
+   "texto": "A mãe pôs o pé no primeiro degrau.",
+   "destaque": [
+    "primeiro degrau"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "degrau": true
+   },
+   "pausa": 0.6,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "O Téo deixa a mãe subir\nno lugar dele?\nComente o que você faria."
+ }
+}

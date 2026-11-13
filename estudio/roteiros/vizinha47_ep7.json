@@ -1,0 +1,357 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 7",
+ "titulo": "A OUTRA\nFILHA",
+ "elenco_extra": {
+  "celia": {
+   "nome": "DONA CÉLIA",
+   "voz": "pf_dora",
+   "vel": 0.95,
+   "tom": -0.5,
+   "pele": "#D2A07A",
+   "cabelo": "#5A4636",
+   "estilo_cabelo": "curto",
+   "barba": false,
+   "roupa": "#6B4E3D",
+   "detalhe": "#EADFCC",
+   "calca": "#2F2B33",
+   "estilo_roupa": "cardigan",
+   "etiqueta": "#D98E5F",
+   "oculos": false,
+   "altura": 0.95
+  }
+ },
+ "cenas": [
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "caio",
+    "nina",
+    "celia"
+   ],
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "A minha filha morreu dentro dessa casa.",
+     "destaque": [
+      "morreu"
+     ],
+     "emocao": "triste",
+     "camera": "punch",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "impacto": true,
+     "pausa": 0.4,
+     "audio": "/home/claude/eps/viz7/falas/01.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Que filha, mãe? A sua filha sou eu!",
+     "destaque": [
+      "sou eu"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz7/falas/02.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Você é neta dela. A minha se chamava Bia.",
+     "destaque": [
+      "neta",
+      "Bia"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo"
+     },
+     "pausa": 0.35,
+     "audio": "/home/claude/eps/viz7/falas/03.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "E aí a senhora ficou com a Nina no lugar da Bia?",
+     "destaque": [
+      "no lugar"
+     ],
+     "emocao": "bravo",
+     "camera": "medio",
+     "reacao": {
+      "celia": "triste",
+      "nina": "triste"
+     },
+     "audio": "/home/claude/eps/viz7/falas/04.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Fiquei com a única coisa que essa casa me devia.",
+     "destaque": [
+      "me devia"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "nina": "medo",
+      "caio": "surpreso"
+     },
+     "pausa": 0.4,
+     "audio": "/home/claude/eps/viz7/falas/05.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "caio",
+    "nina",
+    "lurdes",
+    "celia"
+   ],
+   "xs": [
+    240,
+    520,
+    810,
+    1270
+   ],
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "Você roubou a minha neta, Célia.",
+     "destaque": [
+      "roubou",
+      "neta"
+     ],
+     "emocao": "bravo",
+     "camera": "plano",
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo",
+      "celia": "medo"
+     },
+     "tremor": true,
+     "impacto": true,
+     "pausa": 0.35,
+     "audio": "/home/claude/eps/viz7/falas/06.wav",
+     "vel_voz": 1.15
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó… e a minha mãe de verdade?",
+     "destaque": [
+      "mãe de verdade"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "reacao": {
+      "lurdes": "triste",
+      "celia": "triste",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz7/falas/07.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Era minha filha. Morreu no dia que você nasceu.",
+     "destaque": [
+      "minha filha",
+      "nasceu"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "triste",
+      "celia": "medo",
+      "caio": "surpreso"
+     },
+     "pausa": 0.35,
+     "audio": "/home/claude/eps/viz7/falas/08.wav",
+     "vel_voz": 1.15
+    },
+    {
+     "quem": "nina",
+     "texto": "E a Bia? Como ela morreu aqui?",
+     "destaque": [
+      "Bia"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "lurdes": "neutro",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz7/falas/09.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Brincando com você. No seu quarto.",
+     "destaque": [
+      "com você"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "surpreso",
+      "lurdes": "neutro",
+      "caio": "surpreso"
+     },
+     "pausa": 0.35,
+     "audio": "/home/claude/eps/viz7/falas/10.wav"
+    },
+    {
+     "quem": "nina",
+     "texto": "Comigo? Eu nem lembro de nenhuma Bia.",
+     "destaque": [
+      "nem lembro"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "lurdes": "triste",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz7/falas/11.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [],
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Ela ficou trancada lá dentro. Quando abriram, era tarde.",
+     "destaque": [
+      "trancada",
+      "tarde"
+     ],
+     "emocao": "triste",
+     "camera": "plano",
+     "reacao": {},
+     "pausa": 0.4,
+     "audio": "/home/claude/eps/viz7/falas/12.wav"
+    }
+   ]
+  },
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "caio",
+    "nina",
+    "lurdes",
+    "celia"
+   ],
+   "xs": [
+    240,
+    520,
+    810,
+    1270
+   ],
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Trancada por quem?",
+     "destaque": [
+      "por quem"
+     ],
+     "emocao": "bravo",
+     "camera": "medio",
+     "reacao": {
+      "celia": "bravo",
+      "nina": "medo",
+      "lurdes": "neutro"
+     },
+     "audio": "/home/claude/eps/viz7/falas/13.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Por essa mulher aí. Foi por isso que eu tranquei ela também.",
+     "destaque": [
+      "essa mulher",
+      "tranquei"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "lurdes": "bravo",
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "pausa": 0.35,
+     "audio": "/home/claude/eps/viz7/falas/14.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Mentira. Eu nunca tive a chave daquele quarto.",
+     "destaque": [
+      "Mentira",
+      "chave"
+     ],
+     "emocao": "bravo",
+     "camera": "medio",
+     "reacao": {
+      "celia": "medo",
+      "nina": "medo",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz7/falas/15.wav",
+     "vel_voz": 1.15
+    },
+    {
+     "quem": "nina",
+     "texto": "Então quem tinha?",
+     "destaque": [
+      "quem tinha"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "celia": "medo",
+      "lurdes": "neutro",
+      "caio": "medo"
+     },
+     "pausa": 0.45,
+     "audio": "/home/claude/eps/viz7/falas/16.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Você sabe, Célia. A chave estava no seu bolso.",
+     "destaque": [
+      "chave",
+      "seu bolso"
+     ],
+     "emocao": "bravo",
+     "camera": "punch",
+     "reacao": {
+      "celia": "medo",
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.8,
+     "audio": "/home/claude/eps/viz7/falas/17.wav",
+     "vel_voz": 1.15
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "Quem trancou a Bia naquele quarto?\nComente sua teoria."
+ },
+ "inicio": 0.0,
+ "gap": 0.14,
+ "pausa_max": 0.45,
+ "vel_voz": 1.0,
+ "titulo_na_fala": 1
+}

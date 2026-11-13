@@ -791,6 +791,51 @@ def cena_calcada(c, lt, T, t, emo):
 CENAS_EP5 = dict(porta=cena_porta, dois_teos=cena_dois_teos, foto=cena_foto, calcada=cena_calcada)
 CENAS.update(CENAS_EP5)
 
+
+# ---- Ep 6: a mãe esperando no ponto, vista de dentro do ônibus pela porta aberta
+def cena_espera(c, lt, T, t, emo):
+    ceu(c, (0.02, 0.03, 0.08), (0.08, 0.06, 0.14), t)
+    predios(c, 1250, 200, (0.05, 0.05, 0.1), 700, 7)
+    c.set_source_rgb(0.12, 0.12, 0.14); c.rectangle(0, 1250, W, H); c.fill()
+    c.set_source_rgb(0.2, 0.2, 0.22); c.rectangle(0, 1250, W, 50); c.fill()
+    flick = 0.45 if (int(t * 7) % 11 == 0) else 1.0
+    lx = 760
+    c.set_source_rgb(0.05, 0.05, 0.06); c.rectangle(lx, 360, 18, 900); c.fill()
+    g = cairo.LinearGradient(0, 380, 0, 1300); g.add_color_stop_rgba(0, 1, 0.85, 0.5, 0.4 * flick); g.add_color_stop_rgba(1, 1, 0.85, 0.5, 0)
+    c.set_source(g); c.move_to(lx - 20, 380); c.line_to(lx - 420, 1300); c.line_to(lx + 300, 1300); c.line_to(lx + 40, 380); c.close_path(); c.fill()
+    c.set_source_rgb(1, 0.9, 0.6); ell(c, lx + 9, 375, 40, 18); c.fill()
+    # a mãe (grisalha, óculos) no meio-fio
+    if emo.get("longe"):
+        ap = eo(lt / 1.4); s = 0.42; x, y = W / 2 - 60, 1010
+        c.save(); c.push_group(); toon(c, x, y, s, "mae_hoje", "neutro", t, look=0.0); c.pop_group_to_source()
+        c.paint_with_alpha(0.25 + 0.6 * ap); c.restore()
+        c.set_source_rgba(0, 0, 0, 0.35 * (1 - ap)); c.paint()
+    else:
+        perto = emo.get("perto") or emo.get("degrau") or emo.get("olha")
+        s = 1.15 if perto else 0.6; x, y = W / 2 - 30, 860 if perto else 960
+        if emo.get("degrau"):
+            k = eio((lt - 0.3) / max(0.8, T * 0.7)); s *= 1 + 0.22 * k; y += 140 * k
+        z = 1 + 0.04 * eio(lt / max(1.0, T))
+        c.save(); c.translate(W / 2, y); c.scale(z, z); c.translate(-W / 2, -y)
+        toon(c, x, y, s, "mae_hoje", emo.get("mae", "triste" if emo.get("olha") else "neutro"), t, look=0.0 if emo.get("olha") else -0.25)
+        c.restore()
+    neblina(c, t, 1200, 0.16)
+    # moldura da porta do ônibus (estamos dentro)
+    c.set_source_rgb(0.07, 0.07, 0.09)
+    c.rectangle(0, 0, 150, H); c.rectangle(W - 150, 0, 150, H); c.rectangle(0, 0, W, 170); c.fill()
+    for sx in (150, W - 150 - 60):  # folhas da porta recolhidas
+        rrect(c, sx, 170, 60, 1450, 8); fill_ol(c, hx("#E8B23A"), 6)
+        c.set_source_rgba(0.6, 0.8, 0.9, 0.35); c.rectangle(sx + 10, 260, 40, 600); c.fill()
+    c.set_source_rgb(1, 0.55, 0.15); c.rectangle(150, 170, W - 300, 14); c.fill()
+    # degraus
+    c.set_source_rgb(0.16, 0.16, 0.18); c.rectangle(0, 1620, W, H); c.fill()
+    c.set_source_rgb(0.85, 0.65, 0.1); c.rectangle(150, 1620, W - 300, 16); c.fill()
+    c.set_source_rgb(0.22, 0.22, 0.25); c.rectangle(110, 1780, W - 220, 160); c.fill()
+    c.set_source_rgb(0.85, 0.65, 0.1); c.rectangle(110, 1780, W - 220, 16); c.fill()
+    c.set_source_rgba(0.75, 0.88, 1, 0.05 + 0.04 * math.sin(t * 9)); c.paint()
+
+CENAS["espera"] = cena_espera
+
 # ------------------------------------------------------------------ áudio
 def ler_audio(p, vel=1.0):
     af = "adeclip,highpass=f=70,lowpass=f=11000,silenceremove=start_periods=1:start_threshold=-42dB:stop_periods=-1:stop_threshold=-42dB:stop_duration=0.2:stop_silence=0.12" + (f",atempo={vel}" if vel != 1 else "")
