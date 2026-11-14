@@ -1,0 +1,10 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "vizinha47-ep8.json",
+  "onibus-ep7.json"
+ ],
+ "segundos": 29,
+ "modelos": null
+}
