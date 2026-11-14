@@ -1,0 +1,17 @@
+{
+ "ok": true,
+ "motor": "transcrever",
+ "arquivos": [
+  "viz8_cena1.json",
+  "viz8_cena2.json",
+  "viz8_cena3.json",
+  "oni7_cena1.json",
+  "oni7_cena2.json",
+  "oni7_cena3.json",
+  "oni7_cena4.json",
+  "tur3_cena1.json",
+  "tur3_cena2.json"
+ ],
+ "segundos": 34,
+ "modelos": null
+}
