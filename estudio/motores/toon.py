@@ -862,7 +862,7 @@ def cena_partida(c, lt, T, t, emo):
     c.set_source(g); c.paint()
     if emo.get("mae"):
         toon(c, 770, 1020, 0.85, "mae_hoje", emo.get("mae_emo", "triste"), t, look=-0.6)
-    toon(c, 320 if emo.get("mae") else (150 if emo.get("anda") else W / 2 - 150), 1000, 0.9, "teo", emo.get("teo", "triste"), t, look=0.6 if emo.get("mae") else 0.8)
+    toon(c, 320 if emo.get("mae") else (215 if emo.get("anda") else W / 2 - 150), 1000, 0.9, "teo", emo.get("teo", "triste"), t, look=0.6 if emo.get("mae") else 0.8)
 
 CENAS["partida"] = cena_partida
 
