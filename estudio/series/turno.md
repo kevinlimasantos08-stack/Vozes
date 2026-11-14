@@ -19,7 +19,11 @@
 
 - **Ep 2 ("O nono funcionário", Gemini Charon):** os oito abrem os olhos e ninguém pisca; o Rafa corre para a porta: trancada pelo lado de fora; os teclados voltam a bater; na tela da mesa 2, uma ficha de contratação do turno da madrugada com admissão em 13/11/2006 — todas as telas com a mesma data; "não era pra assustar o Rafa, era pra completar a equipe"; na mesa 5, a ficha do nono funcionário: nome Rafael, foto dele, mesma data, vinte anos atrás; o relógio do ponto apita: nona entrada registrada às 3h09 — mas o Rafa não bateu o ponto; um vulto de terno escuro aparece na porta. "Então quem acabou de entrar?"
 
+- **Ep 3 ("Bem-vindo de volta", Gemini Charon):** quem entrou era o chefe (o vulto de terno, o mesmo da regra); os oito param de digitar e baixam a cabeça; no reflexo da janela aparecem o Rafa e os oito, mas o chefe não; o chefe deixa um crachá na mesa 5: "Rafael. Turno da madrugada. 2006" e diz, sem olhar para ele, "bem-vindo de volta"; o Rafa nunca tinha pisado naquele prédio, ou era isso que ele lembrava; em 13/11/2006, nove pessoas bateram o ponto e só uma bateu a saída; os oito se levantam e viram para o Rafa "como quem cobra uma dívida"; no relógio do ponto aparece o nome dele com saída às 3h10, e já eram 3h09.
+
 ## Perguntas em aberto
+- O que acontece às 3h10? Por que só o Rafa saiu naquela noite de 2006, e como ele não envelheceu? O que os oito "cobram" dele? O chefe é um fantasma (não tem reflexo)? (gancho do Ep 3)
+- Respondido no Ep 3: quem entrou foi o chefe; o Rafa já trabalhou lá em 2006 e foi o único que bateu a saída.
 - Quem acabou de entrar (o vulto de terno na porta, `vulto` no elenco)? É o chefe? Quem trancou a porta por fora? (gancho do Ep 2)
 - Como o Rafa foi contratado em 13/11/2006, vinte anos antes? É o mesmo Rafa?
 - Respondido no Ep 2: o nono é o Rafa — os oito querem completar a equipe; a ficha dele tem a mesma data dos crachás.
@@ -43,6 +47,13 @@
 - Se um job do render falhar com `curl: (22) ... 403` ao baixar o Blender, é instabilidade do site: reenviar o roteiro (rodar o toon3d de novo).
 - Não deixar mudanças sem commit no repositório enquanto o toon3d espera o render: o `git pull --rebase` falha calado e ele nunca vê o vídeo pronto.
 
+## Lições do Ep 3
+- O relógio do ponto (câmera `pos [0.2,3.3,1.85] mira [0.2,5.5,2.2] lente 30`) é um painel preto vazio: escrevi o texto por cima depois da finalização com ffmpeg `drawtext` (painel em x 271–808, y 716–1055 no quadro 1080x1920). Vale levar isso para o motor (texto no painel).
+- Close do g8 em pé ou virando a cabeça (`pos [-1.1,-0.8,1.48]`) corta o topo da cabeça; usar só com ele sentado e parado.
+- Com 15 frases e as pausas originais, o Ep 3 deu 79 s; com 14 frases e pausas de 0,3–0,55 s, deu 74 s.
+- O render 3D rodou num clone separado (`/home/claude/vozes_turno`) para não travar o `git pull --rebase` do toon3d enquanto os outros episódios eram commitados.
+
 ## Ideias guardadas para os próximos
 - (usadas no Ep 2: ficha com a mesma data, 20 anos antes; ponto registrando entrada que o Rafa não bateu)
-- O chefe aparece de dia e não tem reflexo no vidro.
+- (usada no Ep 3: o chefe não tem reflexo no vidro)
+- O que aconteceu às 3h10 de 13/11/2006 (incêndio? porta trancada por fora?) e por que o Rafa saiu sem envelhecer.
