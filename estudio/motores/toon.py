@@ -340,7 +340,7 @@ def cena_catraca(c, lt, T, t, emo):
     rrect(c, 300, 820, 480, 900, 40); fill_ol(c, (0.55, 0.57, 0.62), 8)
     c.set_source_rgb(0.42, 0.44, 0.5); rrect(c, 330, 860, 420, 120, 20); c.fill()
     gira = eio((lt - T * 0.45) / 0.7) if not emo.get("fixo") else 0.0
-    num = emo["fixo"] if emo.get("fixo") else ("06" if gira > 0.6 else "07") if emo.get("reverso") else ("07" if gira > 0.6 else "06")
+    num = emo["fixo"] if emo.get("fixo") else ("06" if gira > 0.6 else "07") if emo.get("reverso") else (emo.get("para", "07") if gira > 0.6 else emo.get("de", "06"))
     c.set_source_rgb(0.05, 0.05, 0.05); rrect(c, 420, 880, 240, 80, 10); c.fill()
     fonte(c, 64); c.set_source_rgb(1, 0.25, 0.2) if gira > 0.6 else c.set_source_rgb(0.9, 0.2, 0.15)
     if emo.get("fixo"): c.set_source_rgb(1, 0.25 + 0.15 * math.sin(t * 6), 0.2)
@@ -807,7 +807,7 @@ def cena_espera(c, lt, T, t, emo):
     # a mãe (grisalha, óculos) no meio-fio
     if emo.get("longe"):
         ap = eo(lt / 1.4); s = 0.42; x, y = W / 2 - 60, 1010
-        c.save(); c.push_group(); toon(c, x, y, s, "mae_hoje", "neutro", t, look=0.0); c.pop_group_to_source()
+        c.save(); c.push_group(); toon(c, x, y, s, emo.get("quem", "mae_hoje"), "neutro", t, look=0.0); c.pop_group_to_source()
         c.paint_with_alpha(0.25 + 0.6 * ap); c.restore()
         c.set_source_rgba(0, 0, 0, 0.35 * (1 - ap)); c.paint()
     else:
@@ -817,7 +817,7 @@ def cena_espera(c, lt, T, t, emo):
             k = eio((lt - 0.3) / max(0.8, T * 0.7)); s *= 1 + 0.22 * k; y += 140 * k
         z = 1 + 0.04 * eio(lt / max(1.0, T))
         c.save(); c.translate(W / 2, y); c.scale(z, z); c.translate(-W / 2, -y)
-        toon(c, x, y, s, "mae_hoje", emo.get("mae", "triste" if emo.get("olha") else "neutro"), t, look=0.0 if emo.get("olha") else -0.25)
+        toon(c, x, y, s, emo.get("quem", "mae_hoje"), emo.get("mae", "triste" if emo.get("olha") else "neutro"), t, look=0.0 if emo.get("olha") else -0.25)
         c.restore()
     neblina(c, t, 1200, 0.16)
     # moldura da porta do ônibus (estamos dentro)
@@ -835,6 +835,36 @@ def cena_espera(c, lt, T, t, emo):
     c.set_source_rgba(0.75, 0.88, 1, 0.05 + 0.04 * math.sin(t * 9)); c.paint()
 
 CENAS["espera"] = cena_espera
+
+
+# ---- Ep 7: do lado de fora — o Téo na calçada, o ônibus indo embora com o outro Téo na janela
+def cena_partida(c, lt, T, t, emo):
+    ceu(c, (0.02, 0.03, 0.08), (0.08, 0.06, 0.14), t)
+    predios(c, 1250, 120, (0.05, 0.05, 0.1), 760, 5)
+    c.set_source_rgb(0.08, 0.08, 0.1); c.rectangle(0, 1250, W, H); c.fill()
+    c.set_source_rgb(0.18, 0.18, 0.2); c.rectangle(0, 1560, W, H); c.fill()   # calçada
+    c.set_source_rgb(0.26, 0.26, 0.28); c.rectangle(0, 1560, W, 22); c.fill()
+    if emo.get("onibus", True):
+        anda = eio((lt - 0.3) / max(1.0, T * 1.15)) if emo.get("anda") else 0.0
+        x = (120 + anda * 760) if emo.get("anda") else -260; s = 0.78
+        onibus_lado(c, x, 1500, s, t, porta=0.0, roda=anda * 30)
+        if emo.get("rosto"):   # o outro Téo na janela, batendo no vidro
+            wx = x + (60 + 2 * 160 + 65) * s; wy = 1500 + (-300) * s
+            c.save(); c.rectangle(x + (60 + 2 * 160) * s, 1500 - 380 * s, 130 * s, 150 * s); c.clip()
+            toon(c, wx, wy + 40, 0.36, "teo2", "pavor", t, look=-0.6)
+            for sx in (-1, 1):
+                bate = abs(math.sin(t * 9 + sx)) * 10
+                c.set_source_rgba(0.95, 0.78, 0.62, 0.95); ell(c, wx + sx * 42, wy - 20 - bate, 14, 18); c.fill()
+            c.restore()
+    neblina(c, t, 1300, 0.18)
+    flick = 0.5 if (int(t * 7) % 13 == 0) else 1.0
+    g = cairo.RadialGradient(880, 420, 10, 880, 420, 700); g.add_color_stop_rgba(0, 1, 0.85, 0.5, 0.22 * flick); g.add_color_stop_rgba(1, 1, 0.85, 0.5, 0)
+    c.set_source(g); c.paint()
+    if emo.get("mae"):
+        toon(c, 770, 1020, 0.85, "mae_hoje", emo.get("mae_emo", "triste"), t, look=-0.6)
+    toon(c, 320 if emo.get("mae") else (150 if emo.get("anda") else W / 2 - 150), 1000, 0.9, "teo", emo.get("teo", "triste"), t, look=0.6 if emo.get("mae") else 0.8)
+
+CENAS["partida"] = cena_partida
 
 # ------------------------------------------------------------------ áudio
 def ler_audio(p, vel=1.0):
