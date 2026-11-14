@@ -1,0 +1,4 @@
+parte 1 em 1776s, 428 quadros
+parte 2 em 1677s, 428 quadros
+parte 3 em 1745s, 428 quadros
+parte 4 em 1586s, 425 quadros
