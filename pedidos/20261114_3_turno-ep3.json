@@ -1,0 +1,95 @@
+{
+ "id": "turno-ep3",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "narrador": "Charon"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quem entrou era o chefe. O mesmo que deixou a regra.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, cold, revelation"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os oito pararam de digitar. E baixaram a cabeça.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, eerie, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O Rafa olhou pro vidro escuro da janela.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, low, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "No reflexo, estavam ele e os oito. O chefe, não.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, chilling, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ele andou até a mesa cinco, devagar, sem fazer barulho.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, low, creeping"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Tirou um crachá do bolso e deixou em cima da mesa.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, quiet, ominous"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Rafael. Turno da madrugada. Dois mil e seis.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, slow, cold, reading"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E disse, sem olhar pra ele: bem-vindo de volta.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, whispering, chilling"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "De volta. O Rafa nunca tinha pisado naquele prédio.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, confused, tense"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou era isso que ele lembrava.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, slow, ominous"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Na noite de treze de novembro de dois mil e seis, nove pessoas bateram o ponto.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, grave, storytelling"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E só uma bateu a saída.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, short, cold, revelation"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os oito se levantaram e viraram pro Rafa. Como quem cobra uma dívida.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, dreadful, slow"
+    },
+    {
+     "quem": "narrador",
+     "texto": "No relógio do ponto, apareceu o nome dele. Saída: três e dez.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, tense, low"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Eram três e nove.",
+     "estilo": "Brazilian Portuguese accent from São Paulo, deep middle-aged male horror storyteller telling a scary story at night, natural human delivery, slow, low and ominous, slow, whispering, final chill"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "id": "vizinha47-ep8",
+ "motor": "gemini",
+ "modelo": "gemini-3.1-flash-tts-preview",
+ "vozes": {
+  "nina": "Leda",
+  "caio": "Puck",
+  "lurdes": "Gacrux",
+  "celia": "Kore"
+ },
+ "blocos": [
+  {
+   "n": 1,
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Quem trancou a Bia foi você, Nina.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, cold, grave, slow, finally saying the unspeakable"
+    },
+    {
+     "quem": "nina",
+     "texto": "Eu? Eu tinha seis anos, mãe!",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, shocked, hurt, rising voice"
+    },
+    {
+     "quem": "celia",
+     "texto": "Era esconde-esconde. Você trancou a porta e foi contar.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, quiet, painful, slow"
+    },
+    {
+     "quem": "nina",
+     "texto": "Eu lembro… ela batia na porta. E eu contava.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, distant, whispering, remembering something terrible"
+    },
+    {
+     "quem": "celia",
+     "texto": "É a Bia? Não pode. Eu enterrei a minha filha.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, desperate, trembling, disbelief"
+    },
+    {
+     "quem": "nina",
+     "texto": "Tá vindo do meu quarto antigo.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, whispering, frozen with fear"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "E ninguém ouviu ela chamar?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, tense, disbelief, pressing"
+    },
+    {
+     "quem": "celia",
+     "texto": "Você dormiu com a chave na mão. Eu só achei de manhã.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, broken, low, haunted"
+    },
+    {
+     "quem": "caio",
+     "texto": "Nina… tá ouvindo isso?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, whispering, scared, alert"
+    },
+    {
+     "quem": "celia",
+     "texto": "Pra ninguém nunca culpar ela. Nem ela mesma.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, middle-aged mother, firm, protective, trembling"
+    },
+    {
+     "quem": "caio",
+     "texto": "Tem alguém batendo lá dentro.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young man, low, scared, tense"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "falas": [
+    {
+     "quem": "lurdes",
+     "texto": "E guardou no bolso. E jogou a culpa em mim.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, cold, bitter, slow, menacing"
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó… é verdade?",
+     "estilo": "Brazilian Portuguese accent, natural conversational, young woman, almost whispering, scared, tearful"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Era uma brincadeira, minha filha. Você não sabia.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, tender, sad, soft"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Ninguém abre essa porta.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, afraid for the first time, urgent, low"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Você enterrou um caixão vazio, Célia.",
+     "estilo": "Brazilian Portuguese accent, natural conversational, old woman, slow, chilling whisper, final revelation"
+    }
+   ]
+  }
+ ]
+}
