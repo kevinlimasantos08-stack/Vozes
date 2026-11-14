@@ -460,22 +460,6 @@
    "de": "f11",
    "camera": "geral",
    "pos": [
-    3.9,
-    -4.7,
-    2.6
-   ],
-   "mira": [
-    -0.6,
-    1.4,
-    0.8
-   ],
-   "lente": 19,
-   "acoes": []
-  },
-  {
-   "de": "f12",
-   "camera": "geral",
-   "pos": [
     -0.3,
     1.6,
     1.6
@@ -490,12 +474,12 @@
     {
      "quem": "rafa",
      "acao": "olhar_maos",
-     "em": "f12+0.2"
+     "em": "f11+0.2"
     }
    ]
   },
   {
-   "de": "f13",
+   "de": "f12",
    "camera": "geral",
    "pos": [
     3.9,
@@ -512,48 +496,48 @@
     {
      "quem": "g1",
      "acao": "levantar",
-     "em": "f13+0.10"
+     "em": "f12+0.10"
     },
     {
      "quem": "g2",
      "acao": "levantar",
-     "em": "f13+0.18"
+     "em": "f12+0.18"
     },
     {
      "quem": "g3",
      "acao": "levantar",
-     "em": "f13+0.26"
+     "em": "f12+0.26"
     },
     {
      "quem": "g4",
      "acao": "levantar",
-     "em": "f13+0.34"
+     "em": "f12+0.34"
     },
     {
      "quem": "g5",
      "acao": "levantar",
-     "em": "f13+0.42"
+     "em": "f12+0.42"
     },
     {
      "quem": "g6",
      "acao": "levantar",
-     "em": "f13+0.50"
+     "em": "f12+0.50"
     },
     {
      "quem": "g7",
      "acao": "levantar",
-     "em": "f13+0.58"
+     "em": "f12+0.58"
     },
     {
      "quem": "g8",
      "acao": "levantar",
-     "em": "f13+0.66"
+     "em": "f12+0.66"
     },
     {
      "quem": "g1",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -561,7 +545,7 @@
      "quem": "g2",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -569,7 +553,7 @@
      "quem": "g3",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -577,7 +561,7 @@
      "quem": "g4",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -585,7 +569,7 @@
      "quem": "g5",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -593,7 +577,7 @@
      "quem": "g6",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -601,7 +585,7 @@
      "quem": "g7",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
@@ -609,20 +593,20 @@
      "quem": "g8",
      "acao": "olhar",
      "para": "rafa",
-     "em": "f13+1.2",
+     "em": "f12+1.2",
      "dur": 6,
      "manter": true
     },
     {
      "quem": "rafa",
      "acao": "medo",
-     "em": "f13+1.4",
+     "em": "f12+1.4",
      "dur": 2.0
     }
    ]
   },
   {
-   "de": "f14",
+   "de": "f13",
    "camera": "geral",
    "pos": [
     0.2,
@@ -638,7 +622,7 @@
    "acoes": []
   },
   {
-   "de": "f15",
+   "de": "f14",
    "camera": "geral",
    "pos": [
     -0.3,
@@ -655,7 +639,7 @@
     {
      "quem": "rafa",
      "acao": "medo",
-     "em": "f15+0.2",
+     "em": "f14+0.2",
      "dur": 2.5
     }
    ]
@@ -672,63 +656,59 @@
    "dur": 4.9
   },
   {
-   "t0": 5.76,
+   "t0": 5.65,
    "dur": 4.02
   },
   {
-   "t0": 10.27,
+   "t0": 10.02,
    "dur": 3.08
   },
   {
-   "t0": 13.7,
+   "t0": 13.4,
    "dur": 5.06
   },
   {
-   "t0": 19.39,
+   "t0": 18.96,
    "dur": 4.62
   },
   {
-   "t0": 24.43,
+   "t0": 23.88,
    "dur": 4.06
   },
   {
-   "t0": 28.91,
+   "t0": 28.24,
    "dur": 4.46
   },
   {
-   "t0": 33.93,
+   "t0": 33.1,
    "dur": 4.8
   },
   {
-   "t0": 39.43,
+   "t0": 38.45,
    "dur": 5.14
   },
   {
-   "t0": 44.99,
-   "dur": 2.26
-  },
-  {
-   "t0": 47.88,
+   "t0": 43.94,
    "dur": 6.42
   },
   {
-   "t0": 54.72,
+   "t0": 50.71,
    "dur": 2.66
   },
   {
-   "t0": 58.08,
+   "t0": 53.92,
    "dur": 5.94
   },
   {
-   "t0": 64.58,
+   "t0": 60.26,
    "dur": 6.76
   },
   {
-   "t0": 71.9,
+   "t0": 67.42,
    "dur": 1.78
   }
  ],
- "duracao": 75.88,
+ "duracao": 71.0,
  "elenco_extra": {
   "g1": {
    "base": "figurante",
@@ -813,5 +793,5 @@
   }
  },
  "semente": 7,
- "pedido_em": 1794685421
+ "pedido_em": 1794685492
 }
