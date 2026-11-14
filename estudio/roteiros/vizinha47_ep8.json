@@ -1,0 +1,340 @@
+{
+ "modo": "ficcao",
+ "serie": "A Vizinha do 47 · Ep 8",
+ "titulo": "QUEM TRANCOU\nA BIA?",
+ "elenco_extra": {
+  "celia": {
+   "nome": "DONA CÉLIA",
+   "voz": "pf_dora",
+   "vel": 0.95,
+   "tom": -0.5,
+   "pele": "#D2A07A",
+   "cabelo": "#5A4636",
+   "estilo_cabelo": "curto",
+   "barba": false,
+   "roupa": "#6B4E3D",
+   "detalhe": "#EADFCC",
+   "calca": "#2F2B33",
+   "estilo_roupa": "cardigan",
+   "etiqueta": "#D98E5F",
+   "oculos": false,
+   "altura": 0.95
+  }
+ },
+ "cenas": [
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "caio",
+    "nina",
+    "lurdes",
+    "celia"
+   ],
+   "xs": [
+    240,
+    520,
+    810,
+    1270
+   ],
+   "falas": [
+    {
+     "quem": "celia",
+     "texto": "Quem trancou a Bia foi você, Nina.",
+     "destaque": [
+      "você, Nina"
+     ],
+     "emocao": "bravo",
+     "camera": "punch",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "surpreso",
+      "lurdes": "neutro"
+     },
+     "audio": "/home/claude/eps/viz8/falas/01.wav",
+     "impacto": true,
+     "pausa": 0.4
+    },
+    {
+     "quem": "nina",
+     "texto": "Eu? Eu tinha seis anos, mãe!",
+     "destaque": [
+      "seis anos"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "celia": "triste",
+      "caio": "surpreso",
+      "lurdes": "triste"
+     },
+     "audio": "/home/claude/eps/viz8/falas/02.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Era esconde-esconde. Você trancou a porta e foi contar.",
+     "destaque": [
+      "esconde-esconde",
+      "trancou"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo",
+      "caio": "surpreso",
+      "lurdes": "neutro"
+     },
+     "audio": "/home/claude/eps/viz8/falas/03.wav",
+     "pausa": 0.35
+    },
+    {
+     "quem": "caio",
+     "texto": "E ninguém ouviu ela chamar?",
+     "destaque": [
+      "chamar"
+     ],
+     "emocao": "bravo",
+     "camera": "medio",
+     "reacao": {
+      "celia": "triste",
+      "nina": "medo",
+      "lurdes": "neutro"
+     },
+     "audio": "/home/claude/eps/viz8/falas/04.wav"
+    },
+    {
+     "quem": "celia",
+     "texto": "Você dormiu com a chave na mão. Eu só achei de manhã.",
+     "destaque": [
+      "chave na mão"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo",
+      "lurdes": "bravo"
+     },
+     "audio": "/home/claude/eps/viz8/falas/05.wav",
+     "pausa": 0.35
+    },
+    {
+     "quem": "lurdes",
+     "texto": "E guardou no bolso. E jogou a culpa em mim.",
+     "destaque": [
+      "bolso",
+      "culpa em mim"
+     ],
+     "emocao": "bravo",
+     "camera": "medio",
+     "reacao": {
+      "celia": "medo",
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz8/falas/06.wav",
+     "tremor": true,
+     "vel_voz": 1.1
+    },
+    {
+     "quem": "celia",
+     "texto": "Pra ninguém nunca culpar ela. Nem ela mesma.",
+     "destaque": [
+      "Nem ela mesma"
+     ],
+     "emocao": "bravo",
+     "camera": "close",
+     "reacao": {
+      "lurdes": "bravo",
+      "nina": "triste",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz8/falas/07.wav",
+     "pausa": 0.35
+    },
+    {
+     "quem": "nina",
+     "texto": "Vó… é verdade?",
+     "destaque": [
+      "verdade"
+     ],
+     "emocao": "triste",
+     "camera": "close",
+     "reacao": {
+      "lurdes": "triste",
+      "celia": "triste",
+      "caio": "medo"
+     },
+     "audio": "/home/claude/eps/viz8/falas/08.wav"
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Era uma brincadeira, minha filha. Você não sabia.",
+     "destaque": [
+      "brincadeira",
+      "não sabia"
+     ],
+     "emocao": "triste",
+     "camera": "medio",
+     "reacao": {
+      "nina": "triste",
+      "celia": "triste",
+      "caio": "triste"
+     },
+     "audio": "/home/claude/eps/viz8/falas/09.wav",
+     "pausa": 0.4,
+     "vel_voz": 1.1
+    }
+   ]
+  },
+  {
+   "cenario": "queimado",
+   "personagens": [],
+   "falas": [
+    {
+     "quem": "nina",
+     "texto": "Eu lembro… ela batia na porta. E eu contava.",
+     "destaque": [
+      "batia na porta",
+      "contava"
+     ],
+     "emocao": "triste",
+     "camera": "plano",
+     "reacao": {},
+     "audio": "/home/claude/eps/viz8/falas/10.wav",
+     "pausa": 0.45,
+     "sfx": "batida",
+     "antes": 1.0
+    }
+   ]
+  },
+  {
+   "cenario": "fachada",
+   "personagens": [
+    "caio",
+    "nina",
+    "lurdes",
+    "celia"
+   ],
+   "xs": [
+    240,
+    520,
+    810,
+    1270
+   ],
+   "falas": [
+    {
+     "quem": "caio",
+     "texto": "Nina… tá ouvindo isso?",
+     "destaque": [
+      "ouvindo"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "nina": "medo",
+      "celia": "medo",
+      "lurdes": "medo"
+     },
+     "audio": "/home/claude/eps/viz8/falas/11.wav",
+     "sfx": "batida",
+     "antes": 1.0
+    },
+    {
+     "quem": "nina",
+     "texto": "Tá vindo do meu quarto antigo.",
+     "destaque": [
+      "quarto antigo"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "caio": "medo",
+      "celia": "medo",
+      "lurdes": "medo"
+     },
+     "audio": "/home/claude/eps/viz8/falas/12.wav"
+    },
+    {
+     "quem": "caio",
+     "texto": "Tem alguém batendo lá dentro.",
+     "destaque": [
+      "batendo lá dentro"
+     ],
+     "emocao": "medo",
+     "camera": "medio",
+     "reacao": {
+      "nina": "medo",
+      "celia": "medo",
+      "lurdes": "medo"
+     },
+     "audio": "/home/claude/eps/viz8/falas/13.wav",
+     "sfx": "batida",
+     "pausa": 0.3,
+     "antes": 1.0
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Ninguém abre essa porta.",
+     "destaque": [
+      "Ninguém abre"
+     ],
+     "emocao": "medo",
+     "camera": "plano",
+     "reacao": {
+      "nina": "medo",
+      "caio": "medo",
+      "celia": "medo"
+     },
+     "audio": "/home/claude/eps/viz8/falas/14.wav",
+     "tremor": true,
+     "vel_voz": 1.1
+    },
+    {
+     "quem": "celia",
+     "texto": "É a Bia? Não pode. Eu enterrei a minha filha.",
+     "destaque": [
+      "Bia",
+      "enterrei"
+     ],
+     "emocao": "medo",
+     "camera": "close",
+     "reacao": {
+      "nina": "surpreso",
+      "caio": "medo",
+      "lurdes": "neutro"
+     },
+     "audio": "/home/claude/eps/viz8/falas/15.wav",
+     "pausa": 0.35
+    },
+    {
+     "quem": "lurdes",
+     "texto": "Você enterrou um caixão vazio, Célia.",
+     "destaque": [
+      "caixão vazio"
+     ],
+     "emocao": "bravo",
+     "camera": "punch",
+     "reacao": {
+      "celia": "medo",
+      "nina": "surpreso",
+      "caio": "surpreso"
+     },
+     "audio": "/home/claude/eps/viz8/falas/16.wav",
+     "impacto": true,
+     "tremor": true,
+     "pausa": 0.8,
+     "vel_voz": 1.1
+    }
+   ]
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "Quem está batendo naquele quarto?\nComente sua teoria."
+ },
+ "inicio": 0.0,
+ "gap": 0.14,
+ "pausa_max": 0.45,
+ "vel_voz": 1.0,
+ "titulo_na_fala": 1
+}

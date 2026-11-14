@@ -23,7 +23,11 @@
 
 - **Ep 7 ("A outra filha", Gemini):** a Célia confessa: "a minha filha morreu dentro dessa casa" — a filha verdadeira dela se chamava **Bia**; a Nina é **neta da Lurdes** (a mãe da Nina era filha da Lurdes e morreu no dia em que a Nina nasceu; a Lurdes criou a Nina); a Célia ficou com a Nina como "a única coisa que essa casa me devia"; a Lurdes aparece na porta do 47: "você roubou a minha neta"; a Bia morreu brincando com a Nina no quarto dela, trancada lá dentro ("quando abriram, era tarde"); a Célia culpava a Lurdes e por isso trancou a Lurdes no 47; a Lurdes nega ("nunca tive a chave daquele quarto") e revela: "a chave estava no seu bolso, Célia".
 
+- **Ep 8 ("Quem trancou a Bia?", Gemini):** a Célia acusa: "quem trancou a Bia foi você, Nina" — era esconde-esconde, a Nina (6 anos) trancou a porta e foi contar, dormiu com a chave na mão; a Célia achou a chave de manhã, guardou no bolso e pôs a culpa na Lurdes "pra ninguém nunca culpar ela, nem ela mesma"; a Lurdes confirma, com ternura: "era uma brincadeira, você não sabia"; a Nina lembra: "ela batia na porta, e eu contava"; batidas vêm do quarto antigo da Nina, dentro do 47; a Lurdes, com medo pela primeira vez: "ninguém abre essa porta"; a Célia: "eu enterrei a minha filha"; a Lurdes: "você enterrou um caixão vazio, Célia".
+
 ## Perguntas em aberto (para os próximos)
+- Quem está batendo no quarto antigo da Nina? Por que a Lurdes (fantasma) tem medo? O caixão da Bia estava vazio — onde está o corpo da Bia? A Bia está viva? (gancho do Ep 8)
+- Respondido no Ep 8: quem trancou a Bia foi a Nina criança, num esconde-esconde; a Célia escondeu a chave e culpou a Lurdes.
 - Quem trancou a Bia no quarto? A chave estava mesmo no bolso da Célia (gancho do Ep 7)? Foi acidente? A Nina (criança) estava junto — o que ela viu?
 - Respondido no Ep 7: a Nina é neta da Lurdes (mãe morta no parto); a filha verdadeira da Célia, Bia, morreu no 47, trancada no quarto; a Célia trancou a Lurdes por vingança.
 - A Nina é filha da Lurdes? (gancho do Ep 6) Então quem é a Célia, e onde está a filha verdadeira dela?
@@ -44,4 +48,5 @@
 Layout manual: `"xs": [x1, x2, ...]` na cena (um x por personagem, palco de 1620 px; porta do 47 em x≈810), usado no Ep 7 com a Lurdes na porta e 4 personagens.
 Inserto sem personagens: cena com `"personagens": []` (ex.: `queimado` enquanto a Célia fala fora de quadro).
 Personagem que fala sem estar em `personagens` vira voz fora de quadro (ex.: Caio atrás da porta no Ep 4).
+Batidas na porta: `"sfx": "batida"` na fala + `"antes": 1.0` (silêncio antes da fala para as 3 batidas soarem sozinhas), usado no Ep 8.
 Pose pode ser por personagem: `"pose": {"nina": "deitado"}`.

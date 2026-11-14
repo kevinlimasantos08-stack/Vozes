@@ -1,0 +1,199 @@
+{
+ "serie": "O Último Ônibus · Ep 7",
+ "titulo": "QUEM FICOU\nNO ÔNIBUS?",
+ "titulo_no_bloco": 0,
+ "pausa_max": 0.45,
+ "vel_voz": 1.06,
+ "blocos": [
+  {
+   "texto": "O pé da mãe já estava no degrau quando o Téo gritou: não sobe!",
+   "destaque": [
+    "degrau",
+    "não sobe"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "degrau": true,
+    "mae": "neutro"
+   },
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "Ela parou. Pela primeira vez em vinte anos, alguém ouviu a voz dele.",
+   "destaque": [
+    "ouviu a voz dele"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "olha": true,
+    "mae": "surpreso"
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "Pelo retrovisor, o Seu Bento avisou: alguém vai subir hoje.",
+   "destaque": [
+    "alguém vai subir"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "serio"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Ou ela, ou outro.",
+   "destaque": [
+    "ou outro"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "serio",
+    "sorri": true
+   },
+   "pausa": 0.45,
+   "impacto": false
+  },
+  {
+   "texto": "A catraca esperava, parada no sete.",
+   "destaque": [
+    "parada no sete"
+   ],
+   "cena": "catraca",
+   "emocao": {
+    "fixo": "07"
+   },
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "Foi aí que alguém veio correndo pela calçada, gritando: mãe!",
+   "destaque": [
+    "correndo",
+    "mãe"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "longe": true,
+    "quem": "teo2"
+   },
+   "pausa": 0.3,
+   "impacto": false
+  },
+  {
+   "texto": "Era o outro Téo. O que nasceu no hospital.",
+   "destaque": [
+    "outro Téo",
+    "hospital"
+   ],
+   "cena": "dois_teos",
+   "emocao": {},
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "Ele puxou a mãe pra trás. E, sem saber, subiu no lugar dela.",
+   "destaque": [
+    "subiu no lugar dela"
+   ],
+   "cena": "espera",
+   "emocao": {
+    "degrau": true,
+    "quem": "teo2",
+    "mae": "serio"
+   },
+   "pausa": 0.4,
+   "impacto": true
+  },
+  {
+   "texto": "A catraca girou sozinha. Oito.",
+   "destaque": [
+    "sozinha",
+    "Oito"
+   ],
+   "cena": "catraca",
+   "emocao": {
+    "de": "07",
+    "para": "08"
+   },
+   "pausa": 0.45,
+   "impacto": true
+  },
+  {
+   "texto": "A porta fechou. Com ele dentro.",
+   "destaque": [
+    "fechou",
+    "dentro"
+   ],
+   "cena": "partida",
+   "emocao": {
+    "teo": "medo"
+   },
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "E o Téo tava do lado de fora. Sentindo o frio da rua pela primeira vez.",
+   "destaque": [
+    "lado de fora",
+    "frio"
+   ],
+   "cena": "teo_close",
+   "emocao": {
+    "teo": "triste"
+   },
+   "pausa": 0.35,
+   "impacto": false
+  },
+  {
+   "texto": "A mãe tocou no rosto dele e disse: filho?",
+   "destaque": [
+    "filho"
+   ],
+   "cena": "partida",
+   "emocao": {
+    "mae": true,
+    "mae_emo": "triste",
+    "teo": "triste",
+    "onibus": true
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "No vidro do ônibus indo embora, o outro Téo batia as mãos. Sem som.",
+   "destaque": [
+    "outro Téo",
+    "Sem som"
+   ],
+   "cena": "partida",
+   "emocao": {
+    "anda": true,
+    "rosto": true,
+    "teo": "medo"
+   },
+   "pausa": 0.4,
+   "impacto": false
+  },
+  {
+   "texto": "E o Seu Bento sorria no retrovisor.",
+   "destaque": [
+    "sorria"
+   ],
+   "cena": "espelho",
+   "emocao": {
+    "bento": "neutro",
+    "sorri": true
+   },
+   "pausa": 0.0,
+   "impacto": true
+  }
+ ],
+ "final": {
+  "titulo": "CONTINUA...",
+  "texto": "O Téo vai deixar o outro\nficar preso no lugar dele?\nComente o que você faria."
+ }
+}

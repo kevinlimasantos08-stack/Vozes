@@ -20,7 +20,11 @@
 
 - **Ep 6 ("Quem sobe no lugar?", Gemini):** a regra do ônibus, dita pelo Seu Bento pelo retrovisor: "pra descer desse ônibus, alguém tem que subir no seu lugar" — foi assim que o motorista antigo desceu, quando o Téo subiu pela primeira vez; agora o lugar é do Téo; seis bancos "ocupados por ninguém", seis passageiros esperando a vez de descer; à meia-noite, no ponto 12, pela primeira vez alguém espera: a mãe do Téo, grisalha; ninguém vê o Téo, mas ela vê e diz "eu lembro de você. Foi você que dirigiu naquela noite"; a porta abre, a catraca (07) espera; se ela subir, o Téo desce e ela fica no lugar dele; a mãe põe o pé no primeiro degrau.
 
+- **Ep 7 ("Quem ficou no ônibus?", Gemini):** o Téo grita "não sobe!" e a mãe, no degrau, ouve a voz dele (primeira vez em 20 anos); o Seu Bento avisa pelo retrovisor: "alguém vai subir hoje. Ou ela, ou outro."; o outro Téo (o que nasceu no hospital) chega correndo gritando "mãe!", puxa a mãe para trás e, sem saber, sobe no lugar dela; a catraca gira sozinha: 08; a porta fecha com ele dentro; o Téo fica do lado de fora, sentindo o frio da rua pela primeira vez; a mãe toca no rosto dele: "filho?"; o ônibus vai embora com o outro Téo batendo no vidro, sem som; o Seu Bento sorri no retrovisor.
+
 ## Perguntas em aberto
+- O Téo vai deixar o outro Téo preso no lugar dele? O que acontece com o outro Téo dentro do ônibus (vira passageiro, a vida dele passa para o Téo)? A mãe agora lembra de qual filho? Por que o Seu Bento sorriu — ele queria isso? (gancho do Ep 7)
+- Respondido no Ep 7: a mãe não subiu; quem subiu foi o outro Téo, e o Téo desceu (está do lado de fora, sente frio, a mãe vê ele).
 - O Téo vai deixar a mãe subir no lugar dele? (gancho do Ep 6) Por que só ela lembra dele? Quem são os outros seis passageiros?
 - Respondido no Ep 6: o Téo virou passageiro do ônibus; para descer, alguém precisa subir no lugar; o Seu Bento da noite lembra dele.
 - O Téo virou o sétimo passageiro (um fantasma)? (gancho do Ep 5) Tem volta? O Seu Bento da noite sabe quem ele é?
@@ -38,4 +42,6 @@ Novas no Ep 3: teo_corredor (Téo correndo pelo corredor), jornal (emocao.foco =
 Novas no Ep 4: hospital (emocao.parado, emocao.sombras), caminhao (emocao.passa), branco, ponto_dia (emocao.bento, olha, teo), celular (emocao.vazio = "Nenhum contato"); motorista aceita emocao.quem = "teo".
 Novas no Ep 5: porta (emocao.abre, mae, olha), dois_teos, foto (bebê na maternidade), calcada (gente atravessando o Téo); ponto aceita emocao.sem_onibus; espelho aceita emocao.sorri (rosto mais baixo, sorriso visível); catraca com fixo não toca o clique.
 Nova no Ep 6: espera (a mãe grisalha no ponto, vista de dentro do ônibus pela porta aberta; emocao.longe | perto | olha | degrau).
+Novas no Ep 7: partida (do lado de fora, à noite: Téo na calçada; emocao.mae = mãe grisalha ao lado; emocao.anda = ônibus indo embora; emocao.rosto = outro Téo batendo no vidro da janela); espera aceita emocao.quem (ex.: "teo2" em vez da mãe); catraca aceita emocao.de / emocao.para (ex.: 07→08).
+Atenção: o Téo e o outro Téo usam os dois óculos (não usar "o de óculos" para diferenciar). Emoções do toon: neutro (sorriso leve), serio, medo, pavor — "triste" cai no neutro.
 Personagens toon: teo, teo2 (o outro Téo), bento, antigo, mae (cabelo longo), mae_hoje (grisalha, óculos). Para cenas novas, criar a função `cena_<nome>` e registrar em `CENAS`.
